@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="aplicacion" ng-controller="controlador">
 	<head>
-		<meta charset="UTF-8">
 		<title>UNIBOX</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="script.js">
+		</script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		
 		
 	</head>
 	<body>
+		
+		<h1><a>{{confirmacion}}</a></h1>
 	<div align=center>
 		<h1 align=center>UNIBOX</h1>
 		<div>
@@ -16,6 +20,14 @@
 		<button>Buscar</button>
 		</div>
 		<p>Ingresa el programa y el código de la materia que deseas buscar ej: ADMI1101</p>
+			<table border="1px solid black">
+				<th> CODIGO </th>
+				<th> NOMBRE </th>
+				<tr ng-repeat="materia in materias" >
+					<td><a>ADMI{{materia.codigo}}</a></td>
+					<td>{{materia.nombre}}</td>
+				</tr>
+			</table>
 	</div>
 	</body>
 </html>
