@@ -14,15 +14,14 @@
 	<div align=center>
 		<h1 align=center>UNIBOX</h1>
 		<div>
-		<input type=text size="10px" placeholder="ADMI"></input>
-		<input type=text size="10px" placeholder="1101"></input>
+		<input type=text size="20px" placeholder="ADMI1101" ng-model="busqueda"></input>
 		<button>Buscar</button>
 		</div>
 		<p>Ingresa el programa y el código de la materia que deseas buscar ej: ADMI1101</p>
-			<table border="1px solid black">
+			<table border="1px solid black" id="tablaMaterias">
 				<th> CODIGO </th>
 				<th> NOMBRE </th>
-				<tr ng-repeat="materia in materias" >
+				<tr ng-repeat="materia in materias | filter:busqueda" >
 					<td><a>{{materia.codigo}}</a></td>
 					<td>{{materia.nombre}}</td>
 				</tr>

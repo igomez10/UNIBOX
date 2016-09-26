@@ -6,6 +6,12 @@
 		$scope.materias=mate;
 		$scope.confirmacion="ANGULAR ESTA FUNCIONANDO";
 	});
+	
+	
+	
+	var nombreMateriasEsperadas=function (nombresEsperados) {
+		code
+	}
 
 	var mate = [
 	{
