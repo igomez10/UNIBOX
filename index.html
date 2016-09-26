@@ -17,12 +17,12 @@
 		<input type=text size="20px" placeholder="ADMI1101" ng-model="busqueda"></input>
 		<button>Buscar</button>
 		</div>
-		<p>Ingresa el programa y el código de la materia que deseas buscar ej: ADMI1101</p>
+		<p>Ingresa el nombre o código de la materia que deseas buscar ej: 1101 , ADMI1101 , FUNDAM</p>
 			<table border="1px solid black" id="tablaMaterias">
 				<th> CODIGO </th>
 				<th> NOMBRE </th>
 				<tr ng-repeat="materia in materias | filter:busqueda" >
-					<td><a>{{materia.codigo}}</a></td>
+					<td><a href="">{{materia.codigo}}</a></td>
 					<td>{{materia.nombre}}</td>
 				</tr>
 			</table>
