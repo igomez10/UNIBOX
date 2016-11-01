@@ -12,6 +12,7 @@
 	<body>
 		
 	<div align=center>
+	<h1>{{confirmacion}}</h1>
 		<h1 align=center>UNIBOX</h1>
 		<div>
 		<input type=text size="20px" placeholder="ADMI1101" ng-model="busqueda"></input>
@@ -22,9 +23,12 @@
 				<th> CODIGO </th>
 				<th> NOMBRE </th>
 				<tr ng-repeat="materia in materias | filter:busqueda" >
-					<td><a href="">{{materia.codigo}}</a></td>
+					<td><a href="" ng-click="">{{materia.codigo}}</a></td>
 					<td>{{materia.nombre}}</td>
 				</tr>
+			</table>
+			<table>
+				<td ng-repeat="archivo in materia.archivos">{{materia.archivos}}</td>
 			</table>
 	</div>
 	</body>

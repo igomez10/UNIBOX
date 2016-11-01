@@ -1,21 +1,7 @@
-(function(){
-	var app = angular.module('aplicacion', []);
-
-	app.controller('controlador',function($scope,$http){
-		$scope.mensaje='hola';
-		$scope.materias=mate;
-		$scope.confirmacion='ANGULAR ESTA FUNCIONANDO';
-		$scope.mostrar=false	
-		$scope.cambiarMostrar=function () {
-			$scope.mostrar=!$scope.mostrar;
-		}
-		});
-	
-	var mate = [
+[
 	{
 		 codigo:'ADMI1101'
 		,nombre:'FUNDAM.ADMON Y GERENCIA (ADMI)'
-		,archivos:'HOLAAAAAAA'
 	},
 	{
 		 codigo:'ADMI1102'
@@ -212,5 +198,5 @@
 	{
 		 codigo:'ADMI3991'
 		,nombre:'PRACTICA EMPRESARIAL'
-	}];
-})();
+	}
+]
