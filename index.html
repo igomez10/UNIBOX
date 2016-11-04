@@ -1,35 +1,135 @@
 <!DOCTYPE html>
-<html ng-app="aplicacion" ng-controller="controlador">
+<html>
+
 	<head>
-		<title>UNIBOX</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-		<script src="script.js">
-		</script>
+		<meta charset="UTF-8">
+		<title>Unibox beta vue</title>
+		<script src='https://unpkg.com/vue@next/dist/vue.js'></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
-		
-	</head>
-	<body>
-		
-	<div align=center>
-	<h1>{{confirmacion}}</h1>
-		<h1 align=center>UNIBOX</h1>
-		<div>
-		<input type=text size="20px" placeholder="ADMI1101" ng-model="busqueda"></input>
-		<button>Buscar</button>
-		</div>
-		<p>Ingresa el nombre o código de la materia que deseas buscar ej: 1101 , ADMI1101 , FUNDAM</p>
-			<table border="1px solid black" id="tablaMaterias">
-				<th> CODIGO </th>
-				<th> NOMBRE </th>
-				<tr ng-repeat="materia in materias | filter:busqueda" >
-					<td><a href="" ng-click="">{{materia.codigo}}</a></td>
-					<td>{{materia.nombre}}</td>
+		<script src='https://unpkg.com/lodash'></script>
+
+		<!-- START TEMPLATES -->
+		<script id='table-template' type='text/x-template'>
+			<div>
+
+			<h1 align=center>Unibox</h1>
+
+			<div align=center border=1px>
+				<button align=left v-on:click="changeFilter('/admi.json') , retrieveCourses()" > Administración</button>
+				<button align=left v-on:click="changeFilter('/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
+				<button align=left v-on:click="changeFilter('/mate.json'), retrieveCourses()" >  Matemáticas</button>
+			</div>
+			<div align=center border=1px>
+				<button align=left v-on:click="changeFilter('/fisi.json') , retrieveCourses()" > Física</button>
+				<button align=left v-on:click="changeFilter('/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
+				<button align=left v-on:click="changeFilter('/mate.json'), retrieveCourses()" >  Matemáticas</button>
+			</div>
+
+			<br>
+
+			<div align=center v-if='filtroSeleccionado' >
+				<p>{{filter}}: este es el filtro</p>
+			</div>
+
+			<br>
+
+			<table border=1px align=center>
+				<th align=center>Codigo</th>
+				<th align=center>Nombre</th>
+				<tr v-for='item in content'>
+					<td align=center><a v-bind:id='item.codigo' href='#'> {{item.codigo}}</a></td>
+					<td>{{item.nombre}}</td>
 				</tr>
 			</table>
-			<table>
-				<td ng-repeat="archivo in materia.archivos">{{materia.archivos}}</td>
-			</table>
-	</div>
+
+		</div>
+		</script>
+
+		<!-- END TEMPLATES -->
+
+		<!--  START COMPONENTS -->
+			<!-- TABLE COMPONENT -->
+		<script>
+			Vue.component('component-table',
+			{
+				template:'#table-template',
+				data:function()
+				{
+					return {
+						content:{},
+						filter:'',
+						filtroSeleccionado:false,
+						myCareerFile:'/admi.json'
+					};
+				},
+
+				props:
+				{
+					message:{default:'Hola Ignacio'},
+
+				},
+				methods:
+				{
+
+					changeShow:function()
+					{
+						this.active=!this.active;
+					},
+
+					retrieveCourses:function()
+					{
+						networkPromise = fetch(this.myCareerFile);
+						networkPromise.then((rjson)=>{
+								parsingPromise = rjson.json();
+								parsingPromise.then((rcourses)=>{
+									this.content=rcourses;
+									console.log('importe correctamente')
+								});
+								parsingPromise.catch(function(){console.log('Error de parsear el archivo json');});
+						});
+						networkPromise.catch(function(){console.log('No encontre el arhivo admi.json')});
+					},
+
+					changeFilter:function(pFilter)
+					{
+						this.myCareerFile=pFilter;
+						this.filtroSeleccionado=true;
+						console.log('cambio de filtro a ' + pFilter);
+					},
+
+					isFiltered:function(courseCode)
+					{
+						if(courseCode.split(this.filter).length === 2)
+						{
+							return true;
+						}
+						else{
+							return false;
+						}
+					}
+					}
+				}
+			)
+		</script>
+		<!-- END COMPONENTS -->
+
+	</head>
+
+	<body>
+
+		<div id='app'>
+			<component-table message='Sí funciona'></component-table>
+		</div>
+
+		<script>
+		var vm=new Vue(
+			{
+				el:'#app',
+				data:{
+					message:'Hola Vue'
+				}
+			}
+		);
+		</script>
 	</body>
 </html>
