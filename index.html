@@ -6,49 +6,103 @@
 		<title>Unibox beta vue</title>
 		<script src='https://unpkg.com/vue@next/dist/vue.js'></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="/animate.css">
+		<style>
+			.fade-enter-active, .fade-leave-active {
+  		transition: opacity 2s
+			}
+			.fade-enter, .fade-leave-active {
+  		opacity: 0
+			}
+		</style>
 		<script src='https://unpkg.com/lodash'></script>
 
 		<!-- START TEMPLATES -->
-		<script id='table-template' type='text/x-template'>
+			<!-- START COURSE TEMPLATE -->
+			<script id='course-template' type='text/x-template'>
+				<tr>
+						<td ><a v-bind:id='courseCode' v-bind:href='"files/" +this.getCareer()+"/"+ courseCode'> {{courseCode}}</a></td>
+						<td>{{courseName}}</td>
+				</tr>
+			</script>
+			<!-- END COURSE TEMPLATE -->
+
+			<!-- START TABLE TEMPLATE -->
+			<script id='table-template' type='text/x-template'>
 			<div>
 
-			<h1 align=center>Unibox</h1>
+			<h1 >Unibox</h1>
 
-			<div align=center border=1px>
-				<button align=left v-on:click="changeFilter('/admi.json') , retrieveCourses()" > Administración</button>
-				<button align=left v-on:click="changeFilter('/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
-				<button align=left v-on:click="changeFilter('/mate.json'), retrieveCourses()" >  Matemáticas</button>
+			<div  border=1px>
+				<button  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</button>
+				<button  v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
+				<button  v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
 			</div>
-			<div align=center border=1px>
-				<button align=left v-on:click="changeFilter('/fisi.json') , retrieveCourses()" > Física</button>
-				<button align=left v-on:click="changeFilter('/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
-				<button align=left v-on:click="changeFilter('/mate.json'), retrieveCourses()" >  Matemáticas</button>
+			<br>
+			<div  border=1px>
+				<button  v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</button>
 			</div>
 
 			<br>
-
-			<div align=center v-if='filtroSeleccionado' >
-				<p>{{filter}}: este es el filtro</p>
-			</div>
-
+			<transition name='fade'>
+				<div v-if='filtroSeleccionado'>
+					<p>{{filter.split('/')[2].toUpperCase()}}: este es el filtro</p>
+				</div>
+			</transition>
 			<br>
+			<transition name='fade'>
 
-			<table border=1px align=center>
-				<th align=center>Codigo</th>
-				<th align=center>Nombre</th>
-				<tr v-for='item in content'>
-					<td align=center><a v-bind:id='item.codigo' href='#'> {{item.codigo}}</a></td>
-					<td>{{item.nombre}}</td>
-				</tr>
+			<table border=1px v-if='filtroSeleccionado'>
+				<th>Codigo</th>
+				<th>Nombre</th>
+
+					<component-course v-bind:courseCode='item.codigo' v-bind:courseName='item.nombre' v-for='item in content' v-if='filtroSeleccionado'></component-course>
 			</table>
+		</transition>
 
-		</div>
-		</script>
+			</div>
+			</script>
+			<!-- END TABLE TEMPLATE -->
 
 		<!-- END TEMPLATES -->
 
 		<!--  START COMPONENTS -->
-			<!-- TABLE COMPONENT -->
+
+			<!-- START COURSE COMPONENT -->
+				<script>
+					Vue.component('component-course',
+					{
+						template:'#course-template',
+						data:function(){
+							return{
+							isSelected:false,
+							files:[]
+						}
+						},
+						props:{
+
+							courseCode:{default:''},
+							courseName:{default:''}
+						},
+						methods:{
+							select:function(){
+								this.isSelected=true;
+							},
+							getCareer:function(){
+								var a= this.courseCode.substring(0,4).toLowerCase();
+								return a;
+							},
+							getUrl:function(){
+								// return "/files/" + getCareer() + "/" + this.courseCode
+							}
+						}
+					}
+				)
+				</script>
+		<!-- END COURSE COMPONENT -->
+
+
+			<!-- START TABLE COMPONENT -->
 		<script>
 			Vue.component('component-table',
 			{
@@ -92,6 +146,7 @@
 
 					changeFilter:function(pFilter)
 					{
+						this.filter=pFilter,
 						this.myCareerFile=pFilter;
 						this.filtroSeleccionado=true;
 						console.log('cambio de filtro a ' + pFilter);
@@ -107,29 +162,38 @@
 							return false;
 						}
 					}
-					}
+				}
 				}
 			)
 		</script>
+			<!-- END TABLE COMPONENT -->
 		<!-- END COMPONENTS -->
 
 	</head>
 
 	<body>
-
-		<div id='app'>
-			<component-table message='Sí funciona'></component-table>
+		<div id='app' align=center >
+			<transition name='fade'>
+			<component-table v-if='showTable' ></component-table>
+			</transition>
 		</div>
-
 		<script>
 		var vm=new Vue(
 			{
 				el:'#app',
 				data:{
-					message:'Hola Vue'
+					message:'Hola Vue',
+					showTable:false,
+					load:false
 				}
 			}
 		);
+		window.onload=function(){
+				console.log('se ejecuta window load');
+				vm.showTable=true;
+				vm.load=false
+		};
+
 		</script>
 	</body>
 </html>
