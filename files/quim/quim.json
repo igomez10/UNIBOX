@@ -1,0 +1,286 @@
+[
+ {
+   "codigo": "QUIM1000",
+   "nombre": "INTRODUCCION A QUIMICA"
+ },
+ {
+   "codigo": "QUIM1100",
+   "nombre": "HEXAGONO"
+ },
+ {
+   "codigo": "QUIM1101",
+   "nombre": "QUIMICA GENERAL"
+ },
+ {
+   "codigo": "QUIM1102",
+   "nombre": "LABORATORIO DE QUIMICA GENERAL"
+ },
+ {
+   "codigo": "QUIM1103",
+   "nombre": "QUÍMICA"
+ },
+ {
+   "codigo": "QUIM1104",
+   "nombre": "LABORATORIO DE QUÍMICA"
+ },
+ {
+   "codigo": "QUIM1105",
+   "nombre": "APLICACIONES DE QUÍMICA"
+ },
+ {
+   "codigo": "QUIM1106",
+   "nombre": "LAB DE APLICACIONS DE QUIMICA"
+ },
+ {
+   "codigo": "QUIM1110",
+   "nombre": "INTROD TEOR DE ATOMOS Y MOLEC"
+ },
+ {
+   "codigo": "QUIM1111",
+   "nombre": "QUIMICA EXPERIMENTAL"
+ },
+ {
+   "codigo": "QUIM1210",
+   "nombre": "QUIMICA INORGANICA I"
+ },
+ {
+   "codigo": "QUIM1213",
+   "nombre": "LABORATORIO DE Q. INORG. II"
+ },
+ {
+   "codigo": "QUIM1301",
+   "nombre": "QUIMICA ORGANICA"
+ },
+ {
+   "codigo": "QUIM1302",
+   "nombre": "LAB DE QUIMICA ORGANICA"
+ },
+ {
+   "codigo": "QUIM1303",
+   "nombre": "FUNDAMENTOS QUÍMICA ORGÁNICA"
+ },
+ {
+   "codigo": "QUIM1304",
+   "nombre": "LAB DE FUNDAMENTOS QUIM ORG"
+ },
+ {
+   "codigo": "QUIM1311",
+   "nombre": "LAB. QUIMICA ORGANICA I"
+ },
+ {
+   "codigo": "QUIM1512",
+   "nombre": "FISICOQUIMICA II"
+ },
+ {
+   "codigo": "QUIM1513",
+   "nombre": "LABORATORIO DE FISICOQUIM. II"
+ },
+ {
+   "codigo": "QUIM1618",
+   "nombre": "FUNDAMENTOS ANÁLISIS QUÍMICO"
+ },
+ {
+   "codigo": "QUIM1619",
+   "nombre": "LAB FUNDAM ANÁLISIS QUÍMICO"
+ },
+ {
+   "codigo": "QUIM2312",
+   "nombre": "QUIMICA ORGANICA II"
+ },
+ {
+   "codigo": "QUIM2518",
+   "nombre": "FUNDAMENTOS DE FISICOQUÍMICA"
+ },
+ {
+   "codigo": "QUIM2519",
+   "nombre": "LAB DE FUNDAMENT FISICOQUIM"
+ },
+ {
+   "codigo": "QUIM2620",
+   "nombre": "QUIMICA ANALITICA I"
+ },
+ {
+   "codigo": "QUIM2621",
+   "nombre": "LAB. QUIMICA ANALITICA I"
+ },
+ {
+   "codigo": "QUIM2624",
+   "nombre": "EXTRACCION - SEPARACION"
+ },
+ {
+   "codigo": "QUIM2625",
+   "nombre": "LAB. EXTRACCION - SEPARACION"
+ },
+ {
+   "codigo": "QUIM2626",
+   "nombre": "QUIMIOMETRIA"
+ },
+ {
+   "codigo": "QUIM3012",
+   "nombre": "SEMINARIO AVANZADO"
+ },
+ {
+   "codigo": "QUIM3014",
+   "nombre": "PROYECTO DE GRADO"
+ },
+ {
+   "codigo": "QUIM3214",
+   "nombre": "QUIMICA INORGANICA III"
+ },
+ {
+   "codigo": "QUIM3230",
+   "nombre": "CATALISIS ENLA IND. Y LABORAT."
+ },
+ {
+   "codigo": "QUIM3310",
+   "nombre": "ELUCIDACION DE ESPECTROS AVANZ"
+ },
+ {
+   "codigo": "QUIM3315",
+   "nombre": "LABORATORIO DE Q. ORGANICA III"
+ },
+ {
+   "codigo": "QUIM3514",
+   "nombre": "ESPECTROSCOPIA Y QUIMICA CUAN."
+ },
+ {
+   "codigo": "QUIM3516",
+   "nombre": "QUIMICA COMPUTACIONAL"
+ },
+ {
+   "codigo": "QUIM3530",
+   "nombre": "PRINC. BASICOS DE MATERIALES"
+ },
+ {
+   "codigo": "QUIM3900",
+   "nombre": "TRABAJO DE GRADO"
+ },
+ {
+   "codigo": "QUIM3997",
+   "nombre": "PASANTIA ESTUDIANT. NACIONALES"
+ },
+ {
+   "codigo": "QUIM4100",
+   "nombre": "TALLER DE INVESTIGACIÓN"
+ },
+ {
+   "codigo": "QUIM4150",
+   "nombre": "SEMINARIO I"
+ },
+ {
+   "codigo": "QUIM4165",
+   "nombre": "SEMINARIO II"
+ },
+ {
+   "codigo": "QUIM4230",
+   "nombre": "CATÁLISIS EN LA IND. Y LABORAT"
+ },
+ {
+   "codigo": "QUIM4300",
+   "nombre": "SINT. COMPUESTOS HETEROCICLICO"
+ },
+ {
+   "codigo": "QUIM4310",
+   "nombre": "ELUCIDACIÓN DE ESPECTROS AVANZ"
+ },
+ {
+   "codigo": "QUIM4510",
+   "nombre": "QUÍMICA CUÁNTICA - FISICOQUÍMI"
+ },
+ {
+   "codigo": "QUIM4530",
+   "nombre": "PRINC. BASICOS DE MATERIALES"
+ },
+ {
+   "codigo": "QUIM4600",
+   "nombre": "QUÍMICA ANALITICA - AMBIENTAL"
+ },
+ {
+   "codigo": "QUIM4900",
+   "nombre": "TESIS I"
+ },
+ {
+   "codigo": "QUIM4950",
+   "nombre": "TESIS II"
+ },
+ {
+   "codigo": "QUIM6961",
+   "nombre": "PROYECTO DIRIGIDO"
+ },
+ {
+   "codigo": "QUIM6970",
+   "nombre": "EXAMEN DE CANDIDATURA"
+ },
+ {
+   "codigo": "QUIM6971",
+   "nombre": "PASANTIA"
+ },
+ {
+   "codigo": "QUIM6975",
+   "nombre": "EXAMEN DE CONOCIMIENTOS"
+ },
+ {
+   "codigo": "QUIM6981",
+   "nombre": "TESIS 1 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6982",
+   "nombre": "TESIS 2 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6983",
+   "nombre": "TESIS 3 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6984",
+   "nombre": "TESIS 4 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6985",
+   "nombre": "TESIS 5 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6986",
+   "nombre": "TESIS 6 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6987",
+   "nombre": "TESIS 7 (DOCTORADO)"
+ },
+ {
+   "codigo": "QUIM6990",
+   "nombre": "SUSTENTACIÓN DE TESIS"
+ },
+ {
+   "codigo": "QUIM1001A",
+   "nombre": "QUIMICA, LEYES Y CONCEPTOS"
+ },
+ {
+   "codigo": "QUIM1004A",
+   "nombre": "CLIMA GLOBAL"
+ },
+ {
+   "codigo": "QUIM1103C",
+   "nombre": "COMPL. DE QUÍMICA"
+ },
+ {
+   "codigo": "QUIM1105C",
+   "nombre": "COMPL. DE APLICACIONES"
+ },
+ {
+   "codigo": "QUIM1301C",
+   "nombre": "COMPL DE QUÍMICA ORGÁNICA"
+ },
+ {
+   "codigo": "QUIM1303C",
+   "nombre": "COMPL FUNDAM DE QUÍM ORGÁNICA"
+ },
+ {
+   "codigo": "QUIM1618C",
+   "nombre": "COMPL FUND ANÁLISIS QUIM"
+ },
+ {
+   "codigo": "QUIM2518C",
+   "nombre": "COMPL FUND FISICOQUÍMICA"
+ }
+]

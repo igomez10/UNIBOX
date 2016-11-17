@@ -1,0 +1,174 @@
+[
+ {
+   "codigo": "BIOL1300",
+   "nombre": "BIOLOGIA DE ORGANISMOS-TEO"
+ },
+ {
+   "codigo": "BIOL1301",
+   "nombre": "BIOLOGIA DE ORGANISMOS-LAB"
+ },
+ {
+   "codigo": "BIOL1303",
+   "nombre": "MONOGRAFIA ESTUD. AMBIENTALES"
+ },
+ {
+   "codigo": "BIOL1312",
+   "nombre": "BIOLOGIA PARA PSICOLOGIA-TEO"
+ },
+ {
+   "codigo": "BIOL1313",
+   "nombre": "BIOLOGIA PARA PSICOLOGIA-LAB"
+ },
+ {
+   "codigo": "BIOL1327",
+   "nombre": "ECOLOGIA: PRINCIPIOS Y APLICA."
+ },
+ {
+   "codigo": "BIOL2200",
+   "nombre": "GENETICA-TEO"
+ },
+ {
+   "codigo": "BIOL2201",
+   "nombre": "GENETICA-LAB"
+ },
+ {
+   "codigo": "BIOL2202",
+   "nombre": "EVOLUCION-TEO"
+ },
+ {
+   "codigo": "BIOL2203",
+   "nombre": "EVOLUCION-LAB"
+ },
+ {
+   "codigo": "BIOL2302",
+   "nombre": "INVERTEBRADOS-TEO"
+ },
+ {
+   "codigo": "BIOL2303",
+   "nombre": "INVERTEBRADOS-LAB"
+ },
+ {
+   "codigo": "BIOL2304",
+   "nombre": "BOTANICA-TEO"
+ },
+ {
+   "codigo": "BIOL2305",
+   "nombre": "BOTANICA-LAB"
+ },
+ {
+   "codigo": "BIOL2308",
+   "nombre": "ECOLOGIA-TEO"
+ },
+ {
+   "codigo": "BIOL2309",
+   "nombre": "ECOLOGIA-LAB"
+ },
+ {
+   "codigo": "BIOL3300",
+   "nombre": "FISIOLOGIA ANIMAL-TEO"
+ },
+ {
+   "codigo": "BIOL3301",
+   "nombre": "FISIOLOGIA ANIMAL-LAB"
+ },
+ {
+   "codigo": "BIOL3304",
+   "nombre": "BIOLOGIA DEL DESARROLLO-TEO"
+ },
+ {
+   "codigo": "BIOL3305",
+   "nombre": "BIOLOGIA DEL DESARROLLO-LAB"
+ },
+ {
+   "codigo": "BIOL3310",
+   "nombre": "ECOLOGIA AVANZADA"
+ },
+ {
+   "codigo": "BIOL3311",
+   "nombre": "ECOLOGIA AVANZADA-LAB"
+ },
+ {
+   "codigo": "BIOL3312",
+   "nombre": "BOTANICA SISTEMATICA-TEO"
+ },
+ {
+   "codigo": "BIOL3313",
+   "nombre": "BOTANICA SISTEMATICA-LAB"
+ },
+ {
+   "codigo": "BIOL3330",
+   "nombre": "ECOLOGIA SENSORIAL"
+ },
+ {
+   "codigo": "BIOL3339",
+   "nombre": "ECOLOGIA SENSORIAL-LAB."
+ },
+ {
+   "codigo": "BIOL3340",
+   "nombre": "BUCEO SCUBA Y ECOL. MARINA TEO"
+ },
+ {
+   "codigo": "BIOL3341",
+   "nombre": "BUCEO SCUBA Y ECOL. MARINA LAB"
+ },
+ {
+   "codigo": "BIOL3906",
+   "nombre": "INSCRIPCION PROYECTO DE GRADO"
+ },
+ {
+   "codigo": "BIOL3907",
+   "nombre": "TRABAJO GRADO, MONOGR, PRAC.GR"
+ },
+ {
+   "codigo": "BIOL3908",
+   "nombre": "INSCRIPCION PROYECTO GRADO"
+ },
+ {
+   "codigo": "BIOL3909",
+   "nombre": "TRABAJO GRADO, MONOG.PRAT.GRAD"
+ },
+ {
+   "codigo": "BIOL3911",
+   "nombre": "PRACTICA DE GRADO"
+ },
+ {
+   "codigo": "BIOL3912",
+   "nombre": "COLECCIONES BIOLOGICAS"
+ },
+ {
+   "codigo": "BIOL3991",
+   "nombre": "PRACTICA PROFESIONAL"
+ },
+ {
+   "codigo": "BIOL3995",
+   "nombre": "PROFUNDIZACION INVESTIGACION"
+ },
+ {
+   "codigo": "BIOL1300C",
+   "nombre": "COMPL. BIOLOGIA DE ORGANISMOS"
+ },
+ {
+   "codigo": "BIOL1324A",
+   "nombre": "BIODIVERSIDAD CONSERVA DESARR"
+ },
+ {
+   "codigo": "BIOL1325B",
+   "nombre": "PLANTAS Y EL HOMBRE"
+ },
+ {
+   "codigo": "BIOL1326A",
+   "nombre": "EVOLUCION: EL ORIGEN DE LAS E."
+ },
+ {
+   "codigo": "BIOL1327C",
+   "nombre": "COMPL ECOLOGIA: PRINC Y APLICA"
+ },
+ {
+   "codigo": "BIOL1328B",
+   "nombre": "IMP. REGIONAL CAMBIO AMB. GLO"
+ },
+ {
+   "codigo": "BIOL1330B",
+   "nombre": "INSECTOS Y EL HOMBRE"
+ }
+]

@@ -1,0 +1,346 @@
+[
+ {
+   "codigo": "DERE1101",
+   "nombre": "INTRODUCCION AL DERECHO"
+ },
+ {
+   "codigo": "DERE1102",
+   "nombre": "LOGICA Y RETORICA"
+ },
+ {
+   "codigo": "DERE1103",
+   "nombre": "SOCIOLOGIA JURIDICA"
+ },
+ {
+   "codigo": "DERE1115",
+   "nombre": "TEATRO Y DERECHO"
+ },
+ {
+   "codigo": "DERE1201",
+   "nombre": "DERECHO ROMANO"
+ },
+ {
+   "codigo": "DERE1202",
+   "nombre": "FUNDAM DERE DE LOS NEGOCIOS"
+ },
+ {
+   "codigo": "DERE1300",
+   "nombre": "CONSTITUCION Y DEMOCRACIA"
+ },
+ {
+   "codigo": "DERE1301",
+   "nombre": "TEORIA GENERAL DEL ESTADO"
+ },
+ {
+   "codigo": "DERE1901",
+   "nombre": "EXAMEN DE CICLO 1"
+ },
+ {
+   "codigo": "DERE2101",
+   "nombre": "HISTORIA DE LAS INSTITUCIONES"
+ },
+ {
+   "codigo": "DERE2102",
+   "nombre": "TEORIA JURIDICA"
+ },
+ {
+   "codigo": "DERE2103",
+   "nombre": "ETICA PROFESIONAL"
+ },
+ {
+   "codigo": "DERE2201",
+   "nombre": "OBLIGACIONES I"
+ },
+ {
+   "codigo": "DERE2202",
+   "nombre": "OBLIGACIONES II"
+ },
+ {
+   "codigo": "DERE2203",
+   "nombre": "PROCEDIMIENTOS"
+ },
+ {
+   "codigo": "DERE2204",
+   "nombre": "PRUEBAS"
+ },
+ {
+   "codigo": "DERE2205",
+   "nombre": "CONTRATOS"
+ },
+ {
+   "codigo": "DERE2206",
+   "nombre": "PROPIEDAD Y DERECHOS REALES"
+ },
+ {
+   "codigo": "DERE2207",
+   "nombre": "ARGUMENTACION EN PROCESOS CIVI"
+ },
+ {
+   "codigo": "DERE2208",
+   "nombre": "RELACIONES FAMILIARES"
+ },
+ {
+   "codigo": "DERE2211",
+   "nombre": "DERECHO COMERCIAL"
+ },
+ {
+   "codigo": "DERE2301",
+   "nombre": "DERECHO CONSTITUCIONAL"
+ },
+ {
+   "codigo": "DERE2302",
+   "nombre": "JUEZ E INTERPRET CONSTITUCIONA"
+ },
+ {
+   "codigo": "DERE2303",
+   "nombre": "DERECHO PUBLICO ADMINISTRATIVO"
+ },
+ {
+   "codigo": "DERE2304",
+   "nombre": "LEGISLACION Y POLITICAS PUBLIC"
+ },
+ {
+   "codigo": "DERE2401",
+   "nombre": "DERECHO PENAL"
+ },
+ {
+   "codigo": "DERE2402",
+   "nombre": "ARGUMENTACION EN EL PROCESO PE"
+ },
+ {
+   "codigo": "DERE2403",
+   "nombre": "PENAL ESPECIAL"
+ },
+ {
+   "codigo": "DERE2501",
+   "nombre": "RELACIONES LABORALES"
+ },
+ {
+   "codigo": "DERE2502",
+   "nombre": "PROTECCI�N LABORAL"
+ },
+ {
+   "codigo": "DERE2601",
+   "nombre": "DERECHO INTERNACIONAL"
+ },
+ {
+   "codigo": "DERE2602",
+   "nombre": "DERECHO COMPARADO"
+ },
+ {
+   "codigo": "DERE3101",
+   "nombre": "HERMENEUTICA JURIDICA"
+ },
+ {
+   "codigo": "DERE3123",
+   "nombre": "ANALISIS ECONOMICO DEL DERECH"
+ },
+ {
+   "codigo": "DERE3150",
+   "nombre": "LIDERAZGO Y DERECHO"
+ },
+ {
+   "codigo": "DERE3161",
+   "nombre": "DERECHO Y LITERATURA"
+ },
+ {
+   "codigo": "DERE3201",
+   "nombre": "SOCIEDADES"
+ },
+ {
+   "codigo": "DERE3202",
+   "nombre": "TITULOS VALORES"
+ },
+ {
+   "codigo": "DERE3203",
+   "nombre": "CONTRATOS COMERCIALES Y FINANC"
+ },
+ {
+   "codigo": "DERE3204",
+   "nombre": "PROCESOS DECLAR EJECUT Y ARBIT"
+ },
+ {
+   "codigo": "DERE3207",
+   "nombre": "DERECHO DE LA COMPETENCIA"
+ },
+ {
+   "codigo": "DERE3209",
+   "nombre": "DERECHO BURSATIL"
+ },
+ {
+   "codigo": "DERE3211",
+   "nombre": "PROPIEDAD INDUSTRIAL"
+ },
+ {
+   "codigo": "DERE3222",
+   "nombre": "DERECHO DE LAS MULTINACIONALES"
+ },
+ {
+   "codigo": "DERE3225",
+   "nombre": "DERECHO DE LA UNION EUROPEA"
+ },
+ {
+   "codigo": "DERE3233",
+   "nombre": "DERE E INDUST DE LA MUSICA"
+ },
+ {
+   "codigo": "DERE3234",
+   "nombre": "FUSIONES Y ADQUISICIONES"
+ },
+ {
+   "codigo": "DERE3238",
+   "nombre": "EMPRENDIMIENTO EMPRESARIAL JUR"
+ },
+ {
+   "codigo": "DERE3270",
+   "nombre": "REG LEGA CONTRAC PROJECT FINAN"
+ },
+ {
+   "codigo": "DERE3271",
+   "nombre": "PRACTICA LEGAL INTERNACIONAL"
+ },
+ {
+   "codigo": "DERE3301",
+   "nombre": "RESPONSABILIDAD DEL ESTADO"
+ },
+ {
+   "codigo": "DERE3302",
+   "nombre": "ACCIONES PUBLICAS"
+ },
+ {
+   "codigo": "DERE3303",
+   "nombre": "CONTRATOS ESTATALES"
+ },
+ {
+   "codigo": "DERE3309",
+   "nombre": "TRIBUTARIO"
+ },
+ {
+   "codigo": "DERE3376",
+   "nombre": "LIBERTAD DE EXPRESION"
+ },
+ {
+   "codigo": "DERE3402",
+   "nombre": "DERECHO PENAL ECONOMICO"
+ },
+ {
+   "codigo": "DERE3409",
+   "nombre": "CRIMINOLOGIA"
+ },
+ {
+   "codigo": "DERE3431",
+   "nombre": "CRIMEN ORGANIZADO"
+ },
+ {
+   "codigo": "DERE3432",
+   "nombre": "JUSTICIA TRANSICIONAL"
+ },
+ {
+   "codigo": "DERE3509",
+   "nombre": "SINDICALISMO Y EMPRESA"
+ },
+ {
+   "codigo": "DERE3577",
+   "nombre": "NEGOCIACION RESOLUC.CONFLICTOS"
+ },
+ {
+   "codigo": "DERE3601",
+   "nombre": "DERECHO INTERNACIONAL 2"
+ },
+ {
+   "codigo": "DERE3605",
+   "nombre": "PRESEMINARIO CONCURSO DDHH"
+ },
+ {
+   "codigo": "DERE3606",
+   "nombre": "SEM PHILIP C.JESSUP-MOOT COURT"
+ },
+ {
+   "codigo": "DERE3611",
+   "nombre": "NEGOCIOS INTERNACIONALES"
+ },
+ {
+   "codigo": "DERE3614",
+   "nombre": "PRESEM ELSA WTO MOOT COURT"
+ },
+ {
+   "codigo": "DERE3625",
+   "nombre": "DERE DEL ESPACIO ULTRATERREST"
+ },
+ {
+   "codigo": "DERE3641",
+   "nombre": "DERECHO INTERNAL PRIVADO"
+ },
+ {
+   "codigo": "DERE3642",
+   "nombre": "TEOR. PRACT. DERECHOS HUMANOS"
+ },
+ {
+   "codigo": "DERE3801",
+   "nombre": "CONSULTORIO JURIDICO I"
+ },
+ {
+   "codigo": "DERE3802",
+   "nombre": "CONSULTORIO JURIDICO II"
+ },
+ {
+   "codigo": "DERE3803",
+   "nombre": "PRACTICA CTP 1"
+ },
+ {
+   "codigo": "DERE3804",
+   "nombre": "PRACTICA CTP 2"
+ },
+ {
+   "codigo": "DERE3805",
+   "nombre": "PRACTICA DE GRADO"
+ },
+ {
+   "codigo": "DERE3813",
+   "nombre": "CJ PAIS PRIMARIA"
+ },
+ {
+   "codigo": "DERE3833",
+   "nombre": "CJ-I CONCILIACION"
+ },
+ {
+   "codigo": "DERE3835",
+   "nombre": "CJ-PRISIONES Y C�RCELES"
+ },
+ {
+   "codigo": "DERE3837",
+   "nombre": "CJ MEDIO AMBIENTE SALUD PUBLIC"
+ },
+ {
+   "codigo": "DERE3903",
+   "nombre": "INVESTIGACION DIRIGIDA"
+ },
+ {
+   "codigo": "DERE3904",
+   "nombre": "SEMINARIO INVESTIGACION DIRIGI"
+ },
+ {
+   "codigo": "DERE3905",
+   "nombre": "EXAMEN DE FACULTAD"
+ },
+ {
+   "codigo": "DERE3909",
+   "nombre": "INVESTIGACION DIRIGIDA"
+ },
+ {
+   "codigo": "DERE3990",
+   "nombre": "INSCRIPCION A GRADO"
+ },
+ {
+   "codigo": "DERE1107B",
+   "nombre": "ETICA Y MEDIO AMBIENTE"
+ },
+ {
+   "codigo": "DERE1121B",
+   "nombre": "CINE Y DERECHOS HUMANOS"
+ },
+ {
+   "codigo": "DERE1124B",
+   "nombre": "CINE Y CRIMEN"
+ }
+]

@@ -1,0 +1,358 @@
+[
+ {
+   "codigo": "ARQU1010",
+   "nombre": "PORTAFOLIO REQUISITO DE GRADO"
+ },
+ {
+   "codigo": "ARQU1020",
+   "nombre": "MONOGRAFIA OPCION HIST ART ARQ"
+ },
+ {
+   "codigo": "ARQU1021",
+   "nombre": "MONOGRAFIA OPCION ARQUYCIUDAD"
+ },
+ {
+   "codigo": "ARQU1100",
+   "nombre": "ACOMPAÑAMIENTO ARQU"
+ },
+ {
+   "codigo": "ARQU1111",
+   "nombre": "TALLER DE COMPOSICION 1"
+ },
+ {
+   "codigo": "ARQU1121",
+   "nombre": "TALLER DE COMPOSICION 2"
+ },
+ {
+   "codigo": "ARQU1201",
+   "nombre": "TALLER DE HISTORIA 1"
+ },
+ {
+   "codigo": "ARQU1202",
+   "nombre": "TALLER DE HISTORIA 2"
+ },
+ {
+   "codigo": "ARQU1301",
+   "nombre": "TALLER TECNICO 1"
+ },
+ {
+   "codigo": "ARQU1302",
+   "nombre": "TALLER TECNICO 2"
+ },
+ {
+   "codigo": "ARQU1410",
+   "nombre": "TALLER CIUDAD 1"
+ },
+ {
+   "codigo": "ARQU1420",
+   "nombre": "TALLER CIUDAD 2"
+ },
+ {
+   "codigo": "ARQU1502",
+   "nombre": "VISUALIZACION Y SIMULACIÓN ARQ"
+ },
+ {
+   "codigo": "ARQU1503",
+   "nombre": "DIBUJO ARQUITECTONICO ANALOGO"
+ },
+ {
+   "codigo": "ARQU1504",
+   "nombre": "DIBUJO ARQUITECTONICO DIGITAL"
+ },
+ {
+   "codigo": "ARQU1552",
+   "nombre": "HERRAMIENTAS DIGITALES"
+ },
+ {
+   "codigo": "ARQU2101",
+   "nombre": "PROYECTO HABITAR"
+ },
+ {
+   "codigo": "ARQU2102",
+   "nombre": "PROYECTO TECTONICA"
+ },
+ {
+   "codigo": "ARQU2103",
+   "nombre": "PROYECTO LUGAR"
+ },
+ {
+   "codigo": "ARQU2104",
+   "nombre": "SESION PRACTICA PROY HABITAR"
+ },
+ {
+   "codigo": "ARQU2105",
+   "nombre": "SESION PRACTICA PROYECTO TEC"
+ },
+ {
+   "codigo": "ARQU2106",
+   "nombre": "SESION PRACTICA PROYECTO LUG"
+ },
+ {
+   "codigo": "ARQU2201",
+   "nombre": "ARQUETIPOS EN ARQUITECTURA"
+ },
+ {
+   "codigo": "ARQU2202",
+   "nombre": "ARQUITECTURA CLASICA"
+ },
+ {
+   "codigo": "ARQU2203",
+   "nombre": "ARQUITECTURA MODERNA"
+ },
+ {
+   "codigo": "ARQU2310",
+   "nombre": "SISTEMAS DE SOPORTE"
+ },
+ {
+   "codigo": "ARQU2320",
+   "nombre": "SISTEMAS DE HABITABILIDAD"
+ },
+ {
+   "codigo": "ARQU2330",
+   "nombre": "SISTEMAS DE CONSTRUCCION Y EST"
+ },
+ {
+   "codigo": "ARQU2410",
+   "nombre": "PAISAJE URBANO"
+ },
+ {
+   "codigo": "ARQU2420",
+   "nombre": "PROYECTO URBANO"
+ },
+ {
+   "codigo": "ARQU2430",
+   "nombre": "TEORIAS URBANAS"
+ },
+ {
+   "codigo": "ARQU3156",
+   "nombre": "LA MAGIA DE LA GEOMETRIA"
+ },
+ {
+   "codigo": "ARQU3163",
+   "nombre": "SEM BTA CIUDAD ABIERT COMP.URB"
+ },
+ {
+   "codigo": "ARQU3165",
+   "nombre": "DISEÑAR CONSTRUIR Y PARTICIPAR"
+ },
+ {
+   "codigo": "ARQU3167",
+   "nombre": "MODELAR INTERVENCION EN CIUDAD"
+ },
+ {
+   "codigo": "ARQU3249",
+   "nombre": "SEM ARQU LATINOAMERICANA"
+ },
+ {
+   "codigo": "ARQU3325",
+   "nombre": "SEM. ESTRUCTURAS MADERA"
+ },
+ {
+   "codigo": "ARQU3351",
+   "nombre": "ARQU EN TIERRA CRUDA"
+ },
+ {
+   "codigo": "ARQU3352",
+   "nombre": "CONVIVE: HABITAT INFRAESTR NAT"
+ },
+ {
+   "codigo": "ARQU3810",
+   "nombre": "PROY. UNIDAD INTERM. FORMA"
+ },
+ {
+   "codigo": "ARQU3812",
+   "nombre": "PROY. UNIDAD INTERM. VIVIENDA"
+ },
+ {
+   "codigo": "ARQU3820",
+   "nombre": "TEORIA UI FORMA"
+ },
+ {
+   "codigo": "ARQU3822",
+   "nombre": "TEORIA UI VIVIENDA"
+ },
+ {
+   "codigo": "ARQU3823",
+   "nombre": "TEORIA UI URBANO"
+ },
+ {
+   "codigo": "ARQU3828",
+   "nombre": "PROYECTO UI ARQU URBANA"
+ },
+ {
+   "codigo": "ARQU3829",
+   "nombre": "ANALISIS UI ARQU URBANA (C)"
+ },
+ {
+   "codigo": "ARQU3830",
+   "nombre": "ANÁLISIS UI FORMA"
+ },
+ {
+   "codigo": "ARQU3832",
+   "nombre": "ANÁLISIS UI VIVIENDA"
+ },
+ {
+   "codigo": "ARQU3849",
+   "nombre": "PROY UI TECTONICA Y ESTRUCTURA"
+ },
+ {
+   "codigo": "ARQU3850",
+   "nombre": "ANALISIS UI TECTONICA Y ESTRUC"
+ },
+ {
+   "codigo": "ARQU3851",
+   "nombre": "TEORIA UI TECTONICA Y ESTRUC"
+ },
+ {
+   "codigo": "ARQU3852",
+   "nombre": "PROY UI ARQU Y BELLEZA"
+ },
+ {
+   "codigo": "ARQU3853",
+   "nombre": "ANALISIS UI ARQU Y BELLEZA"
+ },
+ {
+   "codigo": "ARQU3854",
+   "nombre": "TEORIA UI ARQU Y BELLEZA"
+ },
+ {
+   "codigo": "ARQU3858",
+   "nombre": "PROY UI INTERDISC COLOMBIA"
+ },
+ {
+   "codigo": "ARQU3859",
+   "nombre": "ANALISIS UI INTERDISC COLOMBIA"
+ },
+ {
+   "codigo": "ARQU3860",
+   "nombre": "TEORÍA UI INTERDISC COLOMBIA"
+ },
+ {
+   "codigo": "ARQU3910",
+   "nombre": "PROYECTO UNIDAD AVANZADA"
+ },
+ {
+   "codigo": "ARQU3911",
+   "nombre": "PROYECTO UNIDAD AVANZADA GRP2"
+ },
+ {
+   "codigo": "ARQU3912",
+   "nombre": "PROYECTO UNIDAD AVANZADA GRP3"
+ },
+ {
+   "codigo": "ARQU3913",
+   "nombre": "PROYECTO UNIDAD AVANZADA GRP4"
+ },
+ {
+   "codigo": "ARQU3920",
+   "nombre": "TEORIA UNIDAD AVANZADA"
+ },
+ {
+   "codigo": "ARQU3930",
+   "nombre": "ANÁLISIS UNIDAD AVANZADA"
+ },
+ {
+   "codigo": "ARQU3931",
+   "nombre": "ANALISIS UNIDAD AVANZADA GRP2"
+ },
+ {
+   "codigo": "ARQU3932",
+   "nombre": "ANÁLISIS UNIDAD AVANZADA GRP3"
+ },
+ {
+   "codigo": "ARQU3933",
+   "nombre": "ANÁLISIS UNIDAD AVANZADA GRP4"
+ },
+ {
+   "codigo": "ARQU3990",
+   "nombre": "INSCRIPCION A GRADO"
+ },
+ {
+   "codigo": "ARQU3991",
+   "nombre": "PRACTICA INSTITUC.TIEMPO COMP"
+ },
+ {
+   "codigo": "ARQU3992",
+   "nombre": "PRACTICA INSTITUC.TIEMPO PARCI"
+ },
+ {
+   "codigo": "ARQU4102",
+   "nombre": "ANALISIS DE CIUDAD Y ARQUITECT"
+ },
+ {
+   "codigo": "ARQU4105",
+   "nombre": "TEORIA"
+ },
+ {
+   "codigo": "ARQU4202",
+   "nombre": "LABORATORIO 2"
+ },
+ {
+   "codigo": "ARQU4203",
+   "nombre": "LABORATORIO DE PROFUNDIZACION"
+ },
+ {
+   "codigo": "ARQU4204",
+   "nombre": "LABORATORIO DE INVESTIGACIÓN"
+ },
+ {
+   "codigo": "ARQU4301",
+   "nombre": "TESIS 1"
+ },
+ {
+   "codigo": "ARQU4302",
+   "nombre": "TESIS 2"
+ },
+ {
+   "codigo": "ARQU4303",
+   "nombre": "PROYECTO DE GRADO"
+ },
+ {
+   "codigo": "ARQU1225A",
+   "nombre": "LA HISTORIA DE UNA CASA"
+ },
+ {
+   "codigo": "ARQU1226A",
+   "nombre": "HIST PROPORCIONES ARTE Y ARQU"
+ },
+ {
+   "codigo": "ARQU1229A",
+   "nombre": "ARQUITEC. CUERPO Y PERCEPCIÓN"
+ },
+ {
+   "codigo": "ARQU1305A",
+   "nombre": "CIUDAD Y TECNICA"
+ },
+ {
+   "codigo": "ARQU1306B",
+   "nombre": "RASCACIELOS CIUDAD VERTICAL"
+ },
+ {
+   "codigo": "ARQU2310C",
+   "nombre": "COMPL SISTEMAS DE SOPORTE"
+ },
+ {
+   "codigo": "ARQU2320C",
+   "nombre": "COMPL SISTEMAS DE HABITABILID"
+ },
+ {
+   "codigo": "ARQU2330C",
+   "nombre": "COMPL SISTEMAS DE CONSTR Y EST"
+ },
+ {
+   "codigo": "ARQU2410C",
+   "nombre": "COMPL PAISAJE URBANO"
+ },
+ {
+   "codigo": "ARQU2420C",
+   "nombre": "COMPL PROYECTO URBANO"
+ },
+ {
+   "codigo": "ARQU2430C",
+   "nombre": "COMPL TEORIAS URBANAS"
+ },
+ {
+   "codigo": "ARQU3920C",
+   "nombre": "COMPLEM TEORIA UNIDAD AVANZ"
+ }
+]

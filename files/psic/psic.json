@@ -1,0 +1,338 @@
+[
+ {
+   "codigo": "PSIC1000",
+   "nombre": "SEXUALIDAD HUMANA"
+ },
+ {
+   "codigo": "PSIC1015",
+   "nombre": "SEMILLERO PSICOLOGÍA Y CULTURA"
+ },
+ {
+   "codigo": "PSIC1016",
+   "nombre": "SEMILLERO RELACIONES AFECTIVAS"
+ },
+ {
+   "codigo": "PSIC1020",
+   "nombre": "SEMILLERO CRIMINOLOGIA"
+ },
+ {
+   "codigo": "PSIC1022",
+   "nombre": "SEMILLERO LAB DE COGNICION"
+ },
+ {
+   "codigo": "PSIC1024",
+   "nombre": "SEMILLERO EN PSIC Y ASUNT ECON"
+ },
+ {
+   "codigo": "PSIC1025",
+   "nombre": "SEMILLERO NEUROCIENCIAS"
+ },
+ {
+   "codigo": "PSIC1026",
+   "nombre": "SEMILLERO SUB. VIOLEN Y GUERRA"
+ },
+ {
+   "codigo": "PSIC1027",
+   "nombre": "SEMILLERO GENERO, INTERV. PSIC"
+ },
+ {
+   "codigo": "PSIC1028",
+   "nombre": "SEMILLERO ENF.CARDIOVASCULARES"
+ },
+ {
+   "codigo": "PSIC1030",
+   "nombre": "SEMILLERO NEUROCIENCIA SOCIAL"
+ },
+ {
+   "codigo": "PSIC1204",
+   "nombre": "PRINCIPIOS DE NEUROCIENCIAS 1"
+ },
+ {
+   "codigo": "PSIC1205",
+   "nombre": "PRINCIPIOS DE NEUROCIENCIAS 2"
+ },
+ {
+   "codigo": "PSIC1402",
+   "nombre": "FUNDAMENTOS DE PSICOLOGIA"
+ },
+ {
+   "codigo": "PSIC1403",
+   "nombre": "TALLER DE INDUCCION"
+ },
+ {
+   "codigo": "PSIC2312",
+   "nombre": "PSICOLOGIA DEL APRENDIZAJE"
+ },
+ {
+   "codigo": "PSIC2313",
+   "nombre": "PSICOLOGÍA DE LA EMOCIÓN"
+ },
+ {
+   "codigo": "PSIC2314",
+   "nombre": "PSICOLOGÍA DEL LENGUAJE"
+ },
+ {
+   "codigo": "PSIC2315",
+   "nombre": "PENSAMIENTO Y RAZONAMIENTO"
+ },
+ {
+   "codigo": "PSIC2317",
+   "nombre": "PSICOLOGÍA DE LA MEMORIA"
+ },
+ {
+   "codigo": "PSIC2318",
+   "nombre": "MOTIVACIÓN"
+ },
+ {
+   "codigo": "PSIC2503",
+   "nombre": "PSICOLOGÍA SOCIAL CRÍTICA"
+ },
+ {
+   "codigo": "PSIC2504",
+   "nombre": "PSICOL SOCIAL EXPERIM"
+ },
+ {
+   "codigo": "PSIC2600",
+   "nombre": "ENTREVISTA PSICOLOGICA"
+ },
+ {
+   "codigo": "PSIC2601",
+   "nombre": "PSICOMETRIA"
+ },
+ {
+   "codigo": "PSIC2602",
+   "nombre": "EVALUACION PSICOLÓGICA"
+ },
+ {
+   "codigo": "PSIC2706",
+   "nombre": "DISEÑO Y ANÁLISIS DE INV. 1"
+ },
+ {
+   "codigo": "PSIC2707",
+   "nombre": "DISEÑO Y ANÁLISIS DE INV. 2"
+ },
+ {
+   "codigo": "PSIC2708",
+   "nombre": "DISEÑO Y ANÁLISIS DE INV. 3"
+ },
+ {
+   "codigo": "PSIC3600",
+   "nombre": "OPCION GRADO MATERIAS MAESTRIA"
+ },
+ {
+   "codigo": "PSIC3705",
+   "nombre": "TRABAJO DE GRADO 1 06"
+ },
+ {
+   "codigo": "PSIC3706",
+   "nombre": "TRABAJO DE GRADO 2 06"
+ },
+ {
+   "codigo": "PSIC3707",
+   "nombre": "INVESTIGACION DIRIGIDA 1"
+ },
+ {
+   "codigo": "PSIC3708",
+   "nombre": "INVES.DIRIGIDA 2."
+ },
+ {
+   "codigo": "PSIC3709",
+   "nombre": "PASANTIA ESTUDIANTES EXTERNOS"
+ },
+ {
+   "codigo": "PSIC3800",
+   "nombre": "PSICOLOGIA APLICADA"
+ },
+ {
+   "codigo": "PSIC3801",
+   "nombre": "ETICA PROFESIONAL"
+ },
+ {
+   "codigo": "PSIC3809",
+   "nombre": "PRACTICA PROFESIONAL VOL."
+ },
+ {
+   "codigo": "PSIC3811",
+   "nombre": "PRÁCTICA 1 06"
+ },
+ {
+   "codigo": "PSIC3812",
+   "nombre": "PRÁCTICA 2 06"
+ },
+ {
+   "codigo": "PSIC3814",
+   "nombre": "INFORME DE PRÁCTICA"
+ },
+ {
+   "codigo": "PSIC3815",
+   "nombre": "SEM.OPCIÓN GRADO PROFESIONAL"
+ },
+ {
+   "codigo": "PSIC3817",
+   "nombre": "PSIC. DE LA SALUD OCUPACIONAL"
+ },
+ {
+   "codigo": "PSIC3830",
+   "nombre": "RESILIENCIA: NIÑOS Y JOVENES"
+ },
+ {
+   "codigo": "PSIC3845",
+   "nombre": "DIMENSIONES PSIC. DEL CONSUMO"
+ },
+ {
+   "codigo": "PSIC3857",
+   "nombre": "VIOLENCIA E INTERV PSICOSOCIAL"
+ },
+ {
+   "codigo": "PSIC3858",
+   "nombre": "PSICOLOGIA Y EDUCACION INICIAL"
+ },
+ {
+   "codigo": "PSIC3866",
+   "nombre": "LOGOTERAPIA Y SENTIDO DE VIDA"
+ },
+ {
+   "codigo": "PSIC3869",
+   "nombre": "NEUROCIENCIAS COGNITIVAS"
+ },
+ {
+   "codigo": "PSIC3872",
+   "nombre": "BIENESTAR INFANTIL"
+ },
+ {
+   "codigo": "PSIC3876",
+   "nombre": "CLÍNICA PSICOANALÍTICA"
+ },
+ {
+   "codigo": "PSIC3880",
+   "nombre": "POSICIÓN SOCIAL-EQUIDAD-SALUD"
+ },
+ {
+   "codigo": "PSIC3883",
+   "nombre": "PSICOLOGIA SOCIAL DEL DEPORTE"
+ },
+ {
+   "codigo": "PSIC3884",
+   "nombre": "INVESTIGACION DEL DESARROLLO"
+ },
+ {
+   "codigo": "PSIC3891",
+   "nombre": "CYBERPSYCHOLOGY"
+ },
+ {
+   "codigo": "PSIC3894",
+   "nombre": "DLLO.COMPETENCIAS GERENCIALES"
+ },
+ {
+   "codigo": "PSIC3961",
+   "nombre": "PSICOPATOLOGIA"
+ },
+ {
+   "codigo": "PSIC3962",
+   "nombre": "DESARROLLO PSICOLOGICO"
+ },
+ {
+   "codigo": "PSIC3987",
+   "nombre": "PSICOLOGIA DE LA SALUD"
+ },
+ {
+   "codigo": "PSIC3990",
+   "nombre": "INSCRIPCION A GRADO"
+ },
+ {
+   "codigo": "PSIC4100",
+   "nombre": "DISEÑO DE PROY. DE INVEST I"
+ },
+ {
+   "codigo": "PSIC4106",
+   "nombre": "DISEÑO PROY INV II COLOQI"
+ },
+ {
+   "codigo": "PSIC4107",
+   "nombre": "DISEÑO PROY INV III COLOQ II"
+ },
+ {
+   "codigo": "PSIC4108",
+   "nombre": "DISEÑO PR INVE IV COLOQ III"
+ },
+ {
+   "codigo": "PSIC4202",
+   "nombre": "PSIC. SOCIA. EXPERIM. AVANZADA"
+ },
+ {
+   "codigo": "PSIC4246",
+   "nombre": "PSICOLOGIA CONGNITIVA"
+ },
+ {
+   "codigo": "PSIC4248",
+   "nombre": "EDUCACION PARA LA PAZ"
+ },
+ {
+   "codigo": "PSIC4252",
+   "nombre": "EST. DIRIGIDO: NEUROCIENCIA"
+ },
+ {
+   "codigo": "PSIC4890",
+   "nombre": "SUSTENTACIÓN PROY INVEST MA"
+ },
+ {
+   "codigo": "PSIC4891",
+   "nombre": "SUSTENTACION TESIS DE MAESTRIA"
+ },
+ {
+   "codigo": "PSIC6400",
+   "nombre": "PASANTIA"
+ },
+ {
+   "codigo": "PSIC6401",
+   "nombre": "PASANTIA 2"
+ },
+ {
+   "codigo": "PSIC6402",
+   "nombre": "ESTUD. DIRIGIDO: TRAUMA Y POS."
+ },
+ {
+   "codigo": "PSIC6970",
+   "nombre": "EXAMEN CURSOS FUNDAMENTALES"
+ },
+ {
+   "codigo": "PSIC6980",
+   "nombre": "TESIS Y COLOQUIO DOCTORALES"
+ },
+ {
+   "codigo": "PSIC6981",
+   "nombre": "TESIS Y COLOQUIO DOCTORALES"
+ },
+ {
+   "codigo": "PSIC6990",
+   "nombre": "SUSTENTACIÓN PROYECTO INV."
+ },
+ {
+   "codigo": "PSIC6991",
+   "nombre": "DISERTACION DOCTORAL EN CURSO"
+ },
+ {
+   "codigo": "PSIC6992",
+   "nombre": "SUSTENTACION DE TESIS DOCTORAL"
+ },
+ {
+   "codigo": "PSIC1123B",
+   "nombre": "BIOÉTICA"
+ },
+ {
+   "codigo": "PSIC1129B",
+   "nombre": "LA CIENCIA DE LA FELICIDAD"
+ },
+ {
+   "codigo": "PSIC1130B",
+   "nombre": "PERS. PSIC. DEL AMOR DE PAREJA"
+ },
+ {
+   "codigo": "PSIC1136B",
+   "nombre": "GENERO Y SOCIEDAD"
+ },
+ {
+   "codigo": "PSIC1137B",
+   "nombre": "INFANCIA Y SOCIEDAD"
+ }
+]

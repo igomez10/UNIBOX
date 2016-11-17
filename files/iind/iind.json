@@ -1,0 +1,334 @@
+[
+ {
+   "codigo": "IIND1000",
+   "nombre": "INTROD. INGEN. INDUSTRIAL"
+ },
+ {
+   "codigo": "IIND1001",
+   "nombre": "PROGRAMA DE ACOMPAÑAMIENTO"
+ },
+ {
+   "codigo": "IIND1003",
+   "nombre": "CLINICA DE PROBLEMAS (IIND)"
+ },
+ {
+   "codigo": "IIND2070",
+   "nombre": "MONITORIA INGENIERIA INDUSTRIA"
+ },
+ {
+   "codigo": "IIND2071",
+   "nombre": "MONITORIA INGENIERIA INDUSTRIA"
+ },
+ {
+   "codigo": "IIND2103",
+   "nombre": "PRINCIPIOS OPTIMIZACION"
+ },
+ {
+   "codigo": "IIND2104",
+   "nombre": "MODELOS PROBABILISTICOS"
+ },
+ {
+   "codigo": "IIND2106",
+   "nombre": "PROBABILIDAD Y ESTADÍSTICA I"
+ },
+ {
+   "codigo": "IIND2107",
+   "nombre": "PROBABILIDAD Y ESTADISTICA II"
+ },
+ {
+   "codigo": "IIND2109",
+   "nombre": "SISTEMAS APOYO A LA DECISION"
+ },
+ {
+   "codigo": "IIND2201",
+   "nombre": "CONTROL DE PRODUCCION"
+ },
+ {
+   "codigo": "IIND2202",
+   "nombre": "FUNDAMENTOS DE PRODUCCION"
+ },
+ {
+   "codigo": "IIND2301",
+   "nombre": "DINAMICA DE SISTEMAS"
+ },
+ {
+   "codigo": "IIND2302",
+   "nombre": "PENS SISTEMICO ORGANIZACIONES"
+ },
+ {
+   "codigo": "IIND2400",
+   "nombre": "SIST. DE CONTROL GERENCIAL"
+ },
+ {
+   "codigo": "IIND2401",
+   "nombre": "ANALIS.DECISION INVERSION"
+ },
+ {
+   "codigo": "IIND3000",
+   "nombre": "PROYECTO DE GRADO 1"
+ },
+ {
+   "codigo": "IIND3001",
+   "nombre": "PROYECTO DE GRADO 2"
+ },
+ {
+   "codigo": "IIND3006",
+   "nombre": "PROYECTO INTERMEDIO"
+ },
+ {
+   "codigo": "IIND3107",
+   "nombre": "ING. DE MERCADEO"
+ },
+ {
+   "codigo": "IIND3113",
+   "nombre": "SIMULAC. EVENTOS DISCRETOS"
+ },
+ {
+   "codigo": "IIND3202",
+   "nombre": "GERENCIA DE PRODUCCION"
+ },
+ {
+   "codigo": "IIND3209",
+   "nombre": "INNOVACION TECNOLOGICA"
+ },
+ {
+   "codigo": "IIND3218",
+   "nombre": "FUNDAMENTOS DE LA CALIDAD"
+ },
+ {
+   "codigo": "IIND3221",
+   "nombre": "LOGÍSTICA"
+ },
+ {
+   "codigo": "IIND3301",
+   "nombre": "SISTEMAS PUBLICOS"
+ },
+ {
+   "codigo": "IIND3304",
+   "nombre": "NEGOCIACION COLECTIVA"
+ },
+ {
+   "codigo": "IIND3311",
+   "nombre": "ESTRATEGIA ORGANIZACIONAL"
+ },
+ {
+   "codigo": "IIND3312",
+   "nombre": "EMPREND.INNOVAC.EN INGE"
+ },
+ {
+   "codigo": "IIND3400",
+   "nombre": "FINANZAS"
+ },
+ {
+   "codigo": "IIND3402",
+   "nombre": "VALORACION DE EMPRESAS"
+ },
+ {
+   "codigo": "IIND3991",
+   "nombre": "PRACTICA PROFESIONAL"
+ },
+ {
+   "codigo": "IIND4002",
+   "nombre": "TESIS 1"
+ },
+ {
+   "codigo": "IIND4005",
+   "nombre": "SEMINARIO DE INVESTIGACION"
+ },
+ {
+   "codigo": "IIND4006",
+   "nombre": "TESIS DE GRADO 2"
+ },
+ {
+   "codigo": "IIND4007",
+   "nombre": "NIVELATORIO ESTOCASTICOS"
+ },
+ {
+   "codigo": "IIND4008",
+   "nombre": "NIVELATORIO OPTIMIZACION"
+ },
+ {
+   "codigo": "IIND4009",
+   "nombre": "INTERCAMBIO DE MAESTRIA"
+ },
+ {
+   "codigo": "IIND4010",
+   "nombre": "INTERCAMBIO INTERNACIONAL"
+ },
+ {
+   "codigo": "IIND4011",
+   "nombre": "TESIS DOBLE DIPLOMA"
+ },
+ {
+   "codigo": "IIND4100",
+   "nombre": "MODELOS ESTADIST.LINEALES"
+ },
+ {
+   "codigo": "IIND4101",
+   "nombre": "OPTIMIZACION AVANZADA"
+ },
+ {
+   "codigo": "IIND4103",
+   "nombre": "PRON.Y.SERIES DE TIEMPO"
+ },
+ {
+   "codigo": "IIND4109",
+   "nombre": "METAHEURISTICAS"
+ },
+ {
+   "codigo": "IIND4110",
+   "nombre": "TUTORIAL INV.OPERACIONES"
+ },
+ {
+   "codigo": "IIND4115",
+   "nombre": "FLUJO EN REDES"
+ },
+ {
+   "codigo": "IIND4117",
+   "nombre": "TECNICAS AVANZADAS SIMULACION"
+ },
+ {
+   "codigo": "IIND4123",
+   "nombre": "STATISTIC LEARN DATA ANALYTICS"
+ },
+ {
+   "codigo": "IIND4200",
+   "nombre": "MODELOS CONTROL PRODUCC."
+ },
+ {
+   "codigo": "IIND4210",
+   "nombre": "TUTORIAL EN SISTEMAS DE PROD"
+ },
+ {
+   "codigo": "IIND4213",
+   "nombre": "DISEÑO DE EXPERIM. INGE."
+ },
+ {
+   "codigo": "IIND4214",
+   "nombre": "METODOS SIX SIGMA"
+ },
+ {
+   "codigo": "IIND4302",
+   "nombre": "DIAG. Y DIS. ORGANIZACIONAL"
+ },
+ {
+   "codigo": "IIND4309",
+   "nombre": "NEGOCIACION. Y TOMA DE DECIS."
+ },
+ {
+   "codigo": "IIND4311",
+   "nombre": "ESTRUCTUR. DE REDES SOCIALES"
+ },
+ {
+   "codigo": "IIND4317",
+   "nombre": "TUTORIAL DIREC. Y GESTION"
+ },
+ {
+   "codigo": "IIND4333",
+   "nombre": "INGENIERÍA SISTEMAS SOCIALES"
+ },
+ {
+   "codigo": "IIND4403",
+   "nombre": "TEORIA DE LA DECISION"
+ },
+ {
+   "codigo": "IIND4406",
+   "nombre": "GERENCIA FINANCIERA DEL RIESGO"
+ },
+ {
+   "codigo": "IIND6002",
+   "nombre": "TUTORIAL 1"
+ },
+ {
+   "codigo": "IIND6003",
+   "nombre": "TUTORIAL 2"
+ },
+ {
+   "codigo": "IIND6402",
+   "nombre": "PASANTIA SEMESTRAL"
+ },
+ {
+   "codigo": "IIND6970",
+   "nombre": "EXAMEN DE PROPUESTA DOCTORAL"
+ },
+ {
+   "codigo": "IIND6980",
+   "nombre": "TESIS 4CR"
+ },
+ {
+   "codigo": "IIND6981",
+   "nombre": "TESIS 8CR"
+ },
+ {
+   "codigo": "IIND6982",
+   "nombre": "TESIS 12CR"
+ },
+ {
+   "codigo": "IIND6990",
+   "nombre": "SUSTENTACION DE TESIS"
+ },
+ {
+   "codigo": "IIND6997",
+   "nombre": "PASANTIA ESTUDIANTES EXTERNOS"
+ },
+ {
+   "codigo": "IIND1301A",
+   "nombre": "MODELOS PARA PENSAR"
+ },
+ {
+   "codigo": "IIND2103C",
+   "nombre": "REFUERZO PRINCIPIOS OPTIMIZAC."
+ },
+ {
+   "codigo": "IIND2104C",
+   "nombre": "REFUERZO MODELOS PROBABILISTIC"
+ },
+ {
+   "codigo": "IIND2106C",
+   "nombre": "REFUERZO PROBA Y ESTAD I"
+ },
+ {
+   "codigo": "IIND2107C",
+   "nombre": "REFUERZO PROBA Y ESTD II"
+ },
+ {
+   "codigo": "IIND2109C",
+   "nombre": "REFUERZO SIST. APOYO DECISION"
+ },
+ {
+   "codigo": "IIND2201C",
+   "nombre": "REFUERZO CONTROL DE PRODUCCION"
+ },
+ {
+   "codigo": "IIND2202C",
+   "nombre": "COMPL. FUNDAMENTOS PRODUCCIÓN"
+ },
+ {
+   "codigo": "IIND2301C",
+   "nombre": "REFUERZO DINÁMICA DE SISTEMAS"
+ },
+ {
+   "codigo": "IIND2302C",
+   "nombre": "COMPL. PENS SISTE ORGANIZACION"
+ },
+ {
+   "codigo": "IIND2401C",
+   "nombre": "REFUERZO ANALIS.DECISION INVER"
+ },
+ {
+   "codigo": "IIND3113C",
+   "nombre": "REFUERZO SIMULA. EVENT.DISCRET"
+ },
+ {
+   "codigo": "IIND3218C",
+   "nombre": "REFUERZO FUND. CALIDAD"
+ },
+ {
+   "codigo": "IIND3221C",
+   "nombre": "REFUERZO LOGÍSTICA"
+ },
+ {
+   "codigo": "IIND3311C",
+   "nombre": "COMPL. ESTRAT. ORGANIZACIONAL"
+ }
+]

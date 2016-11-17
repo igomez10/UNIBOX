@@ -1,0 +1,478 @@
+[
+ {
+   "codigo": "MEDI1100",
+   "nombre": "INDUCCION"
+ },
+ {
+   "codigo": "MEDI1101",
+   "nombre": "INTRODUC.A LA PROFESION MEDICA"
+ },
+ {
+   "codigo": "MEDI1102",
+   "nombre": "HABILIDADES DE COMUNICACIÓN I"
+ },
+ {
+   "codigo": "MEDI1103",
+   "nombre": "ETICA MEDICA Y PROFESIONALI. I"
+ },
+ {
+   "codigo": "MEDI1104",
+   "nombre": "PRINCIP. DEL DESARROLLO HUMANO"
+ },
+ {
+   "codigo": "MEDI1105",
+   "nombre": "EPIDEMIOLOGIA"
+ },
+ {
+   "codigo": "MEDI1106",
+   "nombre": "MEDICINA SOCIAL"
+ },
+ {
+   "codigo": "MEDI1200",
+   "nombre": "ANATOMIA"
+ },
+ {
+   "codigo": "MEDI1208",
+   "nombre": "EMBRIOLOGIA"
+ },
+ {
+   "codigo": "MEDI1209",
+   "nombre": "HISTOLOGIA"
+ },
+ {
+   "codigo": "MEDI1210",
+   "nombre": "FARMACOLOGIA"
+ },
+ {
+   "codigo": "MEDI1211",
+   "nombre": "FISIOLOGIA"
+ },
+ {
+   "codigo": "MEDI1212",
+   "nombre": "INMUNOLOGIA"
+ },
+ {
+   "codigo": "MEDI1216",
+   "nombre": "PATOLOGIA"
+ },
+ {
+   "codigo": "MEDI1218",
+   "nombre": "BIOQUIMICA"
+ },
+ {
+   "codigo": "MEDI1219",
+   "nombre": "LABORATORIO DE ANATOMIA"
+ },
+ {
+   "codigo": "MEDI1229",
+   "nombre": "LABORATORIO DE HISTOLOGIA"
+ },
+ {
+   "codigo": "MEDI1999",
+   "nombre": "REQUISITO DE VACUNAS 3 SEMEST."
+ },
+ {
+   "codigo": "MEDI2000",
+   "nombre": "REQUISITO DE VACUNAS 5° SEM"
+ },
+ {
+   "codigo": "MEDI2001",
+   "nombre": "MEDICAM.CÓMO ACTUAN, CÓMO USAR"
+ },
+ {
+   "codigo": "MEDI2002",
+   "nombre": "COMPORTAMIENTO Y CEREBRO HUMAN"
+ },
+ {
+   "codigo": "MEDI2003",
+   "nombre": "EL TROPICO Y SUS ENFERMEDADES"
+ },
+ {
+   "codigo": "MEDI2004",
+   "nombre": "SUSTANCIAS PSICOACTIV.SIN CENS"
+ },
+ {
+   "codigo": "MEDI2107",
+   "nombre": "ELEMENT. DE DECISION CLINICA I"
+ },
+ {
+   "codigo": "MEDI2108",
+   "nombre": "SEMI. I Y AT. PRI. A LA COMU."
+ },
+ {
+   "codigo": "MEDI2109",
+   "nombre": "ELEMEN. DE DECISION CLINICA II"
+ },
+ {
+   "codigo": "MEDI2110",
+   "nombre": "SEMI.II Y AT. PRI. A LA COMU."
+ },
+ {
+   "codigo": "MEDI2300",
+   "nombre": "GENÉTICA MÉDICA"
+ },
+ {
+   "codigo": "MEDI2301",
+   "nombre": "PARASITOLOGIA MEDICA"
+ },
+ {
+   "codigo": "MEDI2303",
+   "nombre": "SISTEMA CARDIOVASCULAR"
+ },
+ {
+   "codigo": "MEDI2304",
+   "nombre": "SISTEMA HEMATOPOYETI. Y NEOPL."
+ },
+ {
+   "codigo": "MEDI2305",
+   "nombre": "SISTEMA ENDOCRINOLOGICO"
+ },
+ {
+   "codigo": "MEDI2306",
+   "nombre": "SISTEMA RESPIRATORIO"
+ },
+ {
+   "codigo": "MEDI2307",
+   "nombre": "SISTEMA COMPOR. Y PSIQUIATRIA"
+ },
+ {
+   "codigo": "MEDI2308",
+   "nombre": "SISTEMA GASTROIN. Y NUTRICION"
+ },
+ {
+   "codigo": "MEDI2309",
+   "nombre": "SISTEMA NERVIOSO"
+ },
+ {
+   "codigo": "MEDI2310",
+   "nombre": "SISTEMA URINARIO Y RENAL"
+ },
+ {
+   "codigo": "MEDI2311",
+   "nombre": "SISTEMA MUCOCUTANEO"
+ },
+ {
+   "codigo": "MEDI2312",
+   "nombre": "SISTEMA OSTEOMUSCULAR"
+ },
+ {
+   "codigo": "MEDI2313",
+   "nombre": "SISTEMA REPRODUCTIVO"
+ },
+ {
+   "codigo": "MEDI3111",
+   "nombre": "SISTEMAS DE SALUD I"
+ },
+ {
+   "codigo": "MEDI3112",
+   "nombre": "SISTEMAS DE SALUD II"
+ },
+ {
+   "codigo": "MEDI3113",
+   "nombre": "HABILIDADES DE COMUNICACION II"
+ },
+ {
+   "codigo": "MEDI3114",
+   "nombre": "ETICA MEDICA Y PROFESIONA. II"
+ },
+ {
+   "codigo": "MEDI3400",
+   "nombre": "BITACORA SEMIOLOGIA I"
+ },
+ {
+   "codigo": "MEDI3403",
+   "nombre": "BITACORA SEMIOLOGIA II"
+ },
+ {
+   "codigo": "MEDI3406",
+   "nombre": "MEDICINA INTERNA"
+ },
+ {
+   "codigo": "MEDI3407",
+   "nombre": "PEDIATRIA"
+ },
+ {
+   "codigo": "MEDI3408",
+   "nombre": "BITACORA CLINICA I"
+ },
+ {
+   "codigo": "MEDI3409",
+   "nombre": "TURNOS CLINICOS I"
+ },
+ {
+   "codigo": "MEDI3410",
+   "nombre": "ANESTESIOLOGIA"
+ },
+ {
+   "codigo": "MEDI3411",
+   "nombre": "CIRUGIA"
+ },
+ {
+   "codigo": "MEDI3412",
+   "nombre": "OFTALMOLOG. Y OTORRINOLARINGO."
+ },
+ {
+   "codigo": "MEDI3413",
+   "nombre": "ORTOPEDIA"
+ },
+ {
+   "codigo": "MEDI3414",
+   "nombre": "BITACORA CLINICA II"
+ },
+ {
+   "codigo": "MEDI3415",
+   "nombre": "TURNOS CLINICOS II"
+ },
+ {
+   "codigo": "MEDI3416",
+   "nombre": "GINECOLOGIA Y OBSTETRICIA"
+ },
+ {
+   "codigo": "MEDI3417",
+   "nombre": "MEDICINA LEGAL Y CIENCIA FORE."
+ },
+ {
+   "codigo": "MEDI3418",
+   "nombre": "REANIMACION BASICA Y AVANZADA"
+ },
+ {
+   "codigo": "MEDI3419",
+   "nombre": "UROLOGIA Y ONCOLOGIA"
+ },
+ {
+   "codigo": "MEDI3420",
+   "nombre": "BITACORA CLINICA III"
+ },
+ {
+   "codigo": "MEDI3422",
+   "nombre": "PROYECTO DE GRADO I"
+ },
+ {
+   "codigo": "MEDI3423",
+   "nombre": "MEDICINA FISICA Y REHABILITA."
+ },
+ {
+   "codigo": "MEDI3424",
+   "nombre": "NEUROLOGIA"
+ },
+ {
+   "codigo": "MEDI3425",
+   "nombre": "PSIQUIATRÍA"
+ },
+ {
+   "codigo": "MEDI3426",
+   "nombre": "COMP. HUMANO: TOXI. Y SEXUALI."
+ },
+ {
+   "codigo": "MEDI3427",
+   "nombre": "URGENCIAS"
+ },
+ {
+   "codigo": "MEDI3429",
+   "nombre": "TURNOS CLÍNICOS IV"
+ },
+ {
+   "codigo": "MEDI3430",
+   "nombre": "PROYECTO DE GRADO II"
+ },
+ {
+   "codigo": "MEDI3432",
+   "nombre": "BITACORA CLINICA V"
+ },
+ {
+   "codigo": "MEDI3433",
+   "nombre": "PASANTIA CLINICA MEDICA"
+ },
+ {
+   "codigo": "MEDI3434",
+   "nombre": "TURNOS CLINICOS III"
+ },
+ {
+   "codigo": "MEDI3435",
+   "nombre": "BITACORA CLINICA IV"
+ },
+ {
+   "codigo": "MEDI3436",
+   "nombre": "INTERNADO OBLIGATORIO ANESTES."
+ },
+ {
+   "codigo": "MEDI3437",
+   "nombre": "INTERNADO OBLIGATORIO CIRUGIA"
+ },
+ {
+   "codigo": "MEDI3438",
+   "nombre": "INTERNADO OBLIGATORIO GINE-OBS"
+ },
+ {
+   "codigo": "MEDI3439",
+   "nombre": "INTERNADO OBLIGATORIO MED-INTE"
+ },
+ {
+   "codigo": "MEDI3440",
+   "nombre": "INTERNADO OBLIGATORIO PEDIAT."
+ },
+ {
+   "codigo": "MEDI3441",
+   "nombre": "INTERNADO OBLIGATORIO ORTOPED."
+ },
+ {
+   "codigo": "MEDI3442",
+   "nombre": "INTERNADO OBLIGATORIO URGENC."
+ },
+ {
+   "codigo": "MEDI3443",
+   "nombre": "PALS / REANIMACION PEDIATRICA"
+ },
+ {
+   "codigo": "MEDI3445",
+   "nombre": "PASANTIA INVESTIGACION"
+ },
+ {
+   "codigo": "MEDI3500",
+   "nombre": "MODULO SELECTIVO I ADMINIST. 1"
+ },
+ {
+   "codigo": "MEDI3501",
+   "nombre": "MODULO SELECTIVO I AT. PRIM. 1"
+ },
+ {
+   "codigo": "MEDI3502",
+   "nombre": "MODULO SELECTIVO I HOSP. CL. 1"
+ },
+ {
+   "codigo": "MEDI3503",
+   "nombre": "MODULO SELECTIVO I INVESTIG. 1"
+ },
+ {
+   "codigo": "MEDI3504",
+   "nombre": "MODULO SELECTIVO I SALUD P. 1"
+ },
+ {
+   "codigo": "MEDI3515",
+   "nombre": "MODULO SELECTIVO II ADMINIS. 1"
+ },
+ {
+   "codigo": "MEDI3516",
+   "nombre": "MODULO SELECTIVO II AT. PRI. 1"
+ },
+ {
+   "codigo": "MEDI3517",
+   "nombre": "MODULO SELECTIVO II HOS. CL. 1"
+ },
+ {
+   "codigo": "MEDI3518",
+   "nombre": "MODULO SELECTIVO II INVESTI. 1"
+ },
+ {
+   "codigo": "MEDI3519",
+   "nombre": "MODULO SELECTIVO II SALUD P. 1"
+ },
+ {
+   "codigo": "MEDI3520",
+   "nombre": "MODULO SELECTIVO II ADMINIS. 2"
+ },
+ {
+   "codigo": "MEDI3521",
+   "nombre": "MODULO SELECTIVO II AT. PRI. 2"
+ },
+ {
+   "codigo": "MEDI3522",
+   "nombre": "MODULO SELECTIVO II HOS. CL. 2"
+ },
+ {
+   "codigo": "MEDI3523",
+   "nombre": "MODULO SELECTIVO II INVESTI. 2"
+ },
+ {
+   "codigo": "MEDI3524",
+   "nombre": "MODULO SELECTIVO II SALUD P. 2"
+ },
+ {
+   "codigo": "MEDI3525",
+   "nombre": "MODULO SELECTIVO II ADMINIS. 3"
+ },
+ {
+   "codigo": "MEDI3526",
+   "nombre": "MODULO SELECTIVO II AT. PRI. 3"
+ },
+ {
+   "codigo": "MEDI3527",
+   "nombre": "MODULO SELECTIVO II HOS. CL. 3"
+ },
+ {
+   "codigo": "MEDI3528",
+   "nombre": "MODULO SELECTIVO II INVESTI. 3"
+ },
+ {
+   "codigo": "MEDI3529",
+   "nombre": "MODULO SELECTIVO II SALUD P. 3"
+ },
+ {
+   "codigo": "MEDI3530",
+   "nombre": "INTERNADO SELECTIVO ADMIN. 1"
+ },
+ {
+   "codigo": "MEDI3531",
+   "nombre": "INTERNADO SELECTIVO AT. PRI.1"
+ },
+ {
+   "codigo": "MEDI3532",
+   "nombre": "INTERNADO SELECTIVO HOS. CL. 1"
+ },
+ {
+   "codigo": "MEDI3533",
+   "nombre": "INTERNADO SELECTIVO INVESTI. 1"
+ },
+ {
+   "codigo": "MEDI3534",
+   "nombre": "INTERNADO SELECTIVO SALUD P.1"
+ },
+ {
+   "codigo": "MEDI3535",
+   "nombre": "INTERNADO SELECTIVO ADMINIST.2"
+ },
+ {
+   "codigo": "MEDI3536",
+   "nombre": "INTERN. SELECT. ATENC. PRIMAR2"
+ },
+ {
+   "codigo": "MEDI3537",
+   "nombre": "INTERNADO SELECTIVO HOS. CL. 2"
+ },
+ {
+   "codigo": "MEDI3538",
+   "nombre": "INTERNADO SELECT. INVEST. 2"
+ },
+ {
+   "codigo": "MEDI3539",
+   "nombre": "INTERNADO SELECT. SALUD PÚB. 2"
+ },
+ {
+   "codigo": "MEDI3540",
+   "nombre": "INTERNADO SELECTIVO ADMI. 3"
+ },
+ {
+   "codigo": "MEDI3541",
+   "nombre": "INTERNADO SELECTIVO AT. PRI. 3"
+ },
+ {
+   "codigo": "MEDI3542",
+   "nombre": "INTERNADO SELECTIVO HOS. CL. 3"
+ },
+ {
+   "codigo": "MEDI3543",
+   "nombre": "INTERNADO SELECTIVO INVESTI. 3"
+ },
+ {
+   "codigo": "MEDI3544",
+   "nombre": "INTERNADO SELECTIVO SALUD P.3"
+ },
+ {
+   "codigo": "MEDI3547",
+   "nombre": "AIEPI"
+ },
+ {
+   "codigo": "MEDI3548",
+   "nombre": "DESCIF. LA ENF: INVEST. BIOMED"
+ }
+]

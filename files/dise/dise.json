@@ -1,0 +1,394 @@
+[
+ {
+   "codigo": "DISE1000",
+   "nombre": "INDUCCIÓN TALLER-LABORATORIO"
+ },
+ {
+   "codigo": "DISE1106",
+   "nombre": "ESTUDIO 1"
+ },
+ {
+   "codigo": "DISE1107",
+   "nombre": "ESTUDIO 2"
+ },
+ {
+   "codigo": "DISE1204",
+   "nombre": "HISTORIA DEL DISEÑO"
+ },
+ {
+   "codigo": "DISE1301",
+   "nombre": "DIBUJO A MANO ALZADA"
+ },
+ {
+   "codigo": "DISE1312",
+   "nombre": "TALLER DIGITAL"
+ },
+ {
+   "codigo": "DISE1314",
+   "nombre": "EXPRESIÓN LIBRE"
+ },
+ {
+   "codigo": "DISE1316",
+   "nombre": "DIBUJO DE FIGURA HUMANA"
+ },
+ {
+   "codigo": "DISE1317",
+   "nombre": "NARRATIVAS VISUALES"
+ },
+ {
+   "codigo": "DISE1401",
+   "nombre": "PERSPECTIVA Y DESCRIPTIVA"
+ },
+ {
+   "codigo": "DISE1403",
+   "nombre": "INGENIERÍA DE PAPEL"
+ },
+ {
+   "codigo": "DISE1405",
+   "nombre": "M-T: EXPRESIÓN TRIDIMENSIONAL"
+ },
+ {
+   "codigo": "DISE1415",
+   "nombre": "MEDIOS MIXTOS"
+ },
+ {
+   "codigo": "DISE1501",
+   "nombre": "BOCETACIÓN DE IDEAS"
+ },
+ {
+   "codigo": "DISE2100",
+   "nombre": "ESTUDIO 3"
+ },
+ {
+   "codigo": "DISE2101",
+   "nombre": "ESTUDIO 4"
+ },
+ {
+   "codigo": "DISE2112",
+   "nombre": "ESTUDIO 5: PRODUCCIÓN CREATIVA"
+ },
+ {
+   "codigo": "DISE2122",
+   "nombre": "ESTUDIO 5: DIRECCIÓN CREATIVA"
+ },
+ {
+   "codigo": "DISE2132",
+   "nombre": "ESTUDIO 5: DESARROLLO"
+ },
+ {
+   "codigo": "DISE2200",
+   "nombre": "CULTURAS VISUALES"
+ },
+ {
+   "codigo": "DISE2306",
+   "nombre": "PRODUCTO 1"
+ },
+ {
+   "codigo": "DISE2307",
+   "nombre": "PRODUCTO 2"
+ },
+ {
+   "codigo": "DISE2308",
+   "nombre": "PRODUCTO 3"
+ },
+ {
+   "codigo": "DISE2309",
+   "nombre": "PRODUCTO 4"
+ },
+ {
+   "codigo": "DISE2356",
+   "nombre": "COMUNICACIÓN 1"
+ },
+ {
+   "codigo": "DISE2357",
+   "nombre": "COMUNICACIÓN 2"
+ },
+ {
+   "codigo": "DISE2358",
+   "nombre": "COMUNICACIÓN 3"
+ },
+ {
+   "codigo": "DISE2359",
+   "nombre": "COMUNICACIÓN 4"
+ },
+ {
+   "codigo": "DISE2501",
+   "nombre": "MEDIO: PLASTICOS"
+ },
+ {
+   "codigo": "DISE2502",
+   "nombre": "MEDIO: CERÁMICA"
+ },
+ {
+   "codigo": "DISE2503",
+   "nombre": "MEDIO: MADERA"
+ },
+ {
+   "codigo": "DISE2506",
+   "nombre": "DISEÑO EN MEDIOS INTERACTIVOS"
+ },
+ {
+   "codigo": "DISE2509",
+   "nombre": "MEDIO: GRÁFICA"
+ },
+ {
+   "codigo": "DISE2515",
+   "nombre": "MEDIO: SONIDO"
+ },
+ {
+   "codigo": "DISE2517",
+   "nombre": "TIPOGRAFÍA"
+ },
+ {
+   "codigo": "DISE2521",
+   "nombre": "FOTOGRAFÍA 1"
+ },
+ {
+   "codigo": "DISE2524",
+   "nombre": "MODELADO Y SIMULACIÓN DIGITAL"
+ },
+ {
+   "codigo": "DISE2525",
+   "nombre": "WEB: DISEÑO E INTERACCIÓN"
+ },
+ {
+   "codigo": "DISE2531",
+   "nombre": "ILUSTRACIÓN"
+ },
+ {
+   "codigo": "DISE2601",
+   "nombre": "MOBILIARIO"
+ },
+ {
+   "codigo": "DISE2603",
+   "nombre": "JOYERÍA"
+ },
+ {
+   "codigo": "DISE2606",
+   "nombre": "MEDIO: GRÁFICA AVANZADA"
+ },
+ {
+   "codigo": "DISE2607",
+   "nombre": "TIPOGRAFIA EXPERIMENTAL"
+ },
+ {
+   "codigo": "DISE2610",
+   "nombre": "EMPAQUES"
+ },
+ {
+   "codigo": "DISE2616",
+   "nombre": "FOTOGRAFÍA 2: PERSONAS"
+ },
+ {
+   "codigo": "DISE2618",
+   "nombre": "DISEÑO EDITORIAL"
+ },
+ {
+   "codigo": "DISE2621",
+   "nombre": "AMBIENTES INTERACTIVOS"
+ },
+ {
+   "codigo": "DISE2624",
+   "nombre": "FOTOGRAFÍA 2: PRODUCTOS"
+ },
+ {
+   "codigo": "DISE2628",
+   "nombre": "FOTOGRAFÍA MICROSCÓPICA"
+ },
+ {
+   "codigo": "DISE2631",
+   "nombre": "DISEÑO DE VIDEOJUEGOS"
+ },
+ {
+   "codigo": "DISE2633",
+   "nombre": "VIDEO/DOCUMENTAL"
+ },
+ {
+   "codigo": "DISE2634",
+   "nombre": "DISEÑO Y PRODUCCIÓN DE SONIDO"
+ },
+ {
+   "codigo": "DISE2635",
+   "nombre": "ORNAMENTO CORPORAL"
+ },
+ {
+   "codigo": "DISE3125",
+   "nombre": "ESTUDIO 6: PROD INDUSTRIAL"
+ },
+ {
+   "codigo": "DISE3129",
+   "nombre": "ESTUDIO 7: TALLER INNOVACIÓN"
+ },
+ {
+   "codigo": "DISE3131",
+   "nombre": "ESTUDIO 7: SOSTENIBILIDAD"
+ },
+ {
+   "codigo": "DISE3144",
+   "nombre": "E6: DISEÑO PARA EXPOSICIONES"
+ },
+ {
+   "codigo": "DISE3146",
+   "nombre": "ESTUDIO 6: INTERACCIÓN"
+ },
+ {
+   "codigo": "DISE3147",
+   "nombre": "E6: MODA INDUSTRIA CREATIVA"
+ },
+ {
+   "codigo": "DISE3148",
+   "nombre": "ESTUDIO 7: DISEÑO DE SERVICIOS"
+ },
+ {
+   "codigo": "DISE3149",
+   "nombre": "E7: CHALLENGING EXTREMISM"
+ },
+ {
+   "codigo": "DISE3199",
+   "nombre": "ESTUDIO 8: PROYECTO DE GRADO"
+ },
+ {
+   "codigo": "DISE3202",
+   "nombre": "CREATIVIDAD"
+ },
+ {
+   "codigo": "DISE3205",
+   "nombre": "HISTORIA DEL DISEÑO 2"
+ },
+ {
+   "codigo": "DISE3206",
+   "nombre": "ESTETICA LATINOAMERICANA"
+ },
+ {
+   "codigo": "DISE3207",
+   "nombre": "ALIMENTOS OPORTUN. EMPRENDED."
+ },
+ {
+   "codigo": "DISE3220",
+   "nombre": "DISEÑO Y PROPIEDAD INTELECTU"
+ },
+ {
+   "codigo": "DISE3227",
+   "nombre": "PORTAFOLIO"
+ },
+ {
+   "codigo": "DISE3236",
+   "nombre": "MAPAS - METODOLOGÍA PARA PROCE"
+ },
+ {
+   "codigo": "DISE3245",
+   "nombre": "RECORDANDO EL FUTURO"
+ },
+ {
+   "codigo": "DISE3247",
+   "nombre": "DISEÑO, GENERO Y SEXO"
+ },
+ {
+   "codigo": "DISE3336",
+   "nombre": "COOL HUNTING"
+ },
+ {
+   "codigo": "DISE3344",
+   "nombre": "HISTORIA DE LA TIPOGRAFÍA"
+ },
+ {
+   "codigo": "DISE3349",
+   "nombre": "VIDEOJUEGOS: HISTORIA Y DISEÑO"
+ },
+ {
+   "codigo": "DISE3350",
+   "nombre": "COLOR"
+ },
+ {
+   "codigo": "DISE3351",
+   "nombre": "GUION LAB"
+ },
+ {
+   "codigo": "DISE3353",
+   "nombre": "ATLAS: COMPILAR Y COMUNICAR"
+ },
+ {
+   "codigo": "DISE3354",
+   "nombre": "CUERPO, DISEÑO Y CULTURA"
+ },
+ {
+   "codigo": "DISE3409",
+   "nombre": "DESARROLLO PRODUCTO SOSTENIBLE"
+ },
+ {
+   "codigo": "DISE3423",
+   "nombre": "CO-CREACIÓN"
+ },
+ {
+   "codigo": "DISE3425",
+   "nombre": "DISEÑO DE JUGUETES"
+ },
+ {
+   "codigo": "DISE3430",
+   "nombre": "EXPRESION PARAMETRICA"
+ },
+ {
+   "codigo": "DISE3437",
+   "nombre": "DISEÑO, MATERIALES Y PROCESOS"
+ },
+ {
+   "codigo": "DISE3438",
+   "nombre": "FABRICACION DE PEQUEÑAS SERIES"
+ },
+ {
+   "codigo": "DISE3503",
+   "nombre": "CONSTRUCCIÓN SOBRE EL CUERPO"
+ },
+ {
+   "codigo": "DISE3505",
+   "nombre": "PATRONAJE Y CONFECCIÓN EB"
+ },
+ {
+   "codigo": "DISE3509",
+   "nombre": "SUPERFICIES DIGITALES"
+ },
+ {
+   "codigo": "DISE3511",
+   "nombre": "SUPERFICIES TEXTILES"
+ },
+ {
+   "codigo": "DISE3602",
+   "nombre": "DISEÑO DE ACCESORIOS Y PRENDAS"
+ },
+ {
+   "codigo": "DISE3603",
+   "nombre": "DISEÑO DE SUPERFICIES"
+ },
+ {
+   "codigo": "DISE3604",
+   "nombre": "LABORATORIO DE PATRONES"
+ },
+ {
+   "codigo": "DISE3703",
+   "nombre": "BRANDING"
+ },
+ {
+   "codigo": "DISE3990",
+   "nombre": "INSCRIPCIÓN A GRADO"
+ },
+ {
+   "codigo": "DISE3991",
+   "nombre": "PRÁCTICA EMPRESARIAL"
+ },
+ {
+   "codigo": "DISE3992",
+   "nombre": "PRÁCTICA EMPRESARIAL"
+ },
+ {
+   "codigo": "DISE1223B",
+   "nombre": "COLOR, COLOR Y MAS COLOR"
+ },
+ {
+   "codigo": "DISE1231B",
+   "nombre": "REIMAGINAR EL ESPACIO"
+ },
+ {
+   "codigo": "DISE1240A",
+   "nombre": "HISTORIA DEL TRAJE"
+ }
+]

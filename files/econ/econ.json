@@ -1,0 +1,446 @@
+[
+ {
+   "codigo": "ECON1006",
+   "nombre": "PENSANDO PROBLEMAS"
+ },
+ {
+   "codigo": "ECON1110",
+   "nombre": "ANDES CONTIGO - ACOMPAÑAMIENTO"
+ },
+ {
+   "codigo": "ECON1300",
+   "nombre": "TALLER DE EXCEL"
+ },
+ {
+   "codigo": "ECON1301",
+   "nombre": "TALLER DE STATA"
+ },
+ {
+   "codigo": "ECON1303",
+   "nombre": "TALLER DE MATLAB"
+ },
+ {
+   "codigo": "ECON1304",
+   "nombre": "TALLER DE ARCGIS"
+ },
+ {
+   "codigo": "ECON1501",
+   "nombre": "HISTORIA ECONOMICA GENERAL"
+ },
+ {
+   "codigo": "ECON2101",
+   "nombre": "MICROECONOMIA 2"
+ },
+ {
+   "codigo": "ECON2102",
+   "nombre": "MICROECONOMIA 3"
+ },
+ {
+   "codigo": "ECON2104",
+   "nombre": "EVAL. ECONOMICA DE PROYECTOS"
+ },
+ {
+   "codigo": "ECON2105",
+   "nombre": "TEORIA DE JUEGOS"
+ },
+ {
+   "codigo": "ECON2106",
+   "nombre": "TEORIA DEL CONSUMIDOR Y FIRMA"
+ },
+ {
+   "codigo": "ECON2107",
+   "nombre": "INTRODUCCIÓN A LA MICRO"
+ },
+ {
+   "codigo": "ECON2201",
+   "nombre": "MACROECONOMIA 2"
+ },
+ {
+   "codigo": "ECON2202",
+   "nombre": "MACROECONOMIA 3"
+ },
+ {
+   "codigo": "ECON2203",
+   "nombre": "INTRODUCCIÓN A LA MACRO"
+ },
+ {
+   "codigo": "ECON2204",
+   "nombre": "MEDICION Y CONTABILIDAD"
+ },
+ {
+   "codigo": "ECON2301",
+   "nombre": "ECONOMETRIA 1"
+ },
+ {
+   "codigo": "ECON3301",
+   "nombre": "ECONOMETRIA 2"
+ },
+ {
+   "codigo": "ECON3401",
+   "nombre": "COMERCIO INTERNACIONAL"
+ },
+ {
+   "codigo": "ECON3403",
+   "nombre": "TEORIA POLITICA FISCAL"
+ },
+ {
+   "codigo": "ECON3501",
+   "nombre": "HISTORIA ECONOMICA DE COLOMBIA"
+ },
+ {
+   "codigo": "ECON3502",
+   "nombre": "HIST.ANALISIS ECONOMICO"
+ },
+ {
+   "codigo": "ECON3504",
+   "nombre": "NVA HISTORIA ECON. DE COLOMBIA"
+ },
+ {
+   "codigo": "ECON3602",
+   "nombre": "MEMORIA DE GRADO"
+ },
+ {
+   "codigo": "ECON3609",
+   "nombre": "SEM. COYUNTURA ECONOMICA"
+ },
+ {
+   "codigo": "ECON3613",
+   "nombre": "ECONOMIA POLIT.DE LA POL. ECON"
+ },
+ {
+   "codigo": "ECON3620",
+   "nombre": "ECONOMIA SOCIAL"
+ },
+ {
+   "codigo": "ECON3626",
+   "nombre": "INTR ECON URB Y DEL TRANSPORTE"
+ },
+ {
+   "codigo": "ECON3665",
+   "nombre": "SEM REGULACIÓN FINANCIERA"
+ },
+ {
+   "codigo": "ECON3672",
+   "nombre": "INDUSTRIAL ORGANIZATION"
+ },
+ {
+   "codigo": "ECON3704",
+   "nombre": "DERIVADOS FINANCIEROS"
+ },
+ {
+   "codigo": "ECON3711",
+   "nombre": "VALORACIÓNBIENESNOMERCADEABLES"
+ },
+ {
+   "codigo": "ECON3724",
+   "nombre": "SEM DEVELOPMENT ECONOMICS"
+ },
+ {
+   "codigo": "ECON3727",
+   "nombre": "SEM POL. DE DESARROLLO Y ELCA."
+ },
+ {
+   "codigo": "ECON3730",
+   "nombre": "SEM TEMAS MONETARIOS-BANCARIOS"
+ },
+ {
+   "codigo": "ECON3737",
+   "nombre": "ECON LABORAL Y HECHOS MACRO"
+ },
+ {
+   "codigo": "ECON3740",
+   "nombre": "SEM E.SECTORES Y DLLOPRODUCT."
+ },
+ {
+   "codigo": "ECON3741",
+   "nombre": "MDOS FINANCIEROS EN COLOMBIA"
+ },
+ {
+   "codigo": "ECON3747",
+   "nombre": "ECON DEL COMPORTAMIENTO Y EXPE"
+ },
+ {
+   "codigo": "ECON3750",
+   "nombre": "MACRO Y FINANZAS INTERNACIONAL"
+ },
+ {
+   "codigo": "ECON3756",
+   "nombre": "INTRO A LA ECONOMIA FINANCIERA"
+ },
+ {
+   "codigo": "ECON3759",
+   "nombre": "INTR ORGANIZACIÓN IND EMPÍRICA"
+ },
+ {
+   "codigo": "ECON3760",
+   "nombre": "VALORAC Y ESTRUCTURACIÓN FINAN"
+ },
+ {
+   "codigo": "ECON3991",
+   "nombre": "PRÁCTICA PROFESIONAL 6 CRED."
+ },
+ {
+   "codigo": "ECON3992",
+   "nombre": "PRACTICA PROFESIONAL 3 CRED"
+ },
+ {
+   "codigo": "ECON4112",
+   "nombre": "MICRO AVANZ EQUILIBRIO GENERAL"
+ },
+ {
+   "codigo": "ECON4113",
+   "nombre": "MICRO AVANZ TEORIA DE JUEGOS"
+ },
+ {
+   "codigo": "ECON4212",
+   "nombre": "MACROECONOMIA AVANZADA CP"
+ },
+ {
+   "codigo": "ECON4301",
+   "nombre": "ECONOMETRIA AVANZADA"
+ },
+ {
+   "codigo": "ECON4501",
+   "nombre": "ECONOMIA POLITICA AVANZADA"
+ },
+ {
+   "codigo": "ECON4568",
+   "nombre": "MICROECONOMIA III"
+ },
+ {
+   "codigo": "ECON4600",
+   "nombre": "SEMINARIO DE TESIS PEG"
+ },
+ {
+   "codigo": "ECON4603",
+   "nombre": "TESIS PEG"
+ },
+ {
+   "codigo": "ECON4643",
+   "nombre": "RIESGOYVALORACIÓN DE DERIVADOS"
+ },
+ {
+   "codigo": "ECON4653",
+   "nombre": "TEORÍA DE CONTRATOS"
+ },
+ {
+   "codigo": "ECON4655",
+   "nombre": "HIST. PENS ECONOMICO SIGLO XX"
+ },
+ {
+   "codigo": "ECON4659",
+   "nombre": "TEORIA DE JUEGOS"
+ },
+ {
+   "codigo": "ECON4660",
+   "nombre": "INNOVACIONES SESGADAS"
+ },
+ {
+   "codigo": "ECON4661",
+   "nombre": "POBREZA Y DESARROLLO ECON. II"
+ },
+ {
+   "codigo": "ECON4702",
+   "nombre": "ECONOM.RECURSOS NATURALES"
+ },
+ {
+   "codigo": "ECON4800",
+   "nombre": "INTERCAMBIO PEG"
+ },
+ {
+   "codigo": "ECON4990",
+   "nombre": "INSCRIPCION A GRADO"
+ },
+ {
+   "codigo": "ECON6104",
+   "nombre": "MICRO AVAN EQUILIBRIO GRAL DOC"
+ },
+ {
+   "codigo": "ECON6201",
+   "nombre": "MACROECONOMIA CP DOC"
+ },
+ {
+   "codigo": "ECON6301",
+   "nombre": "ECONOMETRIA DOC"
+ },
+ {
+   "codigo": "ECON6401",
+   "nombre": "SEMINARIO INVESTIGACION 1 DOC"
+ },
+ {
+   "codigo": "ECON6621",
+   "nombre": "HISTORIA Y PENSAMIEN ECON, DOC"
+ },
+ {
+   "codigo": "ECON6622",
+   "nombre": "LECTURAS DIRIGIDAS"
+ },
+ {
+   "codigo": "ECON6970",
+   "nombre": "EXAMEN AREA MICRO"
+ },
+ {
+   "codigo": "ECON6971",
+   "nombre": "EXAMEN AREA MACRO"
+ },
+ {
+   "codigo": "ECON6972",
+   "nombre": "EXAMEN AREA ECONOMETRIA"
+ },
+ {
+   "codigo": "ECON6973",
+   "nombre": "ARTICULO ACADEMICO SEGUNDO AÑO"
+ },
+ {
+   "codigo": "ECON6980",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 1"
+ },
+ {
+   "codigo": "ECON6981",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 2"
+ },
+ {
+   "codigo": "ECON6982",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 3"
+ },
+ {
+   "codigo": "ECON6983",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 4"
+ },
+ {
+   "codigo": "ECON6984",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 5"
+ },
+ {
+   "codigo": "ECON6985",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 6"
+ },
+ {
+   "codigo": "ECON6986",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 7"
+ },
+ {
+   "codigo": "ECON6987",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 8"
+ },
+ {
+   "codigo": "ECON6988",
+   "nombre": "INVESTIGACION TESIS DOCTORAL 9"
+ },
+ {
+   "codigo": "ECON6989",
+   "nombre": "INVESTIGAC.TESIS DOCTORAL 10"
+ },
+ {
+   "codigo": "ECON6990",
+   "nombre": "SUSTENTACION DE TESIS"
+ },
+ {
+   "codigo": "ECON6997",
+   "nombre": "PASANTIA"
+ },
+ {
+   "codigo": "ECON1001B",
+   "nombre": "INTROD. ECON COLOMBIANA"
+ },
+ {
+   "codigo": "ECON1001C",
+   "nombre": "COMPL INTROD. ECON COLOMBIANA"
+ },
+ {
+   "codigo": "ECON1003A",
+   "nombre": "COOPERACION Y COMPETENCIA"
+ },
+ {
+   "codigo": "ECON1006C",
+   "nombre": "COMPL.PENSANDO PROBLEMAS"
+ },
+ {
+   "codigo": "ECON1502B",
+   "nombre": "HISTORIA PENSAMIENTO ECONOMICO"
+ },
+ {
+   "codigo": "ECON2101C",
+   "nombre": "COMPL MICROECONOMÍA 2"
+ },
+ {
+   "codigo": "ECON2102C",
+   "nombre": "COMPL MICROECONOMÍA 3"
+ },
+ {
+   "codigo": "ECON2105C",
+   "nombre": "COMPL. TEORIA DE JUEGOS"
+ },
+ {
+   "codigo": "ECON2106C",
+   "nombre": "COMPL TEORIA DEL CONS Y FIRMA"
+ },
+ {
+   "codigo": "ECON2107C",
+   "nombre": "COMPL INTRODUCCION A LA MICRO"
+ },
+ {
+   "codigo": "ECON2201C",
+   "nombre": "COMPL MACROECONOMIA 2"
+ },
+ {
+   "codigo": "ECON2202C",
+   "nombre": "COMPL MACROECONOMIA 3"
+ },
+ {
+   "codigo": "ECON2203C",
+   "nombre": "COMPL INTRODUCCIÓN A LA MACRO"
+ },
+ {
+   "codigo": "ECON2204C",
+   "nombre": "COMPL MEDICION Y CONTABILIDAD"
+ },
+ {
+   "codigo": "ECON2301C",
+   "nombre": "COMPL ECONOMETRIA 1"
+ },
+ {
+   "codigo": "ECON2501B",
+   "nombre": "ECONOMIA MARXISTA"
+ },
+ {
+   "codigo": "ECON3301C",
+   "nombre": "COMPL ECONOMETRIA 2"
+ },
+ {
+   "codigo": "ECON4112C",
+   "nombre": "COMPL MICRO AVANZ EQUILIBRIO G"
+ },
+ {
+   "codigo": "ECON4113C",
+   "nombre": "COMPL MICRO AVANZ TEORIA DE J"
+ },
+ {
+   "codigo": "ECON4212C",
+   "nombre": "COMPL MACROECONOMI AVANZADA CP"
+ },
+ {
+   "codigo": "ECON4301C",
+   "nombre": "COMPL ECONOMETRIA AVANZADA"
+ },
+ {
+   "codigo": "ECON4568C",
+   "nombre": "COMP. MICROECONOMIA III"
+ },
+ {
+   "codigo": "ECON4659C",
+   "nombre": "COMPL. TEORIA DE JUEGOS"
+ },
+ {
+   "codigo": "ECON6104C",
+   "nombre": "COMPL MICRO AVAN EQUILIBRIO G"
+ },
+ {
+   "codigo": "ECON6201C",
+   "nombre": "COMPL MACROECONOMIA CP DOC"
+ },
+ {
+   "codigo": "ECON6301C",
+   "nombre": "COMPL ECONOMETRIA DOC"
+ }
+]

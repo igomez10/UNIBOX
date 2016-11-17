@@ -1,0 +1,518 @@
+[
+ {
+   "codigo": "ICYA1101",
+   "nombre": "INTROD. PROBLEMATIC. AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA1110",
+   "nombre": "QUIMICA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA1113",
+   "nombre": "INTRODUCCION A ING AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA1114",
+   "nombre": "INTRODUCCION A ING CIVIL"
+ },
+ {
+   "codigo": "ICYA1116",
+   "nombre": "ESTATICA"
+ },
+ {
+   "codigo": "ICYA1117",
+   "nombre": "MECANICA DE MATERIALES"
+ },
+ {
+   "codigo": "ICYA1122",
+   "nombre": "MATERIALES EN INGENIERIA CIVIL"
+ },
+ {
+   "codigo": "ICYA1125",
+   "nombre": "GEOMÁTICA"
+ },
+ {
+   "codigo": "ICYA2001",
+   "nombre": "MODELACION Y ANALISIS NUMERICO"
+ },
+ {
+   "codigo": "ICYA2070",
+   "nombre": "MONITORIA ING. CIVIL Y AMB."
+ },
+ {
+   "codigo": "ICYA2101",
+   "nombre": "TERMOQUIMICA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA2203",
+   "nombre": "ANALISIS SIST. ESTRUCTURALES"
+ },
+ {
+   "codigo": "ICYA2304",
+   "nombre": "FUNDAMENTOS DE GEOTECNIA"
+ },
+ {
+   "codigo": "ICYA2401",
+   "nombre": "MECANICA DE FLUIDOS"
+ },
+ {
+   "codigo": "ICYA2402",
+   "nombre": "HIDRAULICA"
+ },
+ {
+   "codigo": "ICYA2406",
+   "nombre": "POTABILIZACION"
+ },
+ {
+   "codigo": "ICYA2407",
+   "nombre": "MICROBIOLOGIA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA2412",
+   "nombre": "MECÁNICA DE FLUIDOS AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3078",
+   "nombre": "PROY. FINAL DISEÑO ING.CIVIL"
+ },
+ {
+   "codigo": "ICYA3079",
+   "nombre": "PROY. FINAL DISEÑO ING. AMB."
+ },
+ {
+   "codigo": "ICYA3102",
+   "nombre": "PROYECTO DE GRADO ING. CIVIL"
+ },
+ {
+   "codigo": "ICYA3103",
+   "nombre": "PROYECTO GRADO ING AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3104",
+   "nombre": "PROYECTO ESPECIAL PREGRADO"
+ },
+ {
+   "codigo": "ICYA3107",
+   "nombre": "PRERREQUISITO PROYECTO IAMB"
+ },
+ {
+   "codigo": "ICYA3108",
+   "nombre": "PRERREQUISITO PROYECT. ICIV"
+ },
+ {
+   "codigo": "ICYA3202",
+   "nombre": "DISEÑO ESTRUCTURAL"
+ },
+ {
+   "codigo": "ICYA3203",
+   "nombre": "GERENCIA PROY CONSTRUCCION"
+ },
+ {
+   "codigo": "ICYA3305",
+   "nombre": "ESTRUCTURAS GEOTECNICAS"
+ },
+ {
+   "codigo": "ICYA3306",
+   "nombre": "SISTEMAS DE TRANSPORTE"
+ },
+ {
+   "codigo": "ICYA3307",
+   "nombre": "DISEÑO DE VIAS"
+ },
+ {
+   "codigo": "ICYA3401",
+   "nombre": "HIDROLOGIA"
+ },
+ {
+   "codigo": "ICYA3406",
+   "nombre": "MODELACION AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3408",
+   "nombre": "TRATAMIENTO AGUAS RESIDUALES"
+ },
+ {
+   "codigo": "ICYA3501",
+   "nombre": "CALIDAD DEL AIRE Y METEOROLOGI"
+ },
+ {
+   "codigo": "ICYA3601",
+   "nombre": "EVALUACION Y AUDITOR.AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3702",
+   "nombre": "RESIDUOS SOLIDOS"
+ },
+ {
+   "codigo": "ICYA3991",
+   "nombre": "PRACTICA PROFESIONAL"
+ },
+ {
+   "codigo": "ICYA4070",
+   "nombre": "ASIST GRAD ING CIVIL Y AMBIENT"
+ },
+ {
+   "codigo": "ICYA4071",
+   "nombre": "MONITORIA POST ING CIVIL Y AMB"
+ },
+ {
+   "codigo": "ICYA4104",
+   "nombre": "CONSERVACIÓN DE LA BIODIVERSID"
+ },
+ {
+   "codigo": "ICYA4131",
+   "nombre": "REMEDIACIÓN DE SUELOS"
+ },
+ {
+   "codigo": "ICYA4133",
+   "nombre": "INGENIERIA SANITARIA"
+ },
+ {
+   "codigo": "ICYA4139",
+   "nombre": "ENERGIAS ALTERNATIVAS"
+ },
+ {
+   "codigo": "ICYA4140",
+   "nombre": "VARIABILIDAD YCAMBIO CLIMATICO"
+ },
+ {
+   "codigo": "ICYA4161",
+   "nombre": "PROBABIL. ESTAD.ING. AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA4200",
+   "nombre": "PROPUESTA TESIS"
+ },
+ {
+   "codigo": "ICYA4201",
+   "nombre": "TESIS 1"
+ },
+ {
+   "codigo": "ICYA4202",
+   "nombre": "TESIS 2"
+ },
+ {
+   "codigo": "ICYA4203",
+   "nombre": "PROYECTO ESPECIAL"
+ },
+ {
+   "codigo": "ICYA4206",
+   "nombre": "PROPUESTA DE TESIS GERENCIA"
+ },
+ {
+   "codigo": "ICYA4209",
+   "nombre": "REQUISITO NIVEL"
+ },
+ {
+   "codigo": "ICYA4211",
+   "nombre": "INTERCAMBIO INTERNACIONAL"
+ },
+ {
+   "codigo": "ICYA4290",
+   "nombre": "PROPUESTA PROY. GRADO GERENCIA"
+ },
+ {
+   "codigo": "ICYA4291",
+   "nombre": "PROPUESTA PROY. GRADO ESTRUCTU"
+ },
+ {
+   "codigo": "ICYA4292",
+   "nombre": "PROYECTO GRADO GERENCIA"
+ },
+ {
+   "codigo": "ICYA4293",
+   "nombre": "PROYECTO GRADO ESTRUCTURAS"
+ },
+ {
+   "codigo": "ICYA4301",
+   "nombre": "ADMON PROYECTO CONSTRUC"
+ },
+ {
+   "codigo": "ICYA4305",
+   "nombre": "MODEL. AVANZA. OPTIMIZ. PROYEC"
+ },
+ {
+   "codigo": "ICYA4309",
+   "nombre": "ASPECTOS FINANCIEROS CONSTRUC."
+ },
+ {
+   "codigo": "ICYA4314",
+   "nombre": "PROY. ASOC. PÚBLICA Y PRIVADA"
+ },
+ {
+   "codigo": "ICYA4350",
+   "nombre": "NIV. ING. GERENC. CONSTRUCCION"
+ },
+ {
+   "codigo": "ICYA4401",
+   "nombre": "COMPRT DINAMICO DE ESTRUCTURAS"
+ },
+ {
+   "codigo": "ICYA4410",
+   "nombre": "COMP Y DISEÑ ESTUCT DE ACERO"
+ },
+ {
+   "codigo": "ICYA4415",
+   "nombre": "INGENIERIA SISMICA"
+ },
+ {
+   "codigo": "ICYA4448",
+   "nombre": "DISE - MAMPOSTERIA Y CIMENTACI"
+ },
+ {
+   "codigo": "ICYA4505",
+   "nombre": "MECÁNICA DE SUELOS AVANZADA"
+ },
+ {
+   "codigo": "ICYA4527",
+   "nombre": "TALLER DE DISEÑO EN GEOTECNIA"
+ },
+ {
+   "codigo": "ICYA4531",
+   "nombre": "DISEÑO CONTRATOS INFRAESTRUC."
+ },
+ {
+   "codigo": "ICYA4532",
+   "nombre": "SEMINARIO GEOSI"
+ },
+ {
+   "codigo": "ICYA4602",
+   "nombre": "DISEÑO AVANZADO DE PAV."
+ },
+ {
+   "codigo": "ICYA4610",
+   "nombre": "GEST. CONSERV. INFR. VIAL"
+ },
+ {
+   "codigo": "ICYA4701",
+   "nombre": "DISEÑO EN ING HIDRAULICA"
+ },
+ {
+   "codigo": "ICYA4717",
+   "nombre": "HIDRAULICA DE RIOS"
+ },
+ {
+   "codigo": "ICYA4718",
+   "nombre": "ECONOMIA, REGULAC.AGUA URBANA"
+ },
+ {
+   "codigo": "ICYA4801",
+   "nombre": "ANAL. SISTEMAS DE TRANSPORTE"
+ },
+ {
+   "codigo": "ICYA4809",
+   "nombre": "TRANSPORTE INTERURBANO D CARGA"
+ },
+ {
+   "codigo": "ICYA4810",
+   "nombre": "SEGURIDAD VIAL"
+ },
+ {
+   "codigo": "ICYA4815",
+   "nombre": "METOD. INVESTIGACION TRANSPORT"
+ },
+ {
+   "codigo": "ICYA6002",
+   "nombre": "TUTORIAL 1"
+ },
+ {
+   "codigo": "ICYA6007",
+   "nombre": "TUTORIAL ESPECIAL"
+ },
+ {
+   "codigo": "ICYA6402",
+   "nombre": "PASANTIA SEMESTRAL"
+ },
+ {
+   "codigo": "ICYA6961",
+   "nombre": "PROYECTO DIRIGIDO 1"
+ },
+ {
+   "codigo": "ICYA6962",
+   "nombre": "PROYECTO DIRIGIDO 2"
+ },
+ {
+   "codigo": "ICYA6963",
+   "nombre": "PROYECTO DIRIGIDO 3"
+ },
+ {
+   "codigo": "ICYA6970",
+   "nombre": "EXAMEN DE PROPUESTA DOCTORAL"
+ },
+ {
+   "codigo": "ICYA6980",
+   "nombre": "TESIS 4CR"
+ },
+ {
+   "codigo": "ICYA6981",
+   "nombre": "TESIS 8CR"
+ },
+ {
+   "codigo": "ICYA6982",
+   "nombre": "TESIS 12CR"
+ },
+ {
+   "codigo": "ICYA6990",
+   "nombre": "SUSTENTACION TESIS"
+ },
+ {
+   "codigo": "ICYA6997",
+   "nombre": "PASANTIA ESTUDIANTES EXTERNOS"
+ },
+ {
+   "codigo": "ICYA1110L",
+   "nombre": "LAB QUIMICA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA1111B",
+   "nombre": "AGUA Y AMBIENTE"
+ },
+ {
+   "codigo": "ICYA1113C",
+   "nombre": "COMPL INTRO A ING AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA1114C",
+   "nombre": "COMPL INTRO A ING CIVIL"
+ },
+ {
+   "codigo": "ICYA1116C",
+   "nombre": "COMPL ESTATICA"
+ },
+ {
+   "codigo": "ICYA1117C",
+   "nombre": "COMPL. MECANICA DE MATERIALES"
+ },
+ {
+   "codigo": "ICYA1117L",
+   "nombre": "LAB MECANICA DE MATERIALES"
+ },
+ {
+   "codigo": "ICYA1122L",
+   "nombre": "LAB MATERIALES ING CIVIL"
+ },
+ {
+   "codigo": "ICYA1125L",
+   "nombre": "LABORATORIO DE GEOMÁTICA"
+ },
+ {
+   "codigo": "ICYA1200A",
+   "nombre": "GRAND. PROY. HIST. HUMA"
+ },
+ {
+   "codigo": "ICYA1500B",
+   "nombre": "TRANSPORTE URBANO SOSTENIBLE"
+ },
+ {
+   "codigo": "ICYA1700B",
+   "nombre": "MAPAS:ESTRE. DRONES Y FACEBOOK"
+ },
+ {
+   "codigo": "ICYA2001C",
+   "nombre": "COMPL MODEL Y ANALISIS NUM"
+ },
+ {
+   "codigo": "ICYA2101C",
+   "nombre": "COMPL TERMOQUIMICA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA2203C",
+   "nombre": "COMPL ANALISIS SIST ESTRUCT."
+ },
+ {
+   "codigo": "ICYA2203L",
+   "nombre": "LAB ANALISIS SIST. ESTRUCTURAL"
+ },
+ {
+   "codigo": "ICYA2304C",
+   "nombre": "COMPL FUNDAMENTOS GEOTECNIA"
+ },
+ {
+   "codigo": "ICYA2304L",
+   "nombre": "LAB FUNDAMENTOS DE GEOTECNIA"
+ },
+ {
+   "codigo": "ICYA2401C",
+   "nombre": "COMPL MECANICA DE FLUIDOS"
+ },
+ {
+   "codigo": "ICYA2401L",
+   "nombre": "LAB MECANICA DE FLUIDOS"
+ },
+ {
+   "codigo": "ICYA2402C",
+   "nombre": "COMPL HIDRAULICA"
+ },
+ {
+   "codigo": "ICYA2402L",
+   "nombre": "LAB HIDRAULICA"
+ },
+ {
+   "codigo": "ICYA2406L",
+   "nombre": "LAB POTABILIZACION"
+ },
+ {
+   "codigo": "ICYA2407L",
+   "nombre": "LAB MICROBIOLOGIA AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA2412C",
+   "nombre": "COMPL MECANICA FLUIDOS AMBIENT"
+ },
+ {
+   "codigo": "ICYA2412L",
+   "nombre": "LAB MECANICA FLUIDOS AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3078C",
+   "nombre": "COMPL PROY FINL DISEÑO ING CIV"
+ },
+ {
+   "codigo": "ICYA3079C",
+   "nombre": "COMPL PROY FINL DISEÑO ING AMB"
+ },
+ {
+   "codigo": "ICYA3202C",
+   "nombre": "COMPL DISEÑO ESTRUCTURAL"
+ },
+ {
+   "codigo": "ICYA3203C",
+   "nombre": "COMPL GERENCIA PROY CONSTRUCCI"
+ },
+ {
+   "codigo": "ICYA3305L",
+   "nombre": "LAB ESTRUCTURAS GEOTECNICAS"
+ },
+ {
+   "codigo": "ICYA3306L",
+   "nombre": "LAB SISTEMAS DE TRANSPORTE"
+ },
+ {
+   "codigo": "ICYA3307C",
+   "nombre": "COMPL DISEÑO DE VIAS"
+ },
+ {
+   "codigo": "ICYA3401C",
+   "nombre": "COMPL HIDROLOGIA"
+ },
+ {
+   "codigo": "ICYA3406L",
+   "nombre": "LAB MODELACION AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3408L",
+   "nombre": "LAB TRATAMIENTO AGUAS RESIDU"
+ },
+ {
+   "codigo": "ICYA3501L",
+   "nombre": "LAB CALIDAD DEL AIRE Y METEORO"
+ },
+ {
+   "codigo": "ICYA3601L",
+   "nombre": "LAB.EVALUAC.Y AUDIT.AMBIENTAL"
+ },
+ {
+   "codigo": "ICYA3702L",
+   "nombre": "LAB RESIDUOS SOLIDOS"
+ }
+]
