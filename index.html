@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<style>
 			.fade-enter-active, .fade-leave-active {
-  		transition: opacity 3s
+  		transition: opacity 2.5s
 			}
 			.fade-enter, .fade-leave-active {
   		opacity: 0
@@ -32,8 +32,9 @@
 					<div>
 					<h1> Materia: {{$route.params.courseCode}} </h1>
 					<h1> Archivos: </h1>
-					<input type="file" id="myFile" multiple size="50" onchange="myFunction()">
-					<br>
+					<label class="btn btn-default btn-file">
+					    Subir Archivos <input type="file" style="display: none;">
+					</label>					<br>
 				</div>
 			</script>
 			<!-- END FILES TEMPLATE -->
