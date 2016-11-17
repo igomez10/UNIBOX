@@ -5,11 +5,11 @@
 		<meta charset="UTF-8">
 		<title>Unibox beta vue</title>
 		<script src='https://unpkg.com/vue@next/dist/vue.js'></script>
+		<script src='https://unpkg.com/vue-router@2.0.2' ></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="/animate.css">
 		<style>
 			.fade-enter-active, .fade-leave-active {
-  		transition: opacity 2s
+  		transition: opacity 3s
 			}
 			.fade-enter, .fade-leave-active {
   		opacity: 0
@@ -21,46 +21,64 @@
 			<!-- START COURSE TEMPLATE -->
 			<script id='course-template' type='text/x-template'>
 				<tr>
-						<td ><a v-bind:id='courseCode' v-bind:href='"files/" +this.getCareer()+"/"+ courseCode'> {{courseCode}}</a></td>
+						<td ><router-link v-bind:id='courseCode' v-bind:to='"/files/" +this.getCareer()+"/"+ courseCode'> {{courseCode}}</router-link></td>
 						<td>{{courseName}}</td>
 				</tr>
 			</script>
 			<!-- END COURSE TEMPLATE -->
 
+			<!-- START FILES TEMPLATE -->
+			<script id='files-template' type='text/x-template'>
+					<div>
+					<h1> Materia: {{$route.params.courseCode}} </h1>
+					<h1> Archivos: </h1>
+					<input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+					<br>
+				</div>
+			</script>
+			<!-- END FILES TEMPLATE -->
+
 			<!-- START TABLE TEMPLATE -->
 			<script id='table-template' type='text/x-template'>
 			<div>
 
-			<h1 >Unibox</h1>
+			<h1><a href='/'>  Unibox  </a></h1>
 
 			<div  border=1px>
-				<button  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</button>
-				<button  v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
-				<button  v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
+				<button class="btn btn-default" v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</button>
+				<button class="btn btn-default" v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
+				<button class="btn btn-default" v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
 			</div>
 			<br>
 			<div  border=1px>
-				<button  v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</button>
+				<button class="btn btn-default" v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</button>
 			</div>
-
 			<br>
+			<br>
+			<div class='row'>
+			<div class="col-sm-4">
 			<transition name='fade'>
-				<div v-if='filtroSeleccionado'>
-					<p>{{filter.split('/')[2].toUpperCase()}}: este es el filtro</p>
-				</div>
+			<router-view></router-view>
+
 			</transition>
-			<br>
-			<transition name='fade'>
-
-			<table border=1px v-if='filtroSeleccionado'>
-				<th>Codigo</th>
-				<th>Nombre</th>
-
-					<component-course v-bind:courseCode='item.codigo' v-bind:courseName='item.nombre' v-for='item in content' v-if='filtroSeleccionado'></component-course>
-			</table>
-		</transition>
-
 			</div>
+			<div class="col-sm-4">
+			<transition name='fade'>
+				<table class='table table-hover table-responsive table-condensed' v-if='filtroSeleccionado'>
+					<thead>
+					<tr>
+					<th>Codigo</th>
+					<th>Nombre</th>
+					</tr>
+					</thead>
+					<tbody>
+					<component-course v-bind:courseCode='item.codigo' v-bind:courseName='item.nombre' v-for='item in content' v-if='filtroSeleccionado'></component-course>
+					</tbody>
+				</table>
+			</transition>
+		</div>
+		</div>
+		</div>
 			</script>
 			<!-- END TABLE TEMPLATE -->
 
@@ -91,9 +109,6 @@
 							getCareer:function(){
 								var a= this.courseCode.substring(0,4).toLowerCase();
 								return a;
-							},
-							getUrl:function(){
-								// return "/files/" + getCareer() + "/" + this.courseCode
 							}
 						}
 					}
@@ -172,15 +187,30 @@
 	</head>
 
 	<body>
-		<div id='app' align=center >
+		<div id='app' align=center>
 			<transition name='fade'>
-			<component-table v-if='showTable' ></component-table>
+			<component-table v-if='showTable'></component-table>
 			</transition>
+
 		</div>
+
 		<script>
+		const materia={
+			template: '#files-template'
+		}
+
+		const router=new VueRouter({
+			routes: [
+				{ path: '/files/:career/:courseCode', component: materia  }
+
+			]
+		})
+
+
 		var vm=new Vue(
 			{
 				el:'#app',
+				router,
 				data:{
 					message:'Hola Vue',
 					showTable:false,
