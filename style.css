@@ -1,0 +1,17 @@
+body{
+ padding: 0px;
+ margin: 0px;
+}
+
+#gradient
+{
+}
+
+#header {
+position:fixed;
+ top:0;
+left:0;
+}.scroller {
+ height:300px;
+overflow:scroll;
+}

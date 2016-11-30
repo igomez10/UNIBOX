@@ -6,7 +6,11 @@
 		<title>Unibox beta vue</title>
 		<script src='https://unpkg.com/vue@next/dist/vue.js'></script>
 		<script src='https://unpkg.com/vue-router@2.0.2' ></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
+		<script src='client.js'></script>
+		<!-- <script src='gradient.js'></script> -->
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
 			.fade-enter-active, .fade-leave-active {
   		transition: opacity 2.5s
@@ -16,28 +20,41 @@
 			}
 		</style>
 		<script src='https://unpkg.com/lodash'></script>
-
 		<!-- START TEMPLATES -->
 			<!-- START COURSE TEMPLATE -->
 			<script id='course-template' type='text/x-template'>
 				<tr>
-						<td ><router-link v-bind:id='courseCode' v-bind:to='"/files/" +this.getCareer()+"/"+ courseCode'> {{courseCode}}</router-link></td>
+						<td ><router-link v-bind:id='courseCode' v-bind:to='"/" + this.getCareer()+"/"+ courseCode'> {{courseCode}}</router-link></td>
 						<td>{{courseName}}</td>
 				</tr>
 			</script>
 			<!-- END COURSE TEMPLATE -->
 
-			<!-- START FILES TEMPLATE -->
-			<script id='files-template' type='text/x-template'>
+			<!-- START FILE TEMPLATE -->
+			<script id='file-template' type='text/x-template'>
+				<div>
+				<li v-for="file in files"> <a :href='"files/" + file.path' > {{file.path.split("/")[3]}} </a> </li>
+				<div>
+			</script>
+			<!-- END FILE TEMPLATE -->
+
+			<!-- START FILE VIEWER TEMPLATE -->
+			<script id='fileViewer-template' type='text/x-template'>
 					<div>
 					<h1> Materia: {{$route.params.courseCode}} </h1>
 					<h1> Archivos: </h1>
 					<label class="btn btn-default btn-file">
-					    Subir Archivos <input type="file" style="display: none;">
-					</label>					<br>
+					    Subir Archivos <input type="file" style="display: none;" @change="onFileChange">
+					</label>
+					<br>
+					<br>
+						<div id=fileList>
+							<component-file v-bind:files='this.files'></component-file>
+						</div>
 				</div>
 			</script>
-			<!-- END FILES TEMPLATE -->
+			<!-- END FILE VIEWER TEMPLATE -->
+
 
 			<!-- START TABLE TEMPLATE -->
 			<script id='table-template' type='text/x-template'>
@@ -46,7 +63,7 @@
 			<h1><a href='/'>  Unibox  </a></h1>
 
 			<div  border=1px>
-				<button class="btn btn-default" v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</button>
+				<button class="btn btn-default" v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()"> Administración</button>
 				<button class="btn btn-default" v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
 				<button class="btn btn-default" v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
 			</div>
@@ -77,15 +94,14 @@
 			<br>
 			<br>
 			<div class='row'>
-			<div class="col-sm-4">
+			<div class="col-sm-4" v-if=''>
 			<transition name='fade'>
-			<router-view></router-view>
-
+				<router-view :route='$route.params'></router-view>
 			</transition>
 			</div>
 			<div class="col-sm-4">
 			<transition name='fade'>
-				<table class='table table-hover table-responsive table-condensed' v-if='filtroSeleccionado'>
+				<table class='table table-hover table-responsive table-bordered' v-if='filtroSeleccionado'>
 					<thead>
 					<tr>
 					<th>Codigo</th>
@@ -106,6 +122,90 @@
 		<!-- END TEMPLATES -->
 
 		<!--  START COMPONENTS -->
+
+		<!-- START FILE COMPONENT -->
+
+		<script>
+		Vue.component('component-file',
+		{
+			template:'#file-template',
+			props:{
+				files:{default:''}
+			},
+			methods:
+			{
+				// openFile:function(aPath){
+				// 	const x=function(y){console.log(y)}
+				// 	fsapi.open(aPath , x)
+				// }
+				}
+		}
+		)
+		</script>
+
+		<!-- END FILE COMPONENT -->
+
+			<!-- START FILE VIEWER COMPONENT -->
+			<script>
+
+			const componentFileViewer=Vue.component('component-fileViewer',
+			{
+			template:'#fileViewer-template',
+			data: function(){
+				return {
+				filesToUpload:'',
+				fileName:'No has subido un archivo',
+				fileSize:'No has subido un archivo',
+				fileType:'No has subido un archivo',
+				files:'holadata'
+				};
+			},
+			watch:{
+				$route : function(){
+					this.getFiles()
+					console.log("cambio la ruta")
+				}
+			},
+			methods:
+			{
+				onFileChange : function(e)
+				{
+					this.filesToUpload = e.path[0].files[0];
+					this.fileName=this.filesToUpload.name;
+					this.fileSize=this.filesToUpload.size;
+					this.fileType=this.filesToUpload.type;
+					console.log("File to upload: Name: " + this.fileName +", Size: "+ this.fileSize + ", Type: "+ this.fileType);
+				},
+				getFiles:function()
+				{
+					//courseUrl start from the career folder. not from files
+					const x=function(y,z){console.log(y,z)}
+					const theUrl = this.$route.params.career + "/" + this.$route.params.courseCode
+
+					const filePromise= new Promise( (resolve, reject)=>{
+						fsapi.list( theUrl , (res)=>{
+							console.log(res)
+							this.files= res
+
+							const temp11=res
+								resolve(res.data)
+						})
+					})
+
+					filePromise.then(function(data){
+					})
+				}
+
+			}
+			}
+			)
+
+			const router=new VueRouter({
+				routes: [{ path: '/:career/:courseCode', component: componentFileViewer  }]
+			})
+
+			</script>
+			<!-- END FILE VIEWER COMPONENT -->
 
 			<!-- START COURSE COMPONENT -->
 				<script>
@@ -130,7 +230,8 @@
 							getCareer:function(){
 								var a= this.courseCode.substring(0,4).toLowerCase();
 								return a;
-							}
+							},
+
 						}
 					}
 				)
@@ -186,17 +287,6 @@
 						this.myCareerFile=pFilter;
 						this.filtroSeleccionado=true;
 						console.log('cambio de filtro a ' + pFilter);
-					},
-
-					isFiltered:function(courseCode)
-					{
-						if(courseCode.split(this.filter).length === 2)
-						{
-							return true;
-						}
-						else{
-							return false;
-						}
 					}
 				}
 				}
@@ -216,18 +306,6 @@
 		</div>
 
 		<script>
-		const materia={
-			template: '#files-template'
-		}
-
-		const router=new VueRouter({
-			routes: [
-				{ path: '/files/:career/:courseCode', component: materia  }
-
-			]
-		})
-
-
 		var vm=new Vue(
 			{
 				el:'#app',
