@@ -1,20 +1,20 @@
-var fsapi = {
-    
+const fsapi = {
+
     /**
      * Config
-     * 
+     *
      * Set: fsapi.config({url}, {key}, {optional - 'validate'});
      * Get: fsapi.config();
-     * 
+     *
      */
-     
+
     config: function () {
-        
+
         if (arguments.length) {
             // Set values
             this.store("fsapiUrl", arguments[0]);
             this.store("fsapiKey", arguments[1]);
-            
+
             // Defaults validation to true
             arguments[2] = arguments[2] || true;
             this.store("fsapiValidate", arguments[2]);
@@ -25,24 +25,24 @@ var fsapi = {
                fsapiValidate: this.store("fsapiValidate")
             };
         }
-        
+
     },
-    
+
     /**
      * Disconnect, remove local stores
      */
-    
+
     disconnect: function () {
         this.store("fsapiUrl", null);
         this.store("fsapiKey", null);
     },
-    
+
     /**
      * Request
-     * 
+     *
      * Makes request
      */
-     
+
     request: function (url, type, params, fn) {
         var _this = this;
         this.ajax({
@@ -58,11 +58,11 @@ var fsapi = {
             }
         });
     },
-    
+
     /**
      * Validate Response
      */
-     
+
     validate: function (res) {
         if (res.status === "success") {
             if (!res.data) {
@@ -77,109 +77,109 @@ var fsapi = {
             return false;
         }
     },
-    
+
     /**
      * Read (GET)
      */
-    
+
     open: function (path, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/file/" + path;
         this.request(url, "GET", null, fn);
     },
-    
+
     list: function (path, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/dir/" + path;
         this.request(url, "GET", null, fn);
     },
-    
+
     /**
      * Create (POST)
      */
-    
+
     // Create handler
     create: function (path, type, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/" + type + "/" + path;
         this.request(url, "POST", null, fn);
     },
-    
+
     // Proxy for create (file)
     createFile: function (path, fn) {
         this.create(path, "file", fn);
     },
-    
+
     // Proxy for create (dir)
     createDirectory: function (path, fn) {
         this.create(path, "dir", fn);
     },
-    
+
     // Copy file or directory
     copy: function (path, destination, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/copy/" + path;
         this.request(url, "POST", { destination: destination }, fn);
     },
-    
+
     // Performs copy, then delete original
     move: function (path, destination, fn) {
         var _this = this;
         this.copy(path, destination, function (data) {
             if (data.status === "success") {
-                _this.delete(path, fn);   
+                _this.delete(path, fn);
             } else {
                 fn(data);
             }
         });
     },
-    
+
     /**
      * Update (PUT)
      */
-    
+
     save: function (path, data, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/save/" + path;
         this.request(url, "PUT", { data: data }, fn);
     },
-    
+
     rename: function (path, name, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/rename/" + path;
         this.request(url, "PUT", { name: name }, fn);
     },
-    
+
     /**
      * Delete (DELETE)
      */
-    
+
     delete: function (path, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/"+ path;
         this.request(url, "DELETE", { name: name }, fn);
     },
-    
+
     /**
      * AJAX Handler
-     * 
+     *
      * **Configuration Object:**
-     * 
+     *
      * `url`: URL of request if not specified as first argument
-     * 
+     *
      * `type`: Request method, defaults to `GET`
-     * 
+     *
      * `async`: Run request asynchronously, defaults to `TRUE`
-     * 
+     *
      * `cache`: Cache the request, defaults to `TRUE`
-     * 
+     *
      * `data`: Object or JSON data passed through request
-     * 
+     *
      * `success`: Function called on successful request
-     * 
+     *
      * `error`: Function called on failure of request
-     * 
+     *
      * `qsData`: Allows blocking (set `false`) of `data` add to URL for RESTful requests
     */
-    
+
     ajax: function() {
 
         // Parent object for all parameters
         var xhr = {};
-    
+
         // Determine call structure: ajax(url, { params }); or ajax({ params });
         if (arguments.length === 1) {
             // All params passed as object
@@ -189,8 +189,8 @@ var fsapi = {
             xhr = arguments[1];
             // Add first argument to xhr object as url
             xhr.url = arguments[0];
-        }        
-    
+        }
+
         // Parameters & Defaults
         xhr.request = false;
         xhr.type = xhr.type || "GET";
@@ -200,7 +200,7 @@ var fsapi = {
         if (xhr.async || !xhr.hasOwnProperty("async")) { xhr.async = true; } else { xhr.async = false; }
         if (xhr.success && typeof xhr.success === "function") { xhr.success = xhr.success; } else { xhr.success = false; }
         if (xhr.error && typeof xhr.error === "function") { xhr.error = xhr.error; } else { xhr.error = false; }
-        
+
         // Format xhr.data & encode values
         if (xhr.data) {
             var param_count = 0,
@@ -221,7 +221,7 @@ var fsapi = {
             }
             xhr.data = xhr.data;
         }
-    
+
         // Appends data to URL
         function formatURL(data) {
             var url_split = xhr.url.split("?");
@@ -231,17 +231,17 @@ var fsapi = {
                 xhr.url += "?" + data;
             }
         }
-    
+
         // Handle xhr.data on GET request type
         if (xhr.data && xhr.type.toUpperCase() === "GET" && xhr.qsData) {
             formatURL(xhr.data);
         }
-    
+
         // Check cache parameter, set URL param
         if (!xhr.cache) {
             formatURL(new Date().getTime());
         }
-    
+
         // Establish request
         if (window.XMLHttpRequest) {
             // Modern non-IE
@@ -253,7 +253,7 @@ var fsapi = {
             // No request object, break
             return false;
         }
-    
+
         // Monitor ReadyState
         xhr.request.onreadystatechange = function () {
             if (xhr.request.readyState === 4) {
@@ -270,26 +270,26 @@ var fsapi = {
                 }
             }
         };
-    
+
         // Open Http Request connection
         xhr.request.open(xhr.type, xhr.url, xhr.async);
-    
+
         // Set request header for POST
         if (xhr.type.toUpperCase() === "POST" || xhr.type.toUpperCase() === "PUT") {
             xhr.request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         }
-    
+
         // Send data
         xhr.request.send(xhr.data);
-    
+
     },
-    
+
     /**
      * LocalStorage with polyfill support via cookies
-     * 
+     *
      * @param {String} key The key or identifier for the store
      * @param {String|Object} [value] Contents of the store, blank to return, "null" to clear
-     * 
+     *
      * Specify a string/object value to `set`, none to `get`, and "null" to `clear`
      */
     store: function (key, value) {
@@ -335,10 +335,10 @@ var fsapi = {
         }
 
     },
-    
+
     /**
      * Creates new cookie or removes cookie with negative expiration
-     * 
+     *
      * @param {String} key The key or identifier for the store
      * @param {String} value Contents of the store
      * @param {Number} exp Expiration in days
@@ -350,10 +350,10 @@ var fsapi = {
         expires = "; expires=" + date.toGMTString();
         document.cookie = key + "=" + value + expires + "; path=/";
     },
-    
+
     /**
      * Reads cookie
-     * 
+     *
      * @param {String} key The key or identifier for the store
      * @return {String} the value of the cookie
      */
@@ -366,6 +366,8 @@ var fsapi = {
             if (c.indexOf(nameEQ) === 0) { return c.substring(nameEQ.length, c.length); }
         }
         return null;
-    }  
-    
+    }
+
 };
+
+export default fsapi;
