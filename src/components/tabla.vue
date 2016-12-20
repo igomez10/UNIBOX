@@ -34,31 +34,31 @@
     </div>
     <br>
     <br>
-    <div class='row'>
-      <div class="col-sm-4" v-if=''>
-        <transition name='fade'>
-          <div>
-          </div>
-        </transition>
-      </div>
-      <hr>
-      <div class="col-sm-4">
-        <transition name='fade'>
-          <table class='table table-hover table-responsive table-bordered' v-if='filtroSeleccionado'>
-            <thead>
-              <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-              </tr>
-            </thead>
-            <tbody>
-              <course :courseCode='item.codigo' :courseName='"🎓 " + item.nombre' v-for='item in content' v-if='filtroSeleccionado'></course>
-            </tbody>
-          </table>
-        </transition>
-      </div>
+    <v-row fluid>
+      <!-- <v-col xs12 sm6 md4 lg3 v-if=''>
+      <transition name='fade'>
+      <div>
     </div>
-  </div>
+  </transition>
+</v-col> -->
+<hr>
+<v-col xs6 offset-xs3 fluid>
+  <transition name='fade'>
+    <table class='table table-hover table-responsive table-bordered' v-if='filtroSeleccionado'>
+      <thead>
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <course :courseCode='item.codigo' :courseName='"🎓 " + item.nombre' v-for='item in content' v-if='filtroSeleccionado'></course>
+      </tbody>
+    </table>
+  </transition>
+</v-col>
+</v-row>
+</div>
 </template>
 <script>
 import course from "./course.vue"

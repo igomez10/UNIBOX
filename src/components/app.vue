@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <tabla></tabla>
+  <div>
+  <div id="app" style="text-align: center;">
+    <tabla style="text-align:center;"></tabla>
+  </div>
     <!--
       Aquí sólo se debe poner código que _siempre_ aparece, por ejemplo:
       Menú de navegación o footer que sale en todas las páginas.
@@ -8,7 +10,7 @@
       a través de una ruta? El index tb es una ruta! Ejemplo:
           { path: '/', component: Tabla  },
     -->
-    <router-view :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    <router-view   style="text-align: center;"   :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
   </div>
 </template>
 
@@ -21,6 +23,9 @@ export default {
   components:{tabla},
   data(){
     return{msg:"hola"}
+  },
+  mounted () {
+    this.$vuetify.init()
   }
 }
 </script>

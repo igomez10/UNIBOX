@@ -23,9 +23,10 @@
   </template>
 
   <script>
-  import fsapi from '../lib/fsapi-client.js'
-  fsapi.config("http://localhost:8080","12345")
-  import file from "./file.vue"
+  import fsapi from '../lib/fsapi-client.js';
+  fsapi.config("http://localhost:8080","12345");
+  window.fsapi = fsapi;
+  import file from "./file.vue";
   export default{
     name:"fileViewer",
     components:{file, fsapi},
@@ -62,8 +63,11 @@
         this.fileName=this.filesToUpload.name;
         this.fileSize=this.filesToUpload.size;
         this.fileType=this.filesToUpload.type;
-        let ladata=this.filesToUpload.value
-        console.log("File to upload: Name: " + this.fileName +", Size: "+ this.fileSize + ", Type: "+ this.fileType + ladata);
+        let ladata=this.filesToUpload;
+        window.f = this.filesToUpload;
+        console.log("File to upload: Name: " + this.fileName +", Size: "+ this.fileSize + ", Type: "+ this.fileType + typeof(ladata));
+        var reader  = new FileReader();
+        console.log(reader.readAsDataURL(this.filesToUpload));
       },
       getFiles:function()
       {
@@ -76,6 +80,7 @@
             this.files= res
             const temp11=res
             resolve(res.data)
+            reject(console.log("No existe la carpeta o algo salió mal"))
           })
         })
         filePromise.then(function(data){
