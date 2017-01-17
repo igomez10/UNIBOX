@@ -76,7 +76,7 @@ export default{
   },
   props:
   {
-    message:{default:'Hola Ignacio'},
+    message:{default:'Hola'},
   },
   methods:
   {
