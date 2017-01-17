@@ -2,33 +2,13 @@
   <div align="center">
 
     <br>
-    <div align="center">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <span class="glyphicon glyphicon-cloud-upload"></span>
-                <h2>File Uploader</h2>
-                <h4>Ignacio</h4>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar"></div>
-                </div>
-                <button class="btn btn-lg upload-btn" type="button">Upload File</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <input id="upload-input" type="file" name="uploads[]" multiple="multiple">
-    </div>
-
-  </br>
+    <fileuploader></fileuploader>
+    </br>
   <br>
   <h4> Materia: {{courseCode}} </h4>
   <h4> Archivos: </h4>
 </br>
-<div v-show='fileName!=undefined'>
+<div v-show='true'>
   <br>
   <p><label>Nombre:</label> {{fileName}}</p>
   <p><label>Tamaño:</label> {{fileSize}}</p>
@@ -54,8 +34,7 @@
 <script>
 import fsapi from '../lib/fsapi-client.js';
 fsapi.config("http://localhost:8080","12345");
-import fileuploader from "./fileuploader.js";
-window.fileuploader = fileuploader;
+import fileuploader from "./fileuploader.vue";
 window.fsapi = fsapi;
 import file from "./file.vue";
 
