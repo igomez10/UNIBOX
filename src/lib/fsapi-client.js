@@ -97,9 +97,9 @@ const fsapi = {
      */
 
     // Create handler
-    create: function (path, type, fn) {
+    create: function (path, type, data, fn) {
         var url = this.config().fsapiUrl + "/" + this.config().fsapiKey + "/" + type + "/" + path;
-        this.request(url, "POST", null, fn);
+        this.request(url, "POST", data, fn);
     },
 
     // Proxy for create (file)

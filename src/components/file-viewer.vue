@@ -96,8 +96,7 @@ export default{
           reject(console.log("No existe la carpeta o algo salió mal"))
         })
       })
-      filePromise.then(function(data){
-      })
+      filePromise.then(function(data){})
     }
 
   }

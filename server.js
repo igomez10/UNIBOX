@@ -347,7 +347,13 @@ server.post(commandRegEx, function (req, res, next) {
         case "file":
             // Ensure base path
             if (checkPath(path)) {
+              console.log(req + "este es req")
+              console.log(req.params + " este es reqparams")
+              console.log(req.params.data + "esteesreqparamsdata")
+              console.log(path + " este es el path")
               if (req.params.data) {
+
+
                 fs.writeFile(path, req.params.data, function(err) {
                     if(err) {
                         resError(107, err, res);

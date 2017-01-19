@@ -10,12 +10,6 @@ var fs = require('fs')
 console.log("estoy poniendo el __dirname")
 apps.use(express.static(__dirname));
 
-apps.get('/', function(req, res){
-  console.log("ME ESTA PIDIENDO EL /")
-  res.sendFile(path.join(__dirname, '/index.html'));
-})
-
-
 apps.post('/uploads', function(req, res){
   var form = new formidable.IncomingForm();
 
@@ -26,6 +20,8 @@ apps.post('/uploads', function(req, res){
   //le cambio el nombre al archivo original, se puede personalizar
   form.on( 'file' , function(field, file){
     fs.rename(file.path, path.join(form.uploadDir, file.name));
+    console.log("subi un archivo" + file.name );
+
   });
 
   //log de los errores

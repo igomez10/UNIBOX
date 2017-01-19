@@ -18,7 +18,10 @@
         </div>
       </div>
     </div>
-    <input v-show='false' v-on:change="uploadFile()" ref="input" id="upload-input" type="file" name="uploads[]" multiple="multiple">
+    <form method="post" :action='this.routeAction' v-on:submit.prevent="uploadFile($route)" enctype="multipart/form-data">
+      <input v-show='false' v-on:change='setFiles()' type='file' name='filedata' ref='input' id='upload-input' multiple="multiple"></input>
+      <input type='submit' ref="submit" value="submit"></input>
+    </form>
   </div>
 
 
@@ -26,74 +29,62 @@
 
 <script>
 import $ from 'jquery';
+import fsapi from '../lib/fsapi-client.js';
+fsapi.config("http://localhost:8080","12345");
+window.fsapi = fsapi;
+
 
 export default{
   name:"fileuploader",
   components:{},
   data: function(){
     return{
-
-    };
+      routeAction:  "//localhost:8080/12345/file/" +
+      this.$route.params.career + "/" +
+      this.$route.params.courseCode +
+      "/unarchivo.txt",
+      selectedFiles: "no he seleccionado archivos",
+      ruta: this.$route
+    }
   },
   props:{
     progressBarText:String,
     progressBarWidth:Number
   },
   methods:{
-    selectFile : function(){
+    selectFile: function(){
       this.$refs.input.click();
     },
-    uploadFile : function(){
-      var files = this.$refs.input.files;
-      console.log('se estan subiendo ' + files.length + " archivos")
+    setFiles: function(){
+      this.selectedFiles = this.$refs.input.files;
+      this.routeAction = "//localhost:8080/12345/file/" +
+      this.$route.params.career + "/" +
+      this.$route.params.courseCode + "/" +
+      this.selectedFiles[0].name
+    },
+    uploadFile: function(ruta){
+      var files = this.selectedFiles;
+      console.log('se estan subiendo ' + files.length + ' archivos')
       if(files.length > 0){
         var formData = new FormData();
-
         for(var i = 0 ; i < files.length ; i++){
           var file = files[i];
           console.log(file.name)
           formData.append('upload[]' , file , file.name);
         }
-        $.ajax({
-          url: '/uploads',
-          type: 'POST',
-          data: formData,
-          processData: false,
-          contentType: false,
-          success: function(data){
-            console.log('upload successful!\n' + data);
-          },
-          xhr: function() {
-            // create an XMLHttpRequest
-            var xhr = new XMLHttpRequest();
+        this.$refs.submit.click()
+        $.ajax({ url: this.routeAction ,
+          type:'POST',
+          filedata:files[0],
+          success: function(result){
+            console.log("pude subir exitosamente")
+          }})
 
-            // listen to the 'progress' event
-            xhr.upload.addEventListener('progress', function(evt) {
 
-              if (evt.lengthComputable) {
-                // calculate the percentage of upload completed
-                var percentComplete = evt.loaded / evt.total;
-                percentComplete = parseInt(percentComplete * 100);
 
-                // update the Bootstrap progress bar with the new percentage
-                $('.progress-bar').text(percentComplete + '%');
-                $('.progress-bar').width(percentComplete + '%');
-
-                // once the upload reaches 100%, set the progress bar text to done
-                if (percentComplete === 100) {
-                  $('.progress-bar').html('Done');
-                }
-
-              }
-
-            }, false);
-
-            return xhr;
-          }
-        });
+        }
       }
-    }
 
+    }
   }
-}
-</script>
+  </script>
