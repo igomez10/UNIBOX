@@ -319,8 +319,11 @@ server.get(commandRegEx, function (req, res, next) {
  *
  */
 server.post(commandRegEx, function (req, res, next) {
-
+    // console.log(req)
+    // console.log(res)
+    // console.log(next)
     // Check request
+    console.log(req.body)
     checkReq(config, req, res);
 
     // Set path
@@ -347,10 +350,9 @@ server.post(commandRegEx, function (req, res, next) {
         case "file":
             // Ensure base path
             if (checkPath(path)) {
-              console.log(req + "este es req")
-              console.log(req.params + " este es reqparams")
-              console.log(req.params.data + "esteesreqparamsdata")
-              console.log(path + " este es el path")
+              // console.log(req.params.data + "esteesreqparamsdata-------------------------------------------------------------------------------------")
+              // console.log(path + " este es el path -------------------------------------------------------------------------------------")
+              // console.log( req.files.filedata + "este es el filedata-------------------------------------------------------------------------------------")
               if (req.params.data) {
 
 
@@ -361,9 +363,9 @@ server.post(commandRegEx, function (req, res, next) {
                         resSuccess(null, res);
                     }
                 });
-              } else if (req.files && req.files.filedata) {
-                fs.readFile(req.files.filedata.path, function (err, data) {
-                    fs.writeFile(path, data, function (err) {
+              } else if (true) {
+                fs.readFile(req.body, function (err, data) {
+                    fs.writeFile(path, req.body, function (err) {
                       if(err) {
                           resError(107, err, res);
                       } else {

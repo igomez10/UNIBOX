@@ -70,14 +70,24 @@ export default{
         for(var i = 0 ; i < files.length ; i++){
           var file = files[i];
           console.log(file.name)
-          formData.append('upload[]' , file , file.name);
+          formData.append('filedata' , file , file.name);
         }
-        this.$refs.submit.click()
+        // this.$refs.submit.click();
+        // var client = new XMLHttpRequest();
+        // client.open('post', this.routeAction , true );
+        // client.setRequestHeader("Content-Type", "multipart/form-data");
+        // client.send(formData);
+
         $.ajax({ url: this.routeAction ,
           type:'POST',
-          filedata:files[0],
+          data:files[0],
+          // data:'este es un archivo elm que estoy subiendo ..dsfgsdfgsdfgsdfgsdf[ojasndc[oaweicnwq[eoin]]]',
+          cache : false,
+          processData: false,
+          contentType: false,
           success: function(result){
             console.log("pude subir exitosamente")
+            console.log(files[0])
           }})
 
 
