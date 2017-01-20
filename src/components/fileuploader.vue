@@ -8,6 +8,7 @@
       <button class="btn btn-success" v-on:click="$refs.submit.click()">Paso 2: ENVIAR</button>
     </div>
     <br></br>
+    <p>Nota: Unibox aún no soporta carpetas. Solo puedes subir archivos</p>
     <form method="post" :action='this.routeAction' v-on:submit.prevent="uploadFile($route)" enctype="multipart/form-data">
       <input v-show="false" v-on:change='setFiles()' type='file' name='filedata' ref='input' id='upload-input' multiple="multiple"></input>
       <input v-show="false" type='submit' ref="submit" value="submit"></input>
@@ -68,12 +69,12 @@ export default{
             success: function(result){
               console.log("pude subir exitosamente")
               console.log(files[0])
-            }})
-
-          }
+            }
+          })
         }
+        alert('actualiza para ver los nuevos archivos')
       }
-
     }
   }
-  </script>
+}
+</script>

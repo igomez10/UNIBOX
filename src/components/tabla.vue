@@ -30,7 +30,6 @@
     <div border=1px>
       <button class="btn btn-default" v-on:click="changeFilter('/files/medi/medi.json') , retrieveCourses()" > Medicina </button>
       <button class="btn btn-default" v-on:click="changeFilter('/files/psic/psic.json') , retrieveCourses()" > Psicología</button>
-
     </div>
     <br>
     <br>
