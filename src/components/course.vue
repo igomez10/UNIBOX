@@ -26,8 +26,7 @@ export default{
   methods:{
     select:function(){
       this.isSelected = true;
-    },
-
+    }
   },
   computed: {
     career: function(){
@@ -35,7 +34,7 @@ export default{
       return a;
     },
     courseUrl: function(){
-       return "/" + this.career + "/" + this.courseCode;
+      return "/" + this.career + "/" + this.courseCode;
     }
   }
 }

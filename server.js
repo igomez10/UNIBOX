@@ -318,12 +318,21 @@ server.get(commandRegEx, function (req, res, next) {
  * copy - copies a file or dirextory (to path at param "destination")
  *
  */
+
+
 server.post(commandRegEx, function (req, res, next) {
-    // console.log(req)
-    // console.log(res)
-    // console.log(next)
+
     // Check request
-    console.log(req.body)
+    // console.log(req.body)
+    var date = new Date();
+    console.log(  date.getFullYear() + "/" +
+                  (date.getMonth()+1) + "/" +
+                  date.getDate() + "/ " +
+                  date.getHours() + ":" +
+                  date.getMinutes() + ":" +
+                  date.getSeconds() + ":" +
+                  date.getMilliseconds() + "----->" +
+                  req.url)
     checkReq(config, req, res);
 
     // Set path
@@ -350,9 +359,7 @@ server.post(commandRegEx, function (req, res, next) {
         case "file":
             // Ensure base path
             if (checkPath(path)) {
-              // console.log(req.params.data + "esteesreqparamsdata-------------------------------------------------------------------------------------")
-              // console.log(path + " este es el path -------------------------------------------------------------------------------------")
-              // console.log( req.files.filedata + "este es el filedata-------------------------------------------------------------------------------------")
+
               if (req.params.data) {
 
 

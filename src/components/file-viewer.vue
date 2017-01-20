@@ -1,34 +1,19 @@
 <template>
   <div align="center">
-
     <br>
-    <fileuploader></fileuploader>
-    </br>
-  <br>
-  <h4> Materia: {{courseCode}} </h4>
+    <div align="center">
+      <fileuploader></fileuploader>
+    </div>
+
+  <h3> Materia: {{courseCode}} </h3>
   <h4> Archivos: </h4>
-</br>
-<div v-show='true'>
+
+<div id=fileList>
   <br>
-  <p><label>Nombre:</label> {{fileName}}</p>
-  <p><label>Tamaño:</label> {{fileSize}}</p>
-  <p><label>Tipo:</label>   {{fileType}}<p>
-    <p>Materia Destino: </p>
-    <h3><strong>Tu archivo quedará a la materia {{courseCode}}</strong></h3>
-    <button class="btn btn-success">Upload</button>
-  </div>
-  <div id=fileList>
-    <file v-bind:files='this.files'></file>
-  </div>
+  <file v-bind:files='this.files'></file>
+</div>
 </div>
 </template>
-
-
-
-
-
-
-
 
 
 <script>
