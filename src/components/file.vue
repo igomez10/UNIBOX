@@ -11,7 +11,7 @@
             </thead>
             <tbody>
               <tr fluid v-for="file in files">
-                <td v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.') " > <a :href='"files/" + file.path' >📝 {{file.path.split("/")[3]}} </a> </td>
+                <td v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.') " > <a :href='"files" + file.path' >📝 {{file.path.split("/")[3]}} </a> </td>
               </tr fluid>
             </tbody>
           </table>
