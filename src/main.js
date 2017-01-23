@@ -2,7 +2,8 @@ import Vue from 'vue';
 import routes from './routes';
 import App from './components/app.vue';
 import VueRouter from 'vue-router';
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify';
+import 'whatwg-fetch';
 Vue.use(Vuetify)
 Vue.use(VueRouter);
 
