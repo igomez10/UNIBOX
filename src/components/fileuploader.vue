@@ -19,7 +19,7 @@
 <script>
 import $ from 'jquery';
 import fsapi from '../lib/fsapi-client.js';
-fsapi.config("http://localhost:8080","12345");
+fsapi.config("http://157.253.154.161:8080","12345");
 window.fsapi = fsapi;
 
 export default{
@@ -27,7 +27,7 @@ export default{
   components:{},
   data: function(){
     return{
-      routeAction:  "//localhost:8080/12345/file/" +
+      routeAction:  "//157.253.154.161:8080/12345/file/" +
       this.$route.params.career + "/" +
       this.$route.params.courseCode +
       "/unarchivo.txt",
@@ -36,8 +36,10 @@ export default{
     }
   },
   props:{
-    progressBarText:String,
-    progressBarWidth:Number
+    progressBarText: String,
+    progressBarWidth: Number,
+    files: String,
+    selected: Boolean
   },
   methods:{
     selectFile: function(){
@@ -56,7 +58,7 @@ export default{
           var file = files[i];
           console.log(file.name)
           formData.append('filedata' , file , file.name);
-          this.routeAction = "//localhost:8080/12345/file/" +
+          this.routeAction = "//157.253.154.161:8080/12345/file/" +
           this.$route.params.career + "/" +
           this.$route.params.courseCode + "/" +
           file.name

@@ -19,7 +19,7 @@
 <script>
 import fsapi from '../lib/fsapi-client.js';
 // import uploader from '../../app.js';
-fsapi.config("http://localhost:8080","12345");
+fsapi.config(("http://" + window.location.hostname + ":8080"),"12345");
 import fileuploader from "./fileuploader.vue";
 window.fsapi = fsapi;
 import file from "./file.vue";
