@@ -1,7 +1,7 @@
 <template>
   <tr>
     <td >
-      <router-link :id="courseCode" :to="courseUrl">
+      <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl">
         {{courseCode}}
       </router-link>
     </td>
@@ -11,6 +11,7 @@
 
 
 <script>
+
 export default{
   name: 'course',
   data:function(){

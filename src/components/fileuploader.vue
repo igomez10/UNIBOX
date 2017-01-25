@@ -9,6 +9,14 @@
     </div>
     <br></br>
     <p>Nota: Unibox aún no soporta carpetas. Solo puedes subir archivos</p>
+    <div align='left' v-show="selected">
+    <ul>
+      <li v-for="file in selectedFiles">
+        <label>Nombre:</label> {{file.name}}
+        <label>Tamaño:</label> {{file.size}} bytes
+      </li>
+    </ul>
+  </div>
     <form method="post" :action='this.routeAction' v-on:submit.prevent="uploadFile($route)" enctype="multipart/form-data">
       <input v-show="false" v-on:change='setFiles()' type='file' name='filedata' ref='input' id='upload-input' multiple="multiple"></input>
       <input v-show="false" type='submit' ref="submit" value="submit"></input>
@@ -32,14 +40,18 @@ export default{
       this.$route.params.courseCode +
       "/unarchivo.txt",
       selectedFiles: "no he seleccionado archivos",
-      ruta: this.$route
+      ruta: this.$route,
+      files:{}
     }
   },
   props:{
     progressBarText: String,
     progressBarWidth: Number,
-    files: String,
-    selected: Boolean
+    selected: {
+      type: Boolean,
+      default: false
+    }
+
   },
   methods:{
     selectFile: function(){
@@ -47,6 +59,10 @@ export default{
     },
     setFiles: function(){
       this.selectedFiles = this.$refs.input.files;
+      console.log(this.selectedFiles.name);
+      if(this.selectedFiles != null){
+        this.selected = true;
+      }
 
     },
     uploadFile: function(ruta){

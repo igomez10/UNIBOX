@@ -5,24 +5,24 @@
       <fileuploader></fileuploader>
     </div>
 
-  <h3> Materia: {{courseCode}} </h3>
-  <h4> Archivos: </h4>
-
-<div id=fileList>
-  <br>
-  <file v-bind:files='this.files'></file>
-</div>
-</div>
+    <h3> Materia: {{courseCode}} </h3>
+    <h4> Archivos: </h4>
+    <div id=fileList v-show="!isEmpty">
+      <br>
+      <file :files='this.files'></file>
+    </div>
+    <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
+  </div>
 </template>
 
 
 <script>
 import fsapi from '../lib/fsapi-client.js';
-// import uploader from '../../app.js';
 fsapi.config(("http://" + window.location.hostname + ":8080"),"12345");
 import fileuploader from "./fileuploader.vue";
 window.fsapi = fsapi;
 import file from "./file.vue";
+import $ from 'jquery'
 
 
 export default{
@@ -30,11 +30,8 @@ export default{
   components:{file, fsapi, fileuploader},
   data: function(){
     return {
-      filesToUpload:'',
-      fileName:undefined,
-      fileSize:undefined,
-      fileType:undefined,
-      files:'holadata'
+      files:'holadata',
+      isEmpty:true
     };
   },
   props:{
@@ -44,29 +41,20 @@ export default{
   },
   created : function()
   {
-    this.getFiles()
+    this.getFiles();
+    $.notify("Desliza hasta el final para ver los archivos", 'success')
   },
   watch:{
     $route : function(){
-      this.getFiles()
-      console.log("cambio la ruta")
+      var a = this.getFiles();
+      console.log("cambio la ruta");
+      if( Object.keys(this.files).length >= 1 ){
+        this.isEmpty = false;
+      }
     }
   },
   methods:
   {
-    onFileChange : function(e)
-    {
-      console.log(e)
-      this.filesToUpload = e.path[0].files[0];
-      this.fileName=this.filesToUpload.name;
-      this.fileSize=this.filesToUpload.size;
-      this.fileType=this.filesToUpload.type;
-      let ladata=this.filesToUpload;
-      window.f = this.filesToUpload;
-      console.log("File to upload: Name: " + this.fileName +", Size: "+ this.fileSize + ", Type: "+ this.fileType + typeof(ladata));
-      var reader  = new FileReader();
-      console.log(reader.readAsDataURL(this.filesToUpload));
-    },
     getFiles:function()
     {
       //courseUrl start from the career folder. not from files
