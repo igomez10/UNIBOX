@@ -6,7 +6,8 @@
     <div  border=1px>
       <button class="btn btn-default" v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()"> Administración</button>
       <button class="btn btn-default" v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</button>
-      <button class="btn btn-default" v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
+      <button class="btn btn-default" v-on:click="changeFilter('/files/dise/dise.json') , retrieveCourses()" > Diseño </button>
+
     </div>
     <br>
     <div  border=1px>
@@ -17,8 +18,9 @@
     <br>
     <div border=1px>
       <button class="btn btn-default" v-on:click="changeFilter('/files/econ/econ.json') , retrieveCourses()" > Economía</button>
-      <button class="btn btn-default" v-on:click="changeFilter('/files/dise/dise.json') , retrieveCourses()" > Diseño </button>
       <button class="btn btn-default" v-on:click="changeFilter('/files/arqu/arqu.json') , retrieveCourses()" > Arquitectura</button>
+      <button class="btn btn-default" v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</button>
+
     </div>
     <br>
     <div border=1px>
@@ -32,7 +34,6 @@
       <button class="btn btn-default" v-on:click="changeFilter('/files/psic/psic.json') , retrieveCourses()" > Psicología</button>
     </div>
     <br>
-    <br>
     <div align='center'>
       <hr></hr>
 
@@ -40,13 +41,11 @@
         <div class="list-group" style="text-align:left;" v-if='filtroSeleccionado'>
 
           <h1 style='text-align:center'>Materias</h1>
-          <div align='center' >
-            <v-list two-line v-bind:items="content" style="width:40%">
-              <div>
-                <course :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content'></course>
-              </div>
-            </v-list>
-          </div>
+          <div align="center">
+            <div align='center' class="list-group" style="width:400px;" >
+                  <course :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
+            </div>
+        </div>
         </div>
 
       </transition>
