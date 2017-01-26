@@ -36,16 +36,20 @@
     <br>
     <div align='center'>
       <hr></hr>
-
+      <h5 v-if='!filtroSeleccionado' style="color:blue;">1. Selecciona una carrera para ver sus cursos</h5>
       <transition name='fade'>
         <div class="list-group" style="text-align:left;" v-if='filtroSeleccionado'>
-
+          <div align=center >
+            <h5 style="color:red;">
+              2. Selecciona una materia para ver sus archivos
+            </h5>
+          </div>
           <h1 style='text-align:center'>Materias</h1>
           <div align="center">
             <div align='center' class="list-group" style="width:400px;" >
-                  <course :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
+              <course :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
             </div>
-        </div>
+          </div>
         </div>
 
       </transition>

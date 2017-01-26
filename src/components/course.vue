@@ -1,6 +1,6 @@
 <template>
   <a class="list-group-item">
-  <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl">
+  <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl" onclick="window.scroll(0,99999999999999)">
     🎓 {{courseCode}} - {{courseName}}
   </router-link>
 </a>

@@ -1,17 +1,19 @@
 <template>
   <div align="center">
     <br>
-    <div align="center">
-      <fileuploader></fileuploader>
-    </div>
+
 
     <h3> Materia: {{courseCode}} </h3>
     <h4> Archivos: </h4>
-    <div id=fileList v-show="!isEmpty">
-      <br>
-      <file :files='this.files'></file>
+    <div align='center'>
+      <div align='center' class="list-group" style="width:400px;">
+        <file :files='this.files'></file>
+      </div>
     </div>
     <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
+    <div align="center">
+      <fileuploader></fileuploader>
+    </div>
   </div>
 </template>
 
@@ -38,7 +40,11 @@ export default{
     courseCode:String,
     courseName:String,
     career:String,
-    scrollPosition:Number
+    scrollPosition:Number,
+    filtroSeleccionado:{
+      type:Boolean,
+      default:false,
+    }
   },
   created : function()
   {
@@ -61,7 +67,6 @@ export default{
       else{
         this.isEmpty = true;
       }
-      window.scroll(document.body.width/2, document.body.height)
     }
   },
   methods:
