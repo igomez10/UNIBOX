@@ -2,14 +2,7 @@
   <div>
     <br>
     <hr>
-    <div class="panel-body">
-      <h2>Subir un archivo</h2>
-      <button v-on:click="selectFile()" class="btn btn-lg upload-btn" type="button">Paso 1: Seleccionar Archivo</button>
-      <button class="btn btn-success" v-on:click="$refs.submit.click()">Paso 2: ENVIAR</button>
-    </div>
-    <br></br>
-    <p>Nota: Unibox aún no soporta carpetas. Solo puedes subir archivos</p>
-    <div align='left' v-show="selected">
+    <div align='center' v-if="selected">
     <ul>
       <li v-for="file in selectedFiles">
         <label>Nombre:</label> {{file.name}}
@@ -17,6 +10,14 @@
       </li>
     </ul>
   </div>
+    <div class="panel-body">
+      <h2>Subir un archivo</h2>
+      <button v-on:click="selectFile()" class="btn btn-lg upload-btn" type="button">Paso 1: Seleccionar Archivo</button>
+      <button class="btn btn-success" v-on:click="$refs.submit.click()">Paso 2: ENVIAR</button>
+    </div>
+    <br></br>
+    <p>Nota: Unibox aún no soporta carpetas. Solo puedes subir archivos</p>
+
     <form method="post" :action='this.routeAction' v-on:submit.prevent="uploadFile($route)" enctype="multipart/form-data">
       <input v-show="false" v-on:change='setFiles()' type='file' name='filedata' ref='input' id='upload-input' multiple="multiple"></input>
       <input v-show="false" type='submit' ref="submit" value="submit"></input>
