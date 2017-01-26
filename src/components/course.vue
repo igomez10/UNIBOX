@@ -1,12 +1,13 @@
 <template>
-  <tr>
-    <td >
-      <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl">
-        {{courseCode}}
-      </router-link>
-    </td>
-    <td>{{courseName}}</td>
-  </tr>
+  <div>
+    <v-list-item class="list-group-item">
+      <div style="text-align:left;">
+        <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl" style="text-align:left;" >
+        🎓 {{courseCode}} - {{courseName}}
+        </router-link>
+      </div>
+    </v-list-itemt>
+  </div>
 </template>
 
 

@@ -43,7 +43,7 @@ export default{
   created : function()
   {
     this.getFiles();
-    $.notify("Desliza hasta el final para ver los archivos", 'success')
+    $.notify("Baja hasta el final de la pagina para ver los archivos", 'success')
     if( Object.keys(this.files).length >= 1 ){
       this.isEmpty = false;
     }

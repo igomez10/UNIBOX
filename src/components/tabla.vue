@@ -33,24 +33,25 @@
     </div>
     <br>
     <br>
-    <v-row fluid>
-      <hr>
-      <v-col xs6 offset-xs3 fluid>
-        <transition name='fade'>
-          <table class='table table-hover table-responsive table-bordered' v-if='filtroSeleccionado'>
-            <thead>
-              <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
-              </tr>
-            </thead>
-            <tbody>
-              <course :courseCode='item.codigo' :courseName='"🎓 " + item.nombre' v-for='item in content' v-if='filtroSeleccionado'></course>
-            </tbody>
-          </table>
-        </transition>
-      </v-col>
-    </v-row>
+    <div align='center'>
+      <hr></hr>
+
+      <transition name='fade'>
+        <div class="list-group" style="text-align:left;" v-if='filtroSeleccionado'>
+
+          <h1 style='text-align:center'>Materias</h1>
+          <div align='center' >
+            <v-list two-line v-bind:items="content" style="width:40%">
+              <div>
+                <course :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content'></course>
+              </div>
+            </v-list>
+          </div>
+        </div>
+
+      </transition>
+
+    </div>
   </div>
 </template>
 
