@@ -24,8 +24,12 @@
 <script>
 export default{
   name:"file",
-  props:{
+  props: {
     files:{default:''}
+  },
+  mounted: function(){
+    window.scroll(100,document.body.scrollHeight + 1000000000000)
+    console.log(document.body.scrollHeight)
   }
 }
 </script>

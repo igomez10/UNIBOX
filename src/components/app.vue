@@ -3,7 +3,7 @@
   <div id="app" style="text-align: center;">
     <tabla style="text-align:center;"></tabla>
   </div>
-    <router-view   style="text-align:center;"   :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    <router-view   style="text-align:center;"   :career="$route.params.career" :courseCode="$route.params.courseCode" ></router-view>
   </div>
 </template>
 

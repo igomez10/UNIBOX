@@ -37,12 +37,19 @@ export default{
   props:{
     courseCode:String,
     courseName:String,
-    career:String
+    career:String,
+    scrollPosition:Number
   },
   created : function()
   {
     this.getFiles();
     $.notify("Desliza hasta el final para ver los archivos", 'success')
+    if( Object.keys(this.files).length >= 1 ){
+      this.isEmpty = false;
+    }
+    else{
+      this.isEmpty=true;
+    }
   },
   watch:{
     $route : function(){
@@ -51,6 +58,10 @@ export default{
       if( Object.keys(this.files).length >= 1 ){
         this.isEmpty = false;
       }
+      else{
+        this.isEmpty = true;
+      }
+      window.scroll(document.body.width/2, document.body.height)
     }
   },
   methods:
@@ -70,6 +81,7 @@ export default{
         })
       })
       filePromise.then(function(data){})
+
     }
 
   }

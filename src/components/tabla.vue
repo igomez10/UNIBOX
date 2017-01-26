@@ -93,6 +93,9 @@ export default{
       this.myCareerFile=pFilter;
       this.filtroSeleccionado=true;
     }
+  },
+  mounted: function(){
+    window.scroll(100,document.body.scrollHeight + 1000000000000)
   }
 }
 </script>

@@ -7,7 +7,6 @@ import 'whatwg-fetch';
 import 'notify.js'
 Vue.use(Vuetify)
 Vue.use(VueRouter);
-
 const router = new VueRouter( { routes } );
 
 new Vue({
