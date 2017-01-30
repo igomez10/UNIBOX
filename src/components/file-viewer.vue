@@ -1,15 +1,14 @@
 <template>
-  <div align="center">
-    <br>
+  <div align="center" style="margin-left:50px">
 
-
-    <h3> Materia: {{courseCode}} </h3>
-    <h4> Archivos: </h4>
+    <h2>Archivos</h2>
+    <h5> Materia: {{courseCode}} </h5>
     <div align='center'>
-      <div align='center' class="list-group" style="width:400px;">
+      <div align='center' class="list-group" style="">
         <file :files='this.files'></file>
       </div>
     </div>
+
     <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
     <div align="center">
       <fileuploader></fileuploader>
@@ -49,7 +48,9 @@ export default{
   created : function()
   {
     this.getFiles();
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $.notify("Baja hasta el final de la pagina para ver los archivos", 'success')
+    }
     if( Object.keys(this.files).length >= 1 ){
       this.isEmpty = false;
     }
@@ -91,7 +92,5 @@ export default{
 
   }
 }
-
-
 
 </script>

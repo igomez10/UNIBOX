@@ -8,8 +8,9 @@
     <div id="app" style="background-color:light-blue; text-align:center; display: inline block; float:left">
       <tabla style=""></tabla>
     </div>
-
-    <router-view style="background-color:orange ;text-align:center; display:inline block; float:left" :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    <transition name='fade'>
+    <router-view style="text-align:center; display:inline block; float:left" :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    </transition>
   </div>
 </template>
 
