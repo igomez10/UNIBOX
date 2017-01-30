@@ -1,9 +1,16 @@
 <template>
   <div>
-  <div id="app" style="text-align: center;">
-    <tabla></tabla>
-  </div>
-    <router-view   style="text-align:center;"   :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    <div style="align:center; text-align:center;">
+      <h1><a href='/'>  Unibox  </a></h1>
+      <hr></hr>
+    </div>
+
+    <div id="app" style="background-color:light-blue; text-align:center; display: inline block; float:left">
+      <tabla style=""></tabla>
+    </div>
+    <transition name='fade'>
+    <router-view style="text-align:center; display:inline block; float:left" :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+    </transition>
   </div>
 </template>
 

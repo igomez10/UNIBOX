@@ -91,9 +91,9 @@ export default{
             }
           })
         }
-        alert('actualiza para ver los nuevos archivos')
-      }
+        $.notify("Recarga para ver los cambios", 'success')
+    }      
+    }
     }
   }
-}
 </script>
