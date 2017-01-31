@@ -1,9 +1,8 @@
 <template>
   <div>
 
-    <div id="careerList" style="float: left; width: 300px; margin-left:30px;">
+    <div id="careerList" style="float: left; width: 250px; margin-left:20px;">
       <h2>Carreras</h2>
-      <h5 v-if='!filtroSeleccionado' style="color:#1976D2">1. Selecciona una carrera para ver sus cursos</h5>
       <div class="list-group" align=center>
         <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</a>
         <a class="list-group-item" style="width:200px; margin-bottom:1px"   v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</a>
@@ -23,7 +22,7 @@
     </div>
     <div style=" float: left;" id="courseList">
       <transition name='fade'>
-        <div class="list-group" style="text-align:left; width:400px;" v-if='filtroSeleccionado'>
+        <div class="list-group" style="text-align:left; width:350px;" v-if='filtroSeleccionado'>
           <h2 style='text-align:center'>Materias</h2>
           <div align='center' class="list-group"  >
           <course v-on:click="selectCourse()" :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
