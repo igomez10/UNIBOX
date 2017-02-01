@@ -1,20 +1,19 @@
 <template>
-  <div align="center">
-    <div style="float:left; margin-left:10px" >
-    <h6>1. Selecciona un programa</h6>
-    <h6>2. Selecciona una materia</h6>
-    <h6>3. Selecciona un archivo</h6>
-  </div>
+  <div>
+    <div style="float:left; width:260px">
+      <h6>1. Selecciona un programa</h6>
+      <h6>2. Selecciona una materia</h6>
+      <h6>3. Selecciona un archivo</h6>
+    </div>
     <div style="align:center; text-align:center;">
       <h1><a href='/'>  Unibox  </a></h1>
       <hr></hr>
     </div>
-
-    <div id="app" style="background-color:light-blue; text-align:center; display: inline block; float:left">
-      <tabla style=""></tabla>
+    <div id="app" style="float:left;">
+      <tabla></tabla>
     </div>
     <transition name='fade'>
-    <router-view style="text-align:center; display:inline block; float:left" :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
+      <router-view style="float:left;" :career="$route.params.career" :courseCode="$route.params.courseCode"></router-view>
     </transition>
   </div>
 </template>

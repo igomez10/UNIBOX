@@ -1,16 +1,17 @@
 <template>
-  <div align="center" style="margin-left:20px; width: 250px">
-
-    <h2>Archivos</h2>
-    <h5> Materia: {{courseCode}} </h5>
-    <div align='center' >
-      <div align='center' class="list-group">
-        <file :files='this.files'></file>
+  <div style="float: left; align: center;">
+    <div style='float: left;'>
+      <h2>Archivos</h2>
+      <div align='center' >
+        <div v-show="!isEmpty" style='align:center; overflow: scroll; height:55%; width: 450px' class="list-group">
+          <file :files='this.files'></file>
+        </div>
+        <div style="width:450px;">
+          <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
+        </div>
       </div>
-      <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
     </div>
-
-    <div align="center">
+    <div style="float: left;">
       <fileuploader></fileuploader>
     </div>
   </div>
@@ -49,12 +50,9 @@ export default{
   {
     this.getFiles();
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $.notify("Baja hasta el final de la pagina para ver los archivos", 'success')
+      window.scrollTo(0 , 1000 );
     }
-    else{
-    window.scroll(0,0)
-    }
-    if( Object.keys(this.files).length >= 1 ){
+    if( Object.keys(this.files).length > 0 ){
       this.isEmpty = false;
     }
     else{
@@ -65,7 +63,9 @@ export default{
     $route : function(){
       var a = this.getFiles();
       console.log("cambio la ruta");
-      if( Object.keys(this.files).length >= 1 ){
+      window.scrollTo(0 , 1000 );
+
+      if( Object.keys(this.files).length > 0 ){
         this.isEmpty = false;
       }
       else{

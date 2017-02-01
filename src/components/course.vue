@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 2px;" align=center>
-  <a class="list-group-item" v-on:click="scrollUp()">
+  <a class="list-group-item">
     <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl" >
       🎓 {{courseCode}} - {{courseName}}
     </router-link>
@@ -26,9 +26,6 @@ export default{
   methods:{
     select: function(){
       this.isSelected = true;
-    },
-    scrollUp: function(){
-      window.scroll(0,0);
     }
   },
   computed: {
@@ -37,9 +34,7 @@ export default{
       return a;
     },
     courseUrl: function(){
-      window.scroll(0,0);
       return "/" + this.career + "/" + this.courseCode;
-
     }
   }
 }

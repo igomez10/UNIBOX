@@ -1,31 +1,42 @@
 <template>
   <div>
 
-    <div id="careerList" style="float: left; width: 250px; margin-left:20px;">
-      <h2>Carreras</h2>
-      <div class="list-group" align=center>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"   v-on:click="changeFilter('/files/isis/isis.json'), retrieveCourses()" > Ing. Sistemas</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/dise/dise.json') , retrieveCourses()" > Diseño </a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/dere/dere.json') , retrieveCourses()" > Derecho</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/iind/iind.json') , retrieveCourses()" > Ing. Industrial</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/econ/econ.json') , retrieveCourses()" > Economía</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/arqu/arqu.json') , retrieveCourses()" > Arquitectura</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/mate/mate.json'), retrieveCourses()" >  Matemáticas</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/icya/icya.json') , retrieveCourses()" > Ing. Civil y Ambiental</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/quim/quim.json') , retrieveCourses()" > Química</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/biol/biol.json') , retrieveCourses()" > Biología</a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/medi/medi.json') , retrieveCourses()" > Medicina </a>
-        <a class="list-group-item" style="width:200px; margin-bottom:1px"  v-on:click="changeFilter('/files/psic/psic.json') , retrieveCourses()" > Psicología</a>
+    <div id="careerList" style="float: left;">
+
+      <div>
+
+        <div>
+          <h2>Carreras</h2>
+        </div>
+
+        <div class="list-group" style="align: center; overflow: scroll; height: 55%; width: 300px">
+
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/isis/isis.json') , retrieveCourses()" > Ing. Sistemas</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/dise/dise.json') , retrieveCourses()" > Diseño </a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/dere/dere.json') , retrieveCourses()" > Derecho</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/iind/iind.json') , retrieveCourses()" > Ing. Industrial</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/econ/econ.json') , retrieveCourses()" > Economía</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/arqu/arqu.json') , retrieveCourses()" > Arquitectura</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/mate/mate.json') , retrieveCourses()" >  Matemáticas</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/icya/icya.json') , retrieveCourses()" > Ing. Civil y Ambiental</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/quim/quim.json') , retrieveCourses()" > Química</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/biol/biol.json') , retrieveCourses()" > Biología</a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/medi/medi.json') , retrieveCourses()" > Medicina </a>
+          <a class="list-group-item" style="  margin-bottom:2px"  v-on:click="changeFilter('/files/psic/psic.json') , retrieveCourses()" > Psicología</a>
+
+        </div>
+
       </div>
+
     </div>
     <div style=" float: left;" id="courseList">
       <transition name='fade'>
         <div class="list-group" style="text-align:left; width:350px;" v-if='filtroSeleccionado'>
-          <h2 style='text-align:center'>Materias</h2>
-          <div align='center' class="list-group"  >
-          <course v-on:click="selectCourse()" :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
+          <h2>Materias</h2>
+          <div style='align:center; overflow: scroll; height:55%' class="list-group"  >
+            <course v-on:click="selectCourse()" :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;"></course>
           </div>
         </div>
       </div>
@@ -73,6 +84,9 @@ export default{
       this.filter=pFilter,
       this.myCareerFile=pFilter;
       this.filtroSeleccionado=true;
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        window.scrollTo(0 , 500);
+      }
     }
   }
 }

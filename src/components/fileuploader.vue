@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <br>
-    <hr>
-    <div align='center' v-if="selected">
+  <div style='float: left; margin-left: 30px; width: 250px;'>
+    <div align='center' v-if="selected" style="overflow: scroll; height: 55%; width: 4250px; ">
     <ul>
       <li v-for="file in selectedFiles">
         <label>Nombre:</label> {{file.name}}
@@ -10,9 +8,10 @@
       </li>
     </ul>
   </div>
-    <div class="panel-body">
+    <div class="panel-body" style="width: 450px">
       <h2>Subir un archivo</h2>
       <button v-on:click="selectFile()" class="btn btn-lg upload-btn" type="button">Paso 1: Seleccionar Archivo</button>
+      <br></br>
       <button class="btn btn-success" v-on:click="$refs.submit.click()">Paso 2: ENVIAR</button>
     </div>
     <br></br>
@@ -48,6 +47,7 @@ export default{
   props:{
     progressBarText: String,
     progressBarWidth: Number,
+    courseDestination: String,
     selected: {
       type: Boolean,
       default: false
@@ -92,7 +92,7 @@ export default{
           })
         }
         $.notify("Recarga para ver los cambios", 'success')
-    }      
+    }
     }
     }
   }
