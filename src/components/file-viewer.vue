@@ -3,12 +3,10 @@
     <div style='float: left;'>
       <h2>Archivos</h2>
       <div align='center' >
-        <div v-show="!isEmpty" style='align:center; overflow: scroll; height:55%; width: 450px' class="list-group">
+        <div style='align:center; overflow: scroll; height:55%; width: 400px' class="list-group">
           <file :files='this.files'></file>
         </div>
-        <div style="width:450px;">
-          <h6 v-show="isEmpty" > Lo sentimos, no hay archivos disponibles 😢. Sé el primero y sube un archivo! ❤️</h6>
-        </div>
+
       </div>
     </div>
     <div style="float: left;">
@@ -40,7 +38,6 @@ export default{
     courseCode:String,
     courseName:String,
     career:String,
-    scrollPosition:Number,
     filtroSeleccionado:{
       type:Boolean,
       default:false,
@@ -64,7 +61,6 @@ export default{
       var a = this.getFiles();
       console.log("cambio la ruta");
       window.scrollTo(0 , 1000 );
-
       if( Object.keys(this.files).length > 0 ){
         this.isEmpty = false;
       }
@@ -90,7 +86,12 @@ export default{
         })
       })
       filePromise.then(function(data){})
-
+      if( Object.keys(this.files).length > 0 ){
+        this.isEmpty = false;
+      }
+      else{
+        this.isEmpty=true;
+      }
     }
 
   }
