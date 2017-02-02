@@ -1,10 +1,10 @@
 <template>
   <div style="margin: 2px;" align=center>
-  <a class="list-group-item">
     <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl" >
-      🎓 {{courseCode}} - {{courseName}}
+      <a class="list-group-item">
+        🎓 {{courseCode}} - {{courseName}}
+      </a>
     </router-link>
-  </a>
   </div>
 </template>
 

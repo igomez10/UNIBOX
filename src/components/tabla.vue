@@ -15,7 +15,7 @@
           <h2>Carreras</h2>
         </div>
 
-        <div class="list-group" style="align: center; overflow: scroll; height: 55%; width: 300px">
+        <div class="list-group" style="margin: auto; overflow: scroll; height: 55%; width: 300px">
 
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/isis/isis.json') , retrieveCourses()" > Ing. Sistemas</a>
@@ -41,7 +41,7 @@
       <transition name='fade'>
         <div class="list-group" style="text-align:left; width:350px; margin-right: 30px" v-if='$route.params.career != undefined || filtroSeleccionado'>
           <h2>Materias</h2>
-          <div style='align:center; overflow: scroll; height:55%' class="list-group"  >
+          <div style='margin:auto; overflow: scroll; height:55%' class="list-group"  >
             <course v-on:click="selectCourse()" :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;">
             </course>
           </div>

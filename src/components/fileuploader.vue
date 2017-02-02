@@ -1,6 +1,6 @@
 <template>
   <div style='float: left; margin-left: 30px; width: 250px;'>
-    <div align='center' v-if="selected" style="overflow: scroll; height: 55%; width: 4250px; ">
+    <div align='center' v-if="selected" style="overflow: scroll; height: 10%;">
     <ul>
       <li v-for="file in selectedFiles">
         <label>Nombre:</label> {{file.name}}

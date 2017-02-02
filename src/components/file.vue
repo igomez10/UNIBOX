@@ -1,18 +1,17 @@
 <template>
-  <div>
-    <a class="list-group-item" style="margin:2px" v-for="file in files" v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')">
-      <div style="height: 43px;">
-        <a :href='"files" + file.path' target="_blank" style="float:left; text-align:left; width: 200px;">
-          📝 {{showName(file.path.split("/")[3])}}
-        </a>
+    <div>
+    <a class="list-group-item" style="margin:2px" v-for="file in files" v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')" :href='"files" + file.path'>
+        <div style="height: 50px;">
+          <a :href='"files" + file.path' target="_blank" style="float:left; text-align:left; width: 200px;">
+            {{showName("📝"+file.path.split("/")[3])}}
+          </a>
         <div align=right>
-          <i class="material-icons" title="Denunciar" v-on:click="flagAs(file.path)">
+        <i class="material-icons" title="Denunciar" v-on:click="flagAs(file.path)">
             delete_forever
-          </i>
-        </div>
+        </i>
       </div>
     </a>
-  </div>
+    </div>
 </template>
 
 <script>
