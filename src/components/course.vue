@@ -2,7 +2,7 @@
   <div style="margin: 2px;" align=center>
     <router-link :courseCode="courseCode" :courseName="courseName" :to="courseUrl" >
       <a class="list-group-item">
-        🎓 {{courseCode}} - {{courseName}}
+        🎓 {{courseCode}} - {{displayName( courseName )}}
       </a>
     </router-link>
   </div>
@@ -26,6 +26,9 @@ export default{
   methods:{
     select: function(){
       this.isSelected = true;
+    },
+    displayName: function(aName){
+      return _.startCase(_.toLower(aName));
     }
   },
   computed: {

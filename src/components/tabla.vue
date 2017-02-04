@@ -15,7 +15,7 @@
           <h2>Carreras</h2>
         </div>
 
-        <div class="list-group" style="margin: auto; overflow: scroll; height: 55%; width: 300px">
+        <div class="list-group" style="margin: auto; overflow: auto; height: 55%; width: 300px">
 
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/admi/admi.json') , retrieveCourses()" > Administración</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/isis/isis.json') , retrieveCourses()" > Ing. Sistemas</a>
@@ -31,9 +31,9 @@
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/biol/biol.json') , retrieveCourses()" > Biología</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/medi/medi.json') , retrieveCourses()" > Medicina </a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/psic/psic.json') , retrieveCourses()" > Psicología</a>
+          <h5>Carrera: {{selectedCareer}}</h5>
 
         </div>
-
       </div>
 
     </div>
@@ -41,10 +41,11 @@
       <transition name='fade'>
         <div class="list-group" style="text-align:left; width:350px; margin-right: 30px" v-if='$route.params.career != undefined || filtroSeleccionado'>
           <h2>Materias</h2>
-          <div style='margin:auto; overflow: scroll; height:55%' class="list-group"  >
-            <course v-on:click="selectCourse()" :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;">
+          <div style='margin:auto; overflow: auto; height:55%' class="list-group">
+            <course  :courseCode='item.codigo' :courseName='item.nombre' v-for='item in content' style="text-align: left;">
             </course>
           </div>
+          <h5>Materia: {{selectedCourse}}</h5>
         </div>
       </div>
     </transition>
@@ -64,14 +65,15 @@ export default{
       content:{},
       filter:'',
       filtroSeleccionado:false,
-      courseSelected: false
+      courseSelected: false,
+      selectedCourse: 'Selecciona un curso',
+      selectedCareer: 'Selecciona una carrera'
     };
   },
   methods:
   {
-    selectCourse: function()
-    {
-      this.courseSelected=true;
+    displayName: function(text){
+      return  _.toUpper(text);
     },
     retrieveCourses:function()
     {
@@ -88,22 +90,29 @@ export default{
     },
     changeFilter:function(pFilter)
     {
-      this.filter=pFilter,
-      this.myCareerFile=pFilter;
+      this.filter = pFilter,
+      this.myCareerFile = pFilter;
+      this.selectedCareer = this.displayName(pFilter.split("/")[2]);
       this.filtroSeleccionado=true;
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+      {
         window.scrollTo(0 , 500);
       }
     }
   },
   mounted: function(){
     if(this.$route.fullPath != "/"){
-      this.myCareerFile = '/files/' + 
-                    this.$route.params.career +"/"+ 
-                    this.$route.params.career + ".json";
-      this.retrieveCourses();        
+      this.myCareerFile = '/files/' +
+      this.$route.params.career +"/"+
+      this.$route.params.career + ".json";
+      this.retrieveCourses();
     }
 
+  },
+  watch:{
+    $route: function(){
+      this.selectedCourse = this.$route.params.courseCode;
+    }
   }
 }
 </script>

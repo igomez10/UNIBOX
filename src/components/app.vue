@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div style="float:left; width:260px">
-      <h6>1. Selecciona un programa</h6>
-      <h6>2. Selecciona una materia</h6>
-      <h6>3. Selecciona un archivo</h6>
-    </div>
+
     <div style="align:center; text-align:center;">
       <h1><a href='/'>  Unibox  </a></h1>
       <hr></hr>
