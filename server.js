@@ -498,34 +498,42 @@ server.put(commandRegEx, function (req, res, next) {
 
 });
 
-/**
- * DELETE
- */
-server.del(pathRegEx, function (req, res, next) {
+// /**
+//  * DELETE
+//  */
+// server.del(pathRegEx, function (req, res, next) {
+//
+//     // Check request
+//     checkReq(config, req, res);
+//
+//     // Set path
+//     var path = config.base + "/" + req.params[1];
+//
+//     // Make sure it exists
+//     if (fs.existsSync(path)) {
+//         // Remove file or directory
+//         fs.remove(path, function (err) {
+//             if (err) {
+//                 resError(108, err, res);
+//             } else {
+//                 resSuccess(null, res);
+//             }
+//         });
+//     } else {
+//         resError(103, null, res);
+//     }
+//
+//     return next();
+//
+// });
 
-    // Check request
-    checkReq(config, req, res);
 
-    // Set path
-    var path = config.base + "/" + req.params[1];
+// // LOG
+//
+// server.log(fileinfo){
+//   console.log("CODIGO 3312, PETICION DE DENUNCIA:" +  fileinfo  )
+// }
 
-    // Make sure it exists
-    if (fs.existsSync(path)) {
-        // Remove file or directory
-        fs.remove(path, function (err) {
-            if (err) {
-                resError(108, err, res);
-            } else {
-                resSuccess(null, res);
-            }
-        });
-    } else {
-        resError(103, null, res);
-    }
-
-    return next();
-
-});
 
 /**
  * START SERVER
