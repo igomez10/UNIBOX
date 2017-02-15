@@ -92,6 +92,7 @@ export default{
           })
         }
         $.notify("Recarga para ver los cambios", 'success')
+        window.location.reload()
     }
     }
     }
