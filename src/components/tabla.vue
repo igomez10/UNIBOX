@@ -21,7 +21,7 @@
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/isis/isis.json') , retrieveCourses()" > Ing. Sistemas</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/dise/dise.json') , retrieveCourses()" > Diseño </a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/fisi/fisi.json') , retrieveCourses()" > Física</a>
-          <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/dere/dere.json') , retrieveCourses()" > Derecho</a>
+          <!-- <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/dere/dere.json') , retrieveCourses()" > Derecho</a> -->
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/iind/iind.json') , retrieveCourses()" > Ing. Industrial</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/econ/econ.json') , retrieveCourses()" > Economía</a>
           <a class="list-group-item"  style="margin-bottom:2px"  v-on:click="changeFilter('/files/arqu/arqu.json') , retrieveCourses()" > Arquitectura</a>
