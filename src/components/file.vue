@@ -1,17 +1,19 @@
 <template>
   <div>
-    <a class="list-group-item" style="margin:2px" v-for="file in files" v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')" :href='"files" + file.path'>
-      <div style="height: 50px; text-decoration: none;">
-        <a :href='"files" + file.path' target="_blank" style="float:left; text-align:left; width: 200px; text-decoration: none;">
-          {{showName("📝  "+file.path.split("/")[3])}}
-        </a>
-        <div align=right>
-          <i class="material-icons" title="Denunciar" v-on:click="flagAs(file.path)">
-            delete_forever
-          </i>
+    <div v-for="file in files">
+      <a class="list-group-item" style="margin:2px" v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')" :href='"files" + file.path'>
+        <div style="height: 50px; text-decoration: none;">
+          <a :href='"files" + file.path' target="_blank" style="float:left; text-align:left; width: 200px; text-decoration: none;">
+            {{showName("📝  "+file.path.split("/")[3])}}
+          </a>
+          <div align=right>
+            <i class="material-icons" title="Denunciar" v-on:click="flagAs(file.path)">
+              delete_forever
+            </i>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </template>
 
