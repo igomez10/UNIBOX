@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="file in files">
-      <a class="list-group-item" style="margin:2px" v-show=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')" :href='"files" + file.path'>
+      <a class="list-group-item" style="margin:2px" v-if=" file.path.split('/')[3]!='.DS_Store' && file.path.split('/')[3].includes('.')" :href='"files" + file.path'>
         <div style="height: 50px; text-decoration: none;">
           <a :href='"files" + file.path' target="_blank" style="float:left; text-align:left; width: 200px; text-decoration: none;">
             {{showName("📝  "+file.path.split("/")[3])}}
