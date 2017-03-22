@@ -37,10 +37,10 @@ export default{
       if(aName.length > 40){
         var newName="";
         newName = aName.substring(0, aName.length/2) + " " + aName.substring(aName.length/2 , aName.length);
-        return newName;
+        return newName.replace("_.","");
       }
       else{
-        return aName;
+        return aName.replace("_.","");
       }
     }
   }

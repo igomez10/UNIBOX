@@ -74,24 +74,23 @@ export default{
         for(var i = 0 ; i < files.length ; i++){
           var file = files[i];
           console.log(file.name)
-          formData.append('filedata' , file , file.name);
+          formData.append('data' , file);
           this.routeAction = "//" + window.location.hostname +":8080/12345/file/" +
           this.$route.params.career + "/" +
           this.$route.params.courseCode + "/" +
           file.name.replace(/ /g , "")
           $.ajax({ url: this.routeAction ,
-            type:'POST',
-            data:file,
-            cache : false,
-            processData: false,
+            type: 'POST',
+            data: file,
             contentType: false,
+            processData: false,
             success: function(result){
               console.log("pude subir exitosamente")
               console.log(files[0])
             }
           })
         }
-        $.notify("Recarga para ver los cambios", 'success')
+        // $.notify("Recarga para ver los cambios", 'success')
         window.location.reload()
     }
     }
