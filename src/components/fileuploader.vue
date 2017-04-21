@@ -19,7 +19,6 @@
               <span class="sr-only"></span>
             </div>
           </div>
-          <button @click="complete()"></button>
         </div>
       </div>
       <div align='center' v-if="selected" style="overflow: auto; width: 100%;">
@@ -112,7 +111,7 @@ export default {
 
           console.log(fileName);
 
-          this.complete()
+          this.progValue=40;
           $.ajax({
             url: this.routeAction,
             type: 'POST',
