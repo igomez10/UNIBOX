@@ -1,11 +1,12 @@
 <template>
   <div>
-
+    
     <div style="align:center; text-align:center;">
-      <h1><a href='/'>  Unibox  </a></h1>
+      <h3><a href='/' style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;">  Unibox  </a></h3>
+
       <hr></hr>
     </div>
-    <div id="app" style="float:left;">
+    <div id="app" style="float:left; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
       <tabla></tabla>
     </div>
     <transition name='fade'>

@@ -2,8 +2,10 @@
   <div style="float: left; align: center;">
     <div style='float: left;'>
       <h2>Archivos</h2>
+      <label v-if='files!=""'>Selecciona un archivo</label>
+      <label v-if="false">No hay archivos</label>
       <div align='center' >
-        <div style='align:center; overflow: auto; height:55%; width: 400px' class="list-group">
+        <div style='align:center; overflow: auto; height:55%; width: 300px' class="list-group">
           <file v-if="files!=''" :files='this.files'></file>
         </div>
       </div>
@@ -22,7 +24,6 @@ fsapi.config(("http://" + window.location.hostname + ":8080"),"12345");
 import fileuploader from "./fileuploader.vue";
 import file from "./file.vue";
 import $ from 'jquery'
-
 console.log(this.files)
 
 
@@ -76,13 +77,14 @@ export default{
     {
       //courseUrl start from the career folder. not from files
       const theUrl =this.career + "/" + this.courseCode
-
+      // var algo = _.isEmpty(true);
       const filePromise= new Promise( (resolve, reject)=>{
         fsapi.list( theUrl , (res)=>{
           this.files = res;
-          if( Object.keys(this.files).length > 0 ){
-            this.isEmpty = false;
-          }
+          var algos = this.files;
+          // if( _.isEmpty(algos) ){
+          //   this.isEmpty = false;
+          // }
         })
       })
     }
