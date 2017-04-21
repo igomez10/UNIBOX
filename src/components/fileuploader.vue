@@ -91,7 +91,7 @@ export default{
           })
         }
         // $.notify("Recarga para ver los cambios", 'success')
-        window.location.reload()
+        alert("Actualiza para ver los cambios")
     }
     }
     }

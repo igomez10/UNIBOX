@@ -12,6 +12,7 @@ var config = {
      */
     ips: [
         "*.*.*.*"
+        // "157.253.131.23"
     ],
     /**
      * SSL Config
@@ -113,10 +114,14 @@ var checkIP = function (config, req) {
         curIP,
         b,
         block = [];
+
+    console.log(ip[b]);
     for (var i=0, z=config.ips.length-1; i<=z; i++) {
         curIP = config.ips[i].split(".");
         b = 0;
         // Compare each block
+        console.log(ip);
+
         while (b<=3) {
             (curIP[b]===ip[b] || curIP[b]==="*") ? block[b] = true : block[b] = false;
             b++;

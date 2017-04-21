@@ -4,7 +4,7 @@
       <h2>Archivos</h2>
       <div align='center' >
         <div style='align:center; overflow: auto; height:55%; width: 400px' class="list-group">
-          <file :files='this.files'></file>
+          <file v-if="files!=''" :files='this.files'></file>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ export default{
   components:{file, fsapi, fileuploader},
   data: function(){
     return {
-      files:'holadata',
+      files:'',
       isEmpty:true
     };
   },
@@ -75,24 +75,16 @@ export default{
     getFiles:function()
     {
       //courseUrl start from the career folder. not from files
-      const x=function(y,z){console.log(y,z)}
       const theUrl =this.career + "/" + this.courseCode
 
       const filePromise= new Promise( (resolve, reject)=>{
         fsapi.list( theUrl , (res)=>{
-          this.files = res
-          const temp11=res
-          resolve(res.data)
-          reject(console.log("No existe la carpeta o algo salió mal"))
+          this.files = res;
+          if( Object.keys(this.files).length > 0 ){
+            this.isEmpty = false;
+          }
         })
       })
-      filePromise.then(function(data){})
-      if( Object.keys(this.files).length > 0 ){
-        this.isEmpty = false;
-      }
-      else{
-        this.isEmpty=true;
-      }
     }
 
   }
