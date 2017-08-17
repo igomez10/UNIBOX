@@ -1,34 +1,94 @@
- <!-- Un proyecto por Ignacio Gomez
- Si estas viendo esto nos interesa trabajar contigo, ven al AU311 los jueves 12 30🐙 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<div id="app">
+  <h3>Selecciona un programa: {{selectedMajor}}</h3>
+  <ul style='text-transform:uppercase'>
+    <li name='carrera' v-for='major in majors' @click='getCourses(major)'>{{major}}</li>
+  </ul>
+  <h3>Selecciona una materia: {{selectedCourse.codigo}} {{ selectedCourse.nombre}}</h3>
+  <div style="height:40%;width:20rem;overflow-y:scroll; background-color:grey">
+    <p id='clases' v-for='course in courses' @click='getFile(course)'>{{course.nombre}}</p>
+  </div>
+  <ul>
+  <li v-for='file in files'>
+    <a   :href='file.link'>{{file.titulo}}</a>
+  </li>
+  </ul>
+  <input id='inputfile' type='file'>
+  <button @click='sendFile()'></button>
+  <p  id='responseitem'></p>
+</div>
 
-<html lang="es">
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Unibox</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
-  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
-  <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js" ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
 
 
 
-
-  <style>
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 2.5s
+var app = new Vue({
+  el: '#app',
+  data: {
+    majors: [
+      'admi',
+      'arqu',
+      'biol',
+      'dere',
+      'dise',
+      'econ',
+      'fisi',
+      'icya',
+      'mate',
+      'medi',
+      'psic',
+      'quim',
+      'isis',
+      'iind'
+    ],
+    courses: [],
+    files: [],
+    selectedMajor: '',
+    selectedCourse: {}
+  },
+  methods:{
+    getFile: function(pCourse){
+      this.selectedCourse = pCourse;
+      document.getElementById('responseitem').innerHTML = 'Loading'
+      axios.get('archivo/'+ pCourse.codigo)
+      .then(data => {
+        if(data.data.length > 0 ){
+          this.files = data.data
+        }
+        else{
+          document.getElementById('responseitem').innerHTML = 'No hay archivos 😟 sube uno!'
+        }
+      })
+      .catch(err => console.log(err))
+    },
+    getCourses: function(pMajor){
+      this.selectedMajor = pMajor
+      this.selectedCourse = {}
+      this.courses = []
+      axios.get('clases/'+ pMajor)
+      .then(data => this.courses = data.data)
+    },
+    sendFile: function(){
+      const newFile = document.getElementById('inputfile').files[0]
+      var fileData = new FormData();
+      fileData.append('file', newFile, newFile.name)
+      axios.post('https://anonfile.com/api/upload', fileData).then((data)=>{
+        const obj ={
+          'link': data.data.data.file.url.short,
+          'titulo': newFile.name,
+          'clase': this.selectedCourse.codigo
+        }
+        const objToPost = window.btoa(JSON.stringify(obj))
+        console.log(objToPost)
+        axios.post('archivo/' + objToPost).then((data)=> console.log(data))
+      })
+    }
   }
-  .fade-enter, .fade-leave-active {
-    opacity: 0
-  }
-  </style>
-</head>
+})
 
-<body>
-  <div id="app"></div>
-  <script src="/dist/build.js"></script>
-</body>
 
-</html>
+
+
+</script>
