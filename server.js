@@ -16,41 +16,36 @@ var getTable = function (tableName) {
       }
     })
   }
-  )
+)
 };
 
 getFiles = function(clase){
   return new Promise(function(resolve, reject){
-    pool.query('SELECT TITULO, LINK FROM ARCHIVOS WHERE CLASE=' +"'" + clase + "'", function(err, res){
-      if(err){
-        reject(err);
-      }
-      else{
-        resolve(res);
-      }
+    pool.queryGetLinks(clase)
+    .then(data => {
+      resolve(data)
+    })
+    .catch(err => {
+      console.err('error getFiles in server.js '  + err)
+      reject(err)
     })
   })
 }
 
 postFile = function(propItem){
   return new Promise(function(resolve, reject){
-    pool.query('INSERT INTO ARCHIVOS (link, titulo, clase) VALUES(' + "'" + propItem.link + "','" + propItem.titulo + "','" + propItem.clase + "')", function(err, res){
-      if(err){
-        reject(err);
-      }
-      else{
-        resolve('sepudo');
-      }
+    pool.queryPostLink( propItem.link , propItem.titulo , propItem.clase )
+    .then(data => {
+      resolve(data)
+    })
+    .catch(err => {
+      reject(err)
     })
   })
-}
-
-
+};
 
 app.get('/archivo/:clase', function(req, res){
-  getFiles(req.params.clase)
-  .then((data) => res.send(data.rows) )
-  .catch((err) => res.send('error en get archivo/:clase' + err) )
+  getFiles(req.params.clase).then(data => res.send(data))
 })
 
 app.get('/clases/:carrera', function(req, res){
@@ -60,7 +55,6 @@ app.get('/clases/:carrera', function(req, res){
 app.post('/archivo/:clase', function(req, res){
   console.log(req.params.clase)
   var propItem = JSON.parse(Buffer.from(req.params.clase, 'base64'));
-  // res.send(propItem.titulo)
   postFile(propItem)
   .then(data => res.send(data))
   .catch(err => res.send('err' +  err ))
