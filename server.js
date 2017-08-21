@@ -60,12 +60,17 @@ app.post('/archivo/:clase', function(req, res){
   .catch(err => res.send('err' +  err ))
 })
 
-
+app.get('/assets/:something', function(req, res){
+  res.sendFile(__dirname + '/assets/' + req.params.something);
+})
 
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 })
+
+
+
 
 
 

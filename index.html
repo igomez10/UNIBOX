@@ -1,89 +1,118 @@
 <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<link rel="stylesheet" href="/assets/animate.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1.5, maximum-scale=1.2, user-scalable=no">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<div id="app" style='width:50rem; margin:auto; margin-top:4rem '>
-
-  <ul id="dropdown2" class="dropdown-content">
-    <li v-for='major in majors' >
-      <a href="#!" @click='getCourses(major)' style='text-transform:uppercase' >
-        {{major}}
-      </a>
-    </li>
-  </ul>
-  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">
-    {{selectedMajor}}
-    <i class="material-icons right">
-      arrow_drop_down
-    </i>
-  </a>
-
-
-  <h5>{{selectedCourse.codigo}} {{ selectedCourse.nombre}}</h5>
-  <div v-if='selectedMajor!=""'>
-
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <input v-model='inputSearch' type='text'>
-            <label>Buscar materia</label>
-          </div>
+<div id="app"  class="animated fadeIn"  style='width:95%; margin:auto; margin-top:4rem '>
+  <div style='position:fixed; z-index:2; background-color:white; width:95%'>
+    <a class="btn dropdown-button" v-show='selectedMajor==""' href="#!" style='width:15rem' data-activates="dropdown1">
+      Carrera
+      <i class="material-icons right">
+        arrow_drop_down
+      </i>
+    </a>
+    <div style='float:right'>
+      <a id="menu" @click='openTarget()' class="waves-effect waves-light btn btn-floating" >?</a>
+      <div class="tap-target" data-activates="menu">
+        <div class="tap-target-content">
+          <h5 style>Unibox</h5>
+          <p style='text-align:right'>Una plataforma para guardar links a documentos de clases. Los documentos se guardan en la plataforma Anonfile.com, Unibox no guarda ningun archivo en sus servidores.</p>
         </div>
-      </form>
+      </div>
+    </div>
+    <a class="btn dropdown-button" v-show='selectedMajor!=""' href="#!" style='width:15rem' data-activates="dropdown1">
+      {{selectedMajor}}
+      <i class="material-icons right">
+        arrow_drop_down
+      </i>
+    </a>
+
+    <ul id="dropdown1" class="dropdown-content" >
+      <li v-for='major in majors' >
+        <a href="#!" @click='getCourses(major)' style='width:30rem' >
+          {{major}}
+        </a>
+      </li>
+    </ul>
+
+
+    <h5>{{selectedCourse.codigo}} {{ selectedCourse.nombre}}</h5>
+    <div v-if='selectedMajor!=""' class=' animated fadeIn' >
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input v-model='inputSearch' type='text'>
+              <label>Buscar materia</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div v-if='selectedMajor!=""' class=' animated fadeIn' >
+      <ul  class="collection" style='width:90%; max-width:30rem ; margin:auto'>
+        <li style='width:28rem; margin:auto' v-for='course in searchedCourses' @click='getFile(course)' class="collection-item animated fadeIn" :id='course.codigo'>
+          {{course.nombre}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div style="width:80%; max-width:30rem ; margin:auto; margin-top:2rem" v-if='Object.keys(selectedCourse).length > 0'>
+    <h5>Archivos de</h5>
+    <h5>{{ selectedCourse.nombre}}</h5>
+    <input ref='filesToUpload' id='inputfile' type='file' multiple hidden>
+    <div style=' margin:auto ;display: flex; flex-direction:row'>
+      <a style='margin:auto' class="btn-floating btn-large waves-effect waves-light " @click='$refs.filesToUpload.click()' >
+        <i class="material-icons">
+          add
+        </i>
+      </a>
+      <a  style='margin:auto' @click='sendFile()' class="waves-effect waves-light btn">
+        <i class="material-icons left">
+          cloud
+        </i>
+        Enviar
+      </a>
+
+      <li v-for='file in someFiles'>{{file.name}}</li>
     </div>
 
-    <ul  class="collection" style='width:30rem; margin:auto'>
-      <li style='width:28rem; margin:auto'
-      v-for='course in searchedCourses'
-      @click='getFile(course)'
-      class="collection-item"
-      :id='course.codigo'>
-      {{course.nombre}}
-    </li>
-  </ul>
 
-</div>
 
-<div style="width:50%; margin:auto; margin-top:2rem" v-if='Object.keys(selectedCourse).length > 0'>
-  <input ref='filesToUpload' id='inputfile' type='file' multiple hidden>
-  <div style=' margin:auto ;display: flex; flex-direction:row'>
-    <a style='margin:auto' class="btn-floating btn-large waves-effect waves-light " @click='$refs.filesToUpload.click()' >
-      <i class="material-icons">
-        add
-      </i>
-    </a>
-    <a  style='margin:auto' @click='sendFile()' class="waves-effect waves-light btn">
-      <i class="material-icons left">
-        cloud
-      </i>
-        Enviar
-    </a>
+    <ul class="collection" style='width:100%; max-width:30rem;margin:auto; margin-top:3rem'  >
+      <li style='width:28rem;' v-for='file in files' class="collection-item">
+        <a :href='file.link'>
+          {{file.titulo}}
+        </a>
+      </li>
+    </ul>
+
+    <div style='text-align:center; margin:auto'  id='responseitem'>
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
   </div>
 
 
-  <ul class="collection" style='width:100%;margin:auto; margin-top:3rem'  >
-    <li style='width:28rem;' v-for='file in files' class="collection-item">
-      <a :href='file.link'>
-        {{file.titulo}}
-      </a>
-    </li>
-  </ul>
 
-  <h5 style='text-align:center; margin:auto'  id='responseitem'>
-  </h5>
-</div>
-<div style='height:50px'>
-</div>
+  <div style='height:50px'>
+  </div>
+
 </div>
 
 
@@ -92,22 +121,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    majors: [
-      'admi',
-      'arqu',
-      'biol',
-      'dere',
-      'dise',
-      'econ',
-      'fisi',
-      'icya',
-      'mate',
-      'medi',
-      'psic',
-      'quim',
-      'isis',
-      'iind'
-    ],
+    majors: ["Administración", "Arquitectura", "Biología", "Derecho", "Diseño", "Economía", "Física", "Ing Civil-Amb", "Ing Industrial", "Ing Sistemas", "Matemáticas", "Medicina", "Psicología", "Química"],
     courses: [],
     files: [],
     selectedMajor: '',
@@ -115,7 +129,6 @@ var app = new Vue({
     inputSearch: ''
   },
   methods:{
-
     getFile: function(pCourse){
       this.files = []
       var arr = document.getElementsByClassName('active')
@@ -132,7 +145,7 @@ var app = new Vue({
 
         }
         else{
-          document.getElementById('responseitem').innerHTML = 'No hay archivos 😟 sube uno!'
+          document.getElementById('responseitem').innerHTML = '<h5>No hay archivos 😟 sube uno!<h5>'
         }
       })
       .catch(err => console.log(err))
@@ -157,7 +170,9 @@ var app = new Vue({
 
     sendFile: function(){
       for(var i=0; i < document.getElementById('inputfile').files.length ; i++){
+        const numI=i+1;
         const newFile = document.getElementById('inputfile').files[i]
+        Materialize.toast('Subiendo ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length +  " ) ", 3000, 'rounded')
         var fileData = new FormData();
         fileData.append('file', newFile, newFile.name)
         axios.post('https://anonfile.com/api/upload', fileData).then((data)=>{
@@ -169,33 +184,49 @@ var app = new Vue({
           const objToPost = window.btoa(JSON.stringify(obj))
           console.log(objToPost)
           axios.post('archivo/' + objToPost).then((data)=> console.log(data))
-
+          Materialize.toast('Upload Exitoso de ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length + " ) ", 3000, 'rounded')
         })
       }
+    },
+    openTarget: function(){
+      $('.tap-target').tapTarget('open');
     }
 
   },
   computed: {
     filesToUpload: ()=>{
-      return refs.filesToUpload.files
+      return $refs.filesToUpload.files;
     },
     searchedCourses: function(){
       var arr = document.getElementsByClassName('active')
       Array.from(arr).forEach(function(element){
-        element.classList.remove('active')
+        element.classList.remove('active');
       })
       inputSearch = this.inputSearch;
       if(inputSearch == ''){
-        return this.courses
+        const sortedCourses = _.orderBy(this.courses, 'nombre', 'asc');
+        return sortedCourses;
       }
 
       return this.courses.filter(function(course){
         return course.nombre.includes(this.inputSearch.toUpperCase());
       })
+    },
+    someFiles: function(){
+      try{
+        var arr = Array.from(document.getElementById('inputfile').files);
+        return arr;
+      }
+      catch(err){
+        console.log(err)
+        return []
+      }
     }
+  },
+  mounted: function(){
+    this.openTarget()
   }
-
-})
+});
 
 
 
