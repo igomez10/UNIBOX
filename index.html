@@ -8,9 +8,38 @@ crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-<link rel="stylesheet" href="/assets/animate.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <meta name="viewport" content="initial-scale=1.5, maximum-scale=1.2, user-scalable=no">
+
+<style>
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+
+</style>
+
+
+
+
 
 <div id="app"  class="animated fadeIn"  style='width:95%; margin:auto;'>
   <div style='width:100%;background-color:white;margin:auto'>
@@ -130,7 +159,7 @@ crossorigin="anonymous"></script>
 var app = new Vue({
   el: '#app',
   data: {
-    majors: ["Administración", "Arquitectura", "Biología", "Derecho", "Diseño", "Economía", "Física", "Ing Civil-Amb", "Ing Industrial", "Ing Sistemas", "Matemáticas", "Medicina", "Psicología", "Química"],
+    majors: ["Administracion", "Arquitectura", "Biologia", "Derecho", "Diseno", "Economia", "Fisica", "Ing Civil y Amb", "Ing Industrial", "Ing Sistemas", "Matematicas", "Medicina", "Psicologia", "Quimica"],
     courses: [],
     files: [],
     newFiles: [],

@@ -30,7 +30,7 @@ getFiles = function(clase){
       reject(err)
     })
   })
-}
+};
 
 postFile = function(propItem){
   return new Promise(function(resolve, reject){
@@ -58,16 +58,16 @@ app.post('/archivo/:clase', function(req, res){
   postFile(propItem)
   .then(data => res.send(data))
   .catch(err => res.send('err' +  err ))
-})
+});
 
 app.get('/assets/:something', function(req, res){
   res.sendFile(__dirname + '/assets/' + req.params.something);
-})
+});
 
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
-})
+});
 
 
 
