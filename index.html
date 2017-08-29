@@ -223,7 +223,13 @@ var app = new Vue({
           const objToPost = window.btoa(JSON.stringify(obj))
           console.log(objToPost)
           axios.post('archivo/' + objToPost).then((data)=> console.log(data))
+          .catch(error => {
+            Materialize.toast('Ocurrió un error subiendo tu archivo')
+          })
           Materialize.toast('Upload Exitoso de ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length + " ) ", 3000, 'rounded')
+        })
+        .catch(error => {
+          Materialize.toast('Ocurrió un error subiendo tu archivo, quizás es muy pesado')
         })
       }
     },
