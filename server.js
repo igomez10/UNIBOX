@@ -5,20 +5,6 @@ var bodyParser = require('body-parser');
 const pool = require('./post.js');
 
 
-var getTable = function (tableName) {
-  return new Promise(function (resolve, reject) {
-    pool.query('SELECT * FROM '+ tableName, function (err, res) {
-      if (err) {
-        reject(err);
-      }
-      else {
-        resolve(res);
-      }
-    })
-  }
-)
-};
-
 getFiles = function(clase){
   return new Promise(function(resolve, reject){
     pool.queryGetLinks(clase)
