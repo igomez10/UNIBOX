@@ -4,7 +4,7 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
@@ -95,7 +95,7 @@ crossorigin="anonymous"></script>
   <div>
     <div v-if='selectedMajor!=""' class=' animated fadeIn' >
       <ul  class="collection" style='width:90%; max-width:30rem ; margin:auto'>
-        <li style='width:28rem; margin:auto; font-weight:400' v-for='course in searchedCourses' @click='getFile(course)' class="collection-item animated fadeIn" :id='course.codigo'>
+        <li style='width:28rem; margin:auto; font-weight:400; cursor:pointer' v-for='course in searchedCourses' @click='getFile(course)' class="collection-item animated fadeIn" :id='course.codigo'>
           {{course.nombre}}
         </li>
       </ul>
@@ -123,31 +123,49 @@ crossorigin="anonymous"></script>
       </div>
       <div>
         <ol>
-          <li v-for='file in newFiles'>{{file.name}}</li>
+          <li v-for='file in newFiles'>{{file}}</li>
         </ol>
       </div>
     </div>
 
 
 
-    <ul class="collection" style='width:100%; max-width:30rem;margin:auto; margin-top:3rem'  >
+    <ul class="collapsible" style='width:100%; max-width:30rem;margin:auto; margin-top:3rem'  >
       <li style='width:28rem;' v-for='file in files' class="collection-item">
-        <a :href='file.link'>
-          {{file.titulo}}
-        </a>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{file.titulo}}</div>
+        <div class="collapsible-body">
+          <div style='display:flex; flex-direction:row'>
+
+            <div @click="requestLink(file.link)" :id='"descarga" + file.link' style='cursor:pointer'>
+              <a class="waves-effect waves-light btn grey lighten-1" id='loadingButton' >
+                <i class="material-icons right">
+                  arrow_downward
+                </i>
+                DESCARGAR
+              </a>
+            </div>
+            <br>
+            <a :href='file.link' style='margin:auto'>
+              ir a Anonfile
+            </a>
+          </div>
+        </div>
+
+
       </li>
     </ul>
-
     <div style='text-align:center; margin:auto'  id='responseitem'>
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
     </div>
+
   </div>
 
 
 
   <div style='height:50px'>
+
   </div>
 
 </div>
@@ -208,32 +226,60 @@ var app = new Vue({
     },
 
     sendFile: function(){
-      for(var i=0; i < document.getElementById('inputfile').files.length ; i++){
-        const numI=i+1;
-        const newFile = document.getElementById('inputfile').files[i]
-        Materialize.toast('Subiendo ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length +  " ) ", 3000, 'rounded')
-        var fileData = new FormData();
-        fileData.append('file', newFile, newFile.name)
-        axios.post('https://anonfile.com/api/upload', fileData).then((data)=>{
-          const obj ={
-            'link': data.data.data.file.url.short,
-            'titulo': newFile.name,
-            'clase': this.selectedCourse.codigo
-          }
-          const objToPost = window.btoa(JSON.stringify(obj))
-          console.log(objToPost)
-          axios.post('archivo/' + objToPost).then((data)=> console.log(data))
-          Materialize.toast('Upload Exitoso de ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length + " ) ", 3000, 'rounded')
-        })
-      }
+      var pro = new Promise((resolve, reject)=>{
+        const filesToSend = Array.from(document.getElementById('inputfile').files);
+        for(var i=0; i < filesToSend.length ; i++){
+          const numI = i+1;
+          const newFile = filesToSend[i]
+          Materialize.toast('Subiendo ' + newFile.name + " ( " + numI + "/" + filesToSend.length +  " ) ", 3000, 'rounded')
+          var fileData = new FormData();
+          fileData.append('file', newFile, newFile.name)
+          axios.post('https://anonfile.com/api/upload', fileData).then((data)=>{
+            const obj ={
+              'link': data.data.data.file.url.short,
+              'titulo': newFile.name,
+              'clase': this.selectedCourse.codigo
+            }
+            const objToPost = window.btoa(JSON.stringify(obj))
+            console.log(objToPost)
+            axios.post('archivo/' + objToPost).then((data)=> console.log(data))
+            .catch(error => {
+              Materialize.toast('Ocurrió un error subiendo tu archivo')
+            })
+            Materialize.toast('Upload Exitoso de ' + newFile.name + " ( " + numI + "/" + document.getElementById('inputfile').files.length + " ) ", 3000, 'rounded')
+          })
+          .catch(error => {
+            Materialize.toast('Ocurrió un error subiendo tu archivo, quizás es muy pesado')
+          })
+        }
+        resolve()
+      }).then( () => {
+        document.getElementById('inputfile').value = '';
+        var updatedArray = this.newFiles.map( function(x){
+          return x + " ✅ "
+        });
+        this.newFiles = updatedArray;
+        Materialize.toast('TODOS LOS ARCHIVOS SE SUBIERON, ACTUALIZA', 30000000000000, 'rounded');
+      });
     },
     openTarget: function(){
       $('.tap-target').tapTarget('open');
     },
     processFiles: function(event){
-      this.newFiles = Array.from(event.target.files);
-    }
+      var files = Array.from(event.target.files);
+      var names = files.map(function(x){
+        return x.name;
+      });
+      this.newFiles = names;
+    },
+    requestLink: function(aLink){
+      var linkBase64 = window.btoa(aLink)
+      // document.getElementById('loadingButton').innerHTML='<div class="spinner-layer spinner-green"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div>'
+      axios.get('/link/'+ linkBase64)
+      .then((data) =>{
+        document.getElementById('descarga'+ aLink).innerHTML =   '<a class="waves-effect waves-light btn" href="' + data.data + '" ><i class="material-icons right">arrow_downward</i>DESCARGAR</a>';
 
+      })}
   },
   computed: {
     searchedCourses: function(){
