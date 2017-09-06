@@ -54,7 +54,7 @@ app.get('/clases/:carrera', function(req, res){
 })
 
 
-app.get('/link/:anonlink', function(req, res){
+app.post('/link/:anonlink', function(req, res){
   var anonlink = atob(req.params.anonlink);
 
   request( anonlink , function (error, response, html) {
@@ -65,8 +65,8 @@ app.get('/link/:anonlink', function(req, res){
       })
     }
     else{
-      console.log('error de GET /link/:anonlink');
-      res.send('')
+      console.log('error de POST /link/:anonlink');
+      res.send(error)
     }
   });
 

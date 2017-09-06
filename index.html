@@ -275,11 +275,16 @@ var app = new Vue({
     requestLink: function(aLink){
       var linkBase64 = window.btoa(aLink)
       // document.getElementById('loadingButton').innerHTML='<div class="spinner-layer spinner-green"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div>'
-      axios.get('/link/'+ linkBase64)
+      axios.post('/link/'+ linkBase64)
       .then((data) =>{
         document.getElementById('descarga'+ aLink).innerHTML =   '<a class="waves-effect waves-light btn" href="' + data.data + '" ><i class="material-icons right">arrow_downward</i>DESCARGAR</a>';
 
-      })}
+      })
+      .catch(err =>{
+        console.log("error en request link " + err)
+
+      })
+    }
   },
   computed: {
     searchedCourses: function(){
