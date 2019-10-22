@@ -234,7 +234,7 @@ var app = new Vue({
           Materialize.toast('Subiendo ' + newFile.name + " ( " + numI + "/" + filesToSend.length +  " ) ", 3000, 'rounded')
           var fileData = new FormData();
           fileData.append('file', newFile, newFile.name)
-          axios.post('https://anonfile.com/api/upload', fileData).then((data)=>{
+          axios.post('https://api.anonfile.com/upload', fileData).then((data)=>{
             const obj ={
               'link': data.data.data.file.url.short,
               'titulo': newFile.name,
